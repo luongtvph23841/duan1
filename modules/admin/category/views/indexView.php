@@ -66,12 +66,9 @@
                     <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                         <thead>
                             <tr>
-                                <th title="Field #1">ID Danh mục</th>
-                                <th title="Field #2">Tên danh mục</th>
-                                <th title="Field #3">Ngày tạo</th>
-                                <th title="Field #4">Người tạo</th>
+                                <th title="Field #1">ID</th>
+                                <th title="Field #2">Tên</th>
                                 <th title="Field #5">Hành động</th>
-                                <th title="Field #5">Mô tả</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,8 +76,6 @@
                                 <tr>
                                     <td><?php echo ($category['id']) ?></td>
                                     <td><?php echo ($category['name']) ?></td>
-                                    <td><?php echo ($category['created_at']) ?></td>
-                                    <td><?php echo ($category['full_name']) ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
                                             <a href="?role=admin&mod=category&action=update&id_cate=<?php echo $category['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -101,7 +96,7 @@
                                             </svg> </span> </a>
                                         </span>
                                     </td>
-                                    <td><?php echo $category['description'] ?></td>
+                                    <td><?php echo $category['name'] ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
