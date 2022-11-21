@@ -66,7 +66,7 @@
                     <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                         <thead>
                             <tr>
-                                <th title="Field #1">ID Danh mục</th>
+                                <th title="Field #1">ID</th>
                                 <th title="Field #2">Tên danh mục</th>
                                 <th title="Field #3">Ngày tạo</th>
                                 <th title="Field #4">Người tạo</th>
