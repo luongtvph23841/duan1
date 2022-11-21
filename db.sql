@@ -47,43 +47,43 @@ INSERT INTO `categories` VALUES (2,'Bài viết thử nghiệm chức năng','�
 UNLOCK TABLES;
 
 --
--- Table structure for table `production_medias`
+-- Table structure for table `product_medias`
 --
 
-DROP TABLE IF EXISTS `production_medias`;
+DROP TABLE IF EXISTS `product_medias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `production_medias` (
+CREATE TABLE `product_medias` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `production_id` int NOT NULL,
+  `product_id` int NOT NULL,
   `path` varchar(199) DEFAULT NULL,
   `type` varchar(45) NOT NULL,
   `order` int DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `pk_production_medias_production_id_idx` (`production_id`),
-  CONSTRAINT `pk_production_medias_production_id` FOREIGN KEY (`production_id`) REFERENCES `productions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `pk_product_medias_product_id_idx` (`product_id`),
+  CONSTRAINT `pk_product_medias_product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `production_medias`
+-- Dumping data for table `product_medias`
 --
 
-LOCK TABLES `production_medias` WRITE;
-/*!40000 ALTER TABLE `production_medias` DISABLE KEYS */;
-/*!40000 ALTER TABLE `production_medias` ENABLE KEYS */;
+LOCK TABLES `product_medias` WRITE;
+/*!40000 ALTER TABLE `product_medias` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_medias` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `productions`
+-- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `productions`;
+DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `productions` (
+CREATE TABLE `products` (
   `id` int NOT NULL AUTO_INCREMENT,
   `category_id` int NOT NULL,
   `create_id` int NOT NULL,
@@ -96,20 +96,20 @@ CREATE TABLE `productions` (
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `pk_productions_category_idx` (`category_id`),
-  KEY `pk_productions_create_id_idx` (`create_id`),
-  CONSTRAINT `pk_productions_category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `pk_productions_create_id` FOREIGN KEY (`create_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `pk_products_category_idx` (`category_id`),
+  KEY `pk_products_create_id_idx` (`create_id`),
+  CONSTRAINT `pk_products_category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `pk_products_create_id` FOREIGN KEY (`create_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `productions`
+-- Dumping data for table `products`
 --
 
-LOCK TABLES `productions` WRITE;
-/*!40000 ALTER TABLE `productions` DISABLE KEYS */;
-/*!40000 ALTER TABLE `productions` ENABLE KEYS */;
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
