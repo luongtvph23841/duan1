@@ -27,13 +27,13 @@
                 <form method="POST" action="">
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Tên danh mục</label>
-                            <input type="text" name="name" class="form-control" placeholder="Nhập vào tên danh mục" value="<?php echo $category['name'] ?>" />
+                            <label>ID</label>
+                            <input type="text" name="id" class="form-control" readonly="true" value="<?php echo $category['id'] ?>" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
-                            <label for="descriptionCategoryInput">Mô tả danh mục</label>
-                            <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $category['description'] ?></textarea>
+                            <label for="descriptionCategoryInput">Tên danh mục</label>
+                            <input type="text" name="name" class="form-control" value="<?php echo $category['name'] ?>" />
                         </div>
                     </div>
                     <div class="card-footer">
