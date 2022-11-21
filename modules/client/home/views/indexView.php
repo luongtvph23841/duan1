@@ -28,7 +28,7 @@
             </div>
 
             <div class="border-2  mr-4  rounded-md">
-                <img src="img/aa2.jpg" alt="" class="w-[200px]  h-[280px] m-auto">
+                <img src="assets/media/products/19.png" alt="" class="w-[100px]  h-[280px] m-auto">
 
                 <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
                     Newland...</p>
