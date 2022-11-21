@@ -86,20 +86,20 @@
         <div id="header">
             <ul id="main-menu">
                 <img src="assets/media/logos/logo-kaka.jpg" alt="">
-                <li><a href="">Trang Chủ</a></li>
-                <li><a href="">Sản Phẩm</a></li>
-                <li><a href="">Giới Thiệu</a></li>
+                <li><a href="?role=client&mod=home" class="menu-link">Trang Chủ</a></li>
+                <li><a href="?role=client&mod=product" class="menu-link">Sản Phẩm</a></li>
+                <li><a href="?role=client&mod=introduce" class="menu-link">Giới Thiệu</a></li>
 
                 <form>
                     <input type="search" class="timkiem" required>
                     <button>Tìm kiếm</button>
                 </form>
                 <button id="cart">
-                    <a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                    <a href="?role=client&mod=cart" class="menu-link"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
 
                 </button>
-                <li><a href="">Đăng Nhập </a></li>
-                <li><a href="">Đăng Kí </a></li>
+                <li><a href="?role=client&mod=login">Đăng Nhập </a></li>
+                <li><a href="?role=client&mod=register">Đăng Kí </a></li>
             </ul>
 
         </div>
