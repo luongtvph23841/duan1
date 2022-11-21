@@ -6,7 +6,7 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
                 <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tổng quan</h5>
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Home</h5>
                 <!--end::Page Title-->
             </div>
             <!--end::Info-->
@@ -17,7 +17,7 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class="container">
-            <p>Chào mừng đến với trang quản trị</p>
+            <p style="text-align: center;">Chào mừng đến với trang quản trị</p>
         </div>
         <!--end::Container-->
     </div><!--end::Entry-->
