@@ -17,7 +17,7 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class="container">
-            
+            <p>Chào mừng đến với trang quản trị</p>
         </div>
         <!--end::Container-->
     </div><!--end::Entry-->
