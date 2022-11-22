@@ -36,18 +36,6 @@
                                 <label>Tên</label>
                                 <input type="text" name="name" class="form-control" value="<?php echo $product['name'] ?>"></input>
                             </div>
-                            <div class="form-group mb-1">
-                                <label>Chi tiết sản phẩm</label>
-                                <input type="text" name="detail" class="form-control" value="<?php echo $product['detail'] ?>"></input>
-                            </div>
-                        </div>
-                        <div class="col col-4 mt-3">
-                            <div class="form-group">
-                                <label>Số lượng trong kho</label>
-                                <input type="number" name="quantity" class="form-control" value="<?php echo $product['quantity'] ?>" />
-                            </div>
-                        </div>
-                        <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Giá cho mỗi sản phẩm</label>
                                 <div class="input-group">
@@ -55,8 +43,10 @@
                                     <div class="input-group-append"><span class="input-group-text">VND</span></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col col-4 mt-3">
+                            <div class="form-group">
+                                <label>Số lượng trong kho</label>
+                                <input type="number" name="quantity" class="form-control" value="<?php echo $product['quantity'] ?>" />
+                            </div>
                             <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
                                 <select class="form-control select2" name="id_cate">
@@ -65,8 +55,6 @@
                                     <?php endforeach ?>
                                 </select>
                             </div>
-                        </div>
-                        <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Xuất sứ</label>
                                 <select class="form-control select2" name="id_orgin">
@@ -74,6 +62,10 @@
                                         <option value="<?php echo $key['id'] ?>"><?php echo $key['name'] ?></option>
                                     <?php endforeach ?>
                                 </select>
+                            </div>
+                            <div class="form-group mb-1">
+                                <label>Chi tiết sản phẩm</label>
+                                <input type="text" name="detail" class="form-control" value="<?php echo $product['detail'] ?>"></input>
                             </div>
                         </div>
                         <div class="col col-9">

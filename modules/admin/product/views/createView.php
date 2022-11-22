@@ -17,7 +17,6 @@
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
-
         <!--begin::Card-->
         <div class="card card-custom gutter-b example example-compact">
             <div class="card-header">
@@ -33,6 +32,25 @@
                                 <input type="text" name="name" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
                             </div>
                             <div class="form-group">
+                                <label>Giá</label>
+                                <div class="input-group">
+                                    <input type="text" name="price" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
+                                    <div class="input-group-append"><span class="input-group-text">VND</span></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Số lượng trong kho</label>
+                                <input type="number" name="quantity" class="form-control" placeholder="Nhập vào số lượng" />
+                            </div>
+                            <div class="form-group">
+                                <label>Xuất sứ</label>
+                                <select class="form-control select2" name="id_orgin">
+                                    <?php foreach ($orgin as $key) : ?>
+                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
                                 <select class="form-control select2" name="id_cate">
                                     <?php foreach ($categories as $category) : ?>
@@ -45,49 +63,6 @@
                                 <textarea name="detail" id="kt-ckeditor-1"></textarea>
                             </div>
                         </div>
-                        <div class="col col-4 mt-3">
-                            <div class="form-group">
-                                <label>Số lượng trong kho</label>
-                                <input type="number" name="quantity" class="form-control" placeholder="Nhập vào số lượng" />
-                            </div>
-                        </div>
-                        <div class="col col-4 mt-3">
-                            <div class="form-group">
-                                <label>Giá cho mỗi sản phẩm</label>
-                                <div class="input-group">
-                                    <input type="text" name="price" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
-                                    <div class="input-group-append"><span class="input-group-text">VND</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-4 mt-3">
-                            <div class="form-group">
-                                <label>Xuất sứ</label>
-                                <select class="form-control select2" name="id_orgin">
-                                    <?php foreach ($orgin as $key) : ?>
-                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name'] ?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- <div class="col col-3">
-                            <div class="form-group">
-                                <div><label>Hình ảnh đại diện</label></div>
-                                <div class="image-input image-input-outline" id="kt_image_1">
-                                    <div class="image-input-wrapper" style="background-image: url(assets/media/users/100_1.jpg)"></div>
-
-                                    <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Thay đổi">
-                                        <i class="fa fa-pen icon-sm text-muted"></i>
-                                        <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="thumb_remove" />
-                                    </label>
-
-                                    <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Xoá ảnh đại diện">
-                                        <i class="ki ki-bold-close icon-xs text-muted"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
                             <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
