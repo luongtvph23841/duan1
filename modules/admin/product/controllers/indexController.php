@@ -1,68 +1,89 @@
 <?php
 
-function construct() {
+function construct()
+{
     request_auth();
     load_model('index');
 }
 
-function indexAction() {
+function indexAction()
+{
     $data['products'] = get_list_products();
+    $data['categories'] = get_list_categories();
+    $data['orgin'] = get_list_orgin();
     load_view('index', $data);
 }
 
-function createAction() {
+function createAction()
+{
     $data['categories'] = get_list_categories();
+    $data['orgin'] = get_list_orgin();
     load_view('create', $data);
 }
 
-function createPostAction() {
+function createPostAction()
+{
     $name = $_POST['name'];
-    $description = $_POST['description'];
-    if (empty($name)) {
-        push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
-        header('Location: ?role=admin&mod=category&action=create');
-        die();
-    }
-    create_category($name, $description);
-    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
+    $id_orgin = $_POST['id_orgin'];
+    $id_cate = $_POST['id_cate'];
+    $detail = $_POST['detail'];
+    $img = $_POST['img'];
+    // if (empty($name)) {
+    //     push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
+    //     header('Location: ?role=admin&mod=product&action=create');
+    //     die();
+    // }
+    create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $detail);
+    push_notification('success', ['Thêm mới sản phẩm thành công']);
+    header('Location: ?role=admin&mod=product');
 }
 
-function deleteAction() {
-    $id = $_GET['id_cate'];
-    delete_category($id);
+function deleteAction()
+{
+    $id = $_GET['id_prod'];
+    delete_product($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=product');
 }
 
 function updateAction()
 {
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    $data['category'] = $cate;
-    if ($cate) {
+    $id = $_GET['id_prod'];
+    $prod = get_one_product($id);
+    $data['product'] = $prod;
+    $data['categories'] = get_list_categories();
+    $data['orgin'] = get_list_orgin();
+    if ($prod) {
         load_view('update', $data);
     } else {
-        header('Location: ?role=admin&mod=category');
+        header('Location: ?role=admin&mod=product');
     }
 }
 
-function updatePostAction() {
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    if (!$cate) {
-        header('Location: ?role=admin&mod=category');
+function updatePostAction()
+{
+    $id = $_GET['id_prod'];
+    $prod = get_one_product($id);
+    if (!$prod) {
+        header('Location: ?role=admin&mod=product');
         die();
     }
     $name = $_POST['name'];
-    $description = $_POST['description'];
+    $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
+    $img = $_POST['img'];
+    $id_orgin = $_POST['id_orgin'];
+    $id_cate = $_POST['id_cate'];
+    $detail = $_POST['detail'];
     if (empty($name)) {
         push_notification('errors', [
             'name' => 'Vui lòng nhập vào tên danh mục'
         ]);
-        header('Location: ?role=admin&mod=category&action=update&id_cate='.$id);
+        header('Location: ?role=admin&mod=product&action=update&id_prod=' . $id);
     }
-    update_category($id, $name, $description);
+    update_product($id, $name, $price, $quantity, $img, $id_orgin, $id_cate, $detail);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=product');
 }

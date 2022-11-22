@@ -66,22 +66,28 @@
                 <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                     <thead>
                         <tr>
-                            <th title="Field #1">ID</th>
+                            <!-- <th title="Field #1">ID</th> -->
                             <th title="Field #2">Tên</th>
                             <th title="Field #3">Giá</th>
                             <th title="Field #4">Số lượng</th>
-                            <th title="Field #6">Hình ảnh</th>
-                            <th title="Field #8">Hành động</th>
-                            <th title="Field #8">Hành động</th>
+                            <th title="Field #5">Mô tả</th>
+                            <th title="Field #6">Xuất sứ</th>
+                            <th title="Field #7">Danh mục</th>
+                            <th title="Field #8">Hình ảnh</th>
+                            <th title="Field #10">Hành động</th>
+                            <th title="Field #10">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($products as $product) : ?>
                             <tr>
-                                <td><?php echo ($product['id']) ?></td>
+                                <!-- <td><?php echo ($product['id']) ?></td> -->
                                 <td><?php echo ($product['name']) ?></td>
                                 <td><?php echo ($product['price']) ?></td>
                                 <td><?php echo ($product['quantity']) ?></td>
+                                <td><?php echo ($product['detail']) ?></td>
+                                <td><?php echo ($product['id_orgin']) ?></td>
+                                <td><?php echo ($product['id_cate']) ?></td>
                                 <td><img src="public/images/<?php echo ($product['image']) ?>" width="100" alt=""></td>
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">

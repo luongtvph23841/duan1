@@ -1,15 +1,18 @@
 <?php
-function get_list_categories() {
+function get_list_categories()
+{
     $result = db_fetch_array("SELECT * FROM `categories`");
     return $result;
 }
 
-function get_one_category($id) {
+function get_one_category($id)
+{
     $result = db_fetch_row("SELECT c.id, c.name FROM `categories` c WHERE c.id = $id");
     return $result;
 }
 
-function create_category($name) {
+function create_category($name)
+{
     $user = get_auth();
     $id = db_insert('categories', [
         'name' => $name,
@@ -17,14 +20,16 @@ function create_category($name) {
     return $id;
 }
 
-function update_category($id, $name) {
+function update_category($id, $name)
+{
     db_update('categories', [
         'name' => $name,
     ], "id = $id");
     return true;
 }
 
-function delete_category($id) {
+function delete_category($id)
+{
     db_delete('categories', "id = $id");
     return true;
 }

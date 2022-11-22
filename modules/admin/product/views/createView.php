@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới sản phẩm</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Thêm mới sản phẩm</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -29,26 +29,26 @@
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
-                                <label>Tiêu đề sản phẩm</label>
+                                <label>Tên</label>
                                 <input type="text" name="name" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
                             </div>
                             <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
-                                <select class="form-control select2" name="category_id">
+                                <select class="form-control select2" name="id_cate">
                                     <?php foreach ($categories as $category) : ?>
                                         <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
                             <div class="form-group mb-1">
-                                <label for="descriptionCategoryInput">Chi tiết sản phẩm</label>
-                                <textarea name="description" id="kt-ckeditor-1"></textarea>
+                                <label>Chi tiết sản phẩm</label>
+                                <textarea name="detail" id="kt-ckeditor-1"></textarea>
                             </div>
                         </div>
                         <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Số lượng trong kho</label>
-                                <input type="number" name="count" class="form-control" placeholder="Nhập vào số lượng" />
+                                <input type="number" name="quantity" class="form-control" placeholder="Nhập vào số lượng" />
                             </div>
                         </div>
                         <div class="col col-4 mt-3">
@@ -62,14 +62,15 @@
                         </div>
                         <div class="col col-4 mt-3">
                             <div class="form-group">
-                                <label>Trạng thái sản phẩm</label>
-                                <select class="form-control select2" name="status">
-                                    <option value="1">Nháp</option>
-                                    <option value="2">Công khai</option>
+                                <label>Xuất sứ</label>
+                                <select class="form-control select2" name="id_orgin">
+                                    <?php foreach ($orgin as $key) : ?>
+                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name'] ?></option>
+                                    <?php endforeach ?>
                                 </select>
                             </div>
                         </div>
-                        <div class="col col-3">
+                        <!-- <div class="col col-3">
                             <div class="form-group">
                                 <div><label>Hình ảnh đại diện</label></div>
                                 <div class="image-input image-input-outline" id="kt_image_1">
@@ -86,7 +87,7 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
                             <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
@@ -99,9 +100,9 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
+                    <button type="submit" class="btn btn-primary mr-2">Thêm</button>
                     <button type="reset" class="btn btn-secondary">Làm lại</button>
-                    <a href="?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                    <a href="?role=admin&mod=product" class="btn btn-default">Quay về</a>
                 </div>
             </form>
             <!--end::Form-->
