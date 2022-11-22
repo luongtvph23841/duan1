@@ -87,7 +87,7 @@
                                 <td><?php echo ($product['detail']) ?></td>
                                 <td><?php echo ($product['id_orgin']) ?></td>
                                 <td><?php echo ($product['id_cate']) ?></td>
-                                <td><img src="public/images/<?php echo ($product['image']) ?>" width="100" alt=""></td>
+                                <td><img src="/public/images/<?php echo ($product['image']) ?>" width="100" alt=""></td>
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">
                                         <a href="?role=admin&mod=product&action=update&id_prod=<?php echo $product['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

@@ -29,13 +29,12 @@ function createPostAction()
     $id_orgin = $_POST['id_orgin'];
     $id_cate = $_POST['id_cate'];
     $detail = $_POST['detail'];
-    $img = $_POST['img'];
-    // if (empty($name)) {
-    //     push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
-    //     header('Location: ?role=admin&mod=product&action=create');
-    //     die();
-    // }
+
+    $file = $_FILES['img'];
+    $img = $file['name'];
+
     create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $detail);
+    move_uploaded_file($file['tmp_name'], '/public/images/' . $file['name']);
     push_notification('success', ['Thêm mới sản phẩm thành công']);
     header('Location: ?role=admin&mod=product');
 }
