@@ -20,6 +20,7 @@ function createAction()
 
 function createPostAction()
 {
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $phone = $_POST['phone'];
@@ -27,7 +28,7 @@ function createPostAction()
     $id_role = $_POST['id_role'];
 
 
-    create_user($email, $password, $phone, $address, $id_role);
+    create_user($name, $email, $password, $phone, $address, $id_role);
     push_notification('success', ['Thêm mới người dùng thành công']);
     header('Location: ?role=admin&mod=users');
 }
@@ -61,13 +62,14 @@ function updatePostAction()
         header('Location: ?role=admin&mod=users');
         die();
     }
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $id_role = $_POST['id_role'];
 
-    update_user($id, $email, $password, $phone, $address, $id_role);
+    update_user($id, $name, $email, $password, $phone, $address, $id_role);
     push_notification('success', ['Chỉnh sửa người dùng thành công']);
     header('Location: ?role=admin&mod=users');
 }

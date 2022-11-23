@@ -32,6 +32,10 @@
                                 <input type="text" name="id" class="form-control" value="<?php echo $user['id'] ?>" readonly="true" />
                             </div>
                             <div class=" form-group">
+                                <label>Tên</label>
+                                <input type="text" name="name" class="form-control" value="<?php echo $user['name'] ?>" />
+                            </div>
+                            <div class=" form-group">
                                 <label>Email</label>
                                 <input type="text" name="email" class="form-control" value="<?php echo $user['email'] ?>" />
                             </div>
@@ -51,7 +55,7 @@
                                 <label>Vai trò</label>
                                 <select class="form-control select2" name="id_role">
                                     <?php foreach ($role as $key) : ?>
-                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name'] ?></option>
+                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name_role'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>

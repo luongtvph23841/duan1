@@ -28,6 +28,10 @@
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
+                                <label>Tên</label>
+                                <input type="text" name="name" class="form-control" placeholder="Nhập vào tên" />
+                            </div>
+                            <div class="form-group">
                                 <label>Email</label>
                                 <input type="text" name="email" class="form-control" placeholder="Nhập vào email" />
                             </div>

@@ -304,53 +304,44 @@
 </head>
 
 <body>
-
-
     <p class="text-[#F39C12] mt-3 ml-3">
-        Sản Phẩm > Tính Chất Cô Đọng Dưỡng Da Vita-C ToTal Care Ampule Newland
+        <a href="http://localhost/duan1/?role=client&mod=product">Sản phẩm</a> > <?php echo $product['name'] ?>
     </p>
     <hr>
     <section class="pro-info w-[812px] mx-auto mt-10">
         <div class="info flex ">
             <div class="image w-[226px] h-[180px] border border-[#000000] rounded-[40px]">
-                <img class="w-[133px] h-[141px] mx-auto mt-5" src="assets/media/products/19.png" alt="">
-                <h4 class="font-[600] border-b-2 border-[#000000] mt-5 ">
+                <img class="w-[133px] h-[141px] mx-auto mt-5" src="assets/media/products/<?php echo ($product['image']) ?>" alt="">
+                <!-- <h4 class="font-[600] border-b-2 border-[#000000] mt-5 ">
                     Sản Phẩm Liên Quan
                 </h4>
                 <div class="sub-image mt-5 flex space-x-[20px]">
                     <img class="w-[64px] h-[48px] border border-[#000000] p-[10px]" src="assets/media/products/19.png" alt="">
                     <img class="w-[64px] h-[48px] border border-[#000000] p-[10px]" src="assets/media/products/19.png" alt="">
                     <img class="w-[64px] h-[48px] border border-[#000000] p-[10px]" src="assets/media/products/19.png" alt="">
-                </div>
+                </div> -->
             </div>
             <div class="detail-info ml-[60px] leading-8">
                 <section class="detail w-[400px] mx-auto mt-[5px]">
-                    <p>
-                        Tinh chất cô đặc dưỡng trắng da Vita-C Total Care Ampule NewLand
+                    <p class="font-semibold mt-2 mb-1 p-3">
+                        <?php echo $product['name'] ?>
                     </p>
                     <div class="mt-6 bg-[] p-4 text-[]">
                         <p class="text-[]">
-                            Vita-C Total Care Ampule có chứa 15% vitamin C nguyên
-                            chất từ tế bào gốc thực vật có tác dụng kích hoạt các tế
-                            bào da, ức chế sắc tố trên da làm mờ các đốm nâu hoặc cải thiện vùng da
-                            bị ửng đỏ, tăng cường khả năng đàn hồi cho da, giúp tế bào da được phục hồi nhanh hơn.
+                            <?php echo $product['detail'] ?>
                         </p>
                     </div>
                 </section> <!-- End .detail-->
-                <p class="">Giá: <span class="text-[]">2.690.000đ</span></p>
+                <p class="">Giá: <span class="text-[]"><?php echo $product['price'] ?>đ</span></p>
                 <p>Số lượng:
                     <button>-</button>
                     <span>1</span>
                     <button>+</button>
                 </p>
-                <div class="price mt-[120px] text-left h-[25px] px-5 font-[400] text-[16px] bg-[] ">
-                    <p class="">Total: <span class="text-[#FF0000]">2.690.000đ</span></p>
-                </div>
-                <button class=" mt-6 px-20 bg-[#F39C12] font-[400] text-[16px] rounded-[5px]">
+                <button class="border border-[#EFA969] font-bold mt-[10px] w-[200px] h-[40px] text-[18px] hover:bg-[#EFA969] hover:text-white p-1 place-items-center">
                     Thêm vào giỏ hàng
                 </button>
             </div>
-
         </div> <!-- End .info-->
     </section> <!-- End .pro-info-->
     <section class="detail w-[812px] mx-auto mt-[90px]">
@@ -362,7 +353,7 @@
         </div>
     </section> <!-- End .detail-->
 
-    <section class="comment w-[812px] mx-auto mt-[20px]">
+    <section class="comment w-[812px] mx-auto mt-[20px] mb-[20px]">
         <h4 class="font-[600] w-[80px] border-b-2 border-[#000000]">
             Bình luận
         </h4>
@@ -374,9 +365,6 @@
 
         </form>
     </section>
-
-
-
 </body>
 
 </html>

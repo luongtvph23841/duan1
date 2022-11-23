@@ -31,8 +31,9 @@ function createPostAction()
     $detail = $_POST['detail'];
 
     $file = $_FILES['img'];
+    move_uploaded_file($file['tmp_name'], 'assets/media/products/' . $file['name']);
+
     $img = $file['name'];
-    move_uploaded_file($file['tmp_name'], './upload/' . $file['name']);
 
     create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $detail);
     push_notification('success', ['Thêm mới sản phẩm thành công']);

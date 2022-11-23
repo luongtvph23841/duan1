@@ -1,4 +1,4 @@
-<?php get_header('', 'Danh mục sản phẩm') ?>
+<?php get_header('', 'Người dùng') ?>
 
 <!--begin::Subheader-->
 <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý danh mục</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý người dùng</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -23,7 +23,7 @@
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
                     <h3 class="card-label">Danh sách người dùng
-                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các danh mục sản phẩm có trên hệ thống</span>
+                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các người dùng có trên hệ thống</span>
                     </h3>
                 </div>
                 <div class="card-toolbar">
@@ -67,18 +67,20 @@
                     <thead>
                         <tr>
                             <th title="Field #1">ID</th>
-                            <th title="Field #2">Email</th>
-                            <th title="Field #3">Mật khẩu</th>
-                            <th title="Field #4">Số điện thoại</th>
-                            <th title="Field #5">Địa chỉ</th>
-                            <th title="Field #6">Vai trò</th>
-                            <th title="Field #7">Hành động</th>
+                            <th title="Field #2">Tên</th>
+                            <th title="Field #3">Email</th>
+                            <th title="Field #4">Mật khẩu</th>
+                            <th title="Field #5">Số điện thoại</th>
+                            <th title="Field #6">Địa chỉ</th>
+                            <th title="Field #7">Vai trò</th>
+                            <th title="Field #8">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($users as $user) : ?>
                             <tr>
                                 <td><?php echo ($user['id']) ?></td>
+                                <td><?php echo ($user['name']) ?></td>
                                 <td><?php echo ($user['email']) ?></td>
                                 <td><?php echo ($user['password']) ?></td>
                                 <td><?php echo ($user['phone']) ?></td>

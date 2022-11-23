@@ -1,5 +1,5 @@
 <?php get_header('base', $title) ?>
-<?php $user = get_auth(); ?>
+<?php $users = get_auth(); ?>
 <?php $notifications = get_notification(); ?>
 <!--begin::Main-->
 <!--begin::Header Mobile-->
@@ -218,13 +218,13 @@
 							<!--begin::Header Nav-->
 							<ul class="menu-nav">
 								<li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active" data-menu-toggle="click" aria-haspopup="true">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="?role=admin" class="menu-link menu-toggle">
 										<span class="menu-text">Trang quản trị</span>
 										<i class="menu-arrow"></i>
 									</a>
 								</li>
 								<li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="?role=client&mod=home" class="menu-link menu-toggle">
 										<span class="menu-text">Trang khách hàng</span>
 										<i class="menu-arrow"></i>
 									</a>
@@ -241,9 +241,9 @@
 						<div class="topbar-item">
 							<div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
 								<span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-								<span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?php echo $user['full_name'] ?></span>
+								<span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"><?php echo $users['name'] ?></span>
 								<span class="symbol symbol-35 symbol-light-success">
-									<span class="symbol-label font-size-h5 font-weight-bold"><?php echo substr($user['full_name'], 0, 1) ?></span>
+									<span class="symbol-label font-size-h5 font-weight-bold"><?php echo substr($users['name'], 0, 1) ?></span>
 								</span>
 							</div>
 						</div>
