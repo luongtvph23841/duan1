@@ -32,9 +32,9 @@ function createPostAction()
 
     $file = $_FILES['img'];
     $img = $file['name'];
+    move_uploaded_file($file['tmp_name'], './upload/' . $file['name']);
 
     create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $detail);
-    move_uploaded_file($file['tmp_name'], '/public/images/' . $file['name']);
     push_notification('success', ['Thêm mới sản phẩm thành công']);
     header('Location: ?role=admin&mod=product');
 }

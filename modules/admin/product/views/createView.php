@@ -23,7 +23,7 @@
                 <h3 class="card-title">Form thông tin sản phẩm mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
@@ -63,14 +63,9 @@
                                 <textarea name="detail" id="kt-ckeditor-1"></textarea>
                             </div>
                         </div>
-                        <div class="col col-9">
-                            <div><label>Hình ảnh sản phẩm</label></div>
-                            <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
-                                <div class="dropzone-msg dz-message needsclick">
-                                    <h3 class="dropzone-msg-title">Kéo thả hình ảnh cần upload</h3>
-                                    <span class="dropzone-msg-desc">Chỉ chấp nhận tải lên file hình ảnh</span>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label>Hình ảnh sản phẩm</label>
+                            <input type="file" name="img" id="img" class="form-control" />
                         </div>
                     </div>
                 </div>
