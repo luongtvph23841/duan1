@@ -1,3 +1,6 @@
+<?php $users = get_auth(); ?>
+<?php $notifications = get_notification(); ?>
+
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -108,3 +111,11 @@
 </body>
 
 </html>
+
+<?php foreach ($notifications as $notification) : ?>
+    <div class="container">
+        <?php foreach ($notification['msgs'] as $msg) : ?>
+            <div class="alert alert-<?php echo $notification['type'] ?>" role="alert"><?php echo $msg ?></div>
+        <?php endforeach; ?>
+    </div>
+<?php endforeach; ?>

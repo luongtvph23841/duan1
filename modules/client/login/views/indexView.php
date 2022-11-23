@@ -1,4 +1,6 @@
 <?php get_header() ?>
+<?php $users = get_auth(); ?>
+<?php $notifications = get_notification(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -156,20 +158,26 @@
                     <h1>Welcom</h1>
                     <h3>Login to your account</h3>
                 </div>
-                <center>
-                    <div class="btn1">
-                        <label for="name"><b>Tên đăng nhập</b></label>
-                        <input type="text" placeholder="Tên đăng nhập" name="name" required>
-                        <label for="psw"><b>Mật khẩu</b></label>
-                        <input type="text" placeholder="Mật khẩu" name="psw" required>
-                        <input type="checkbox"> Ghi nhớ mật khẩu?
-                        <br>
-                        <br>
-                        <b><button type="submit" class="signupbtn" style="background-color: rgb(155, 52, 146);width: 150px; height: 50px;"><a href="">Đăng
-                                    Nhập</a></button></b>
-                    </div>
-                    <a href="?role=client&mod=register" class="text1">Bạn chưa có tài khoản đăng kí?</a>
-                </center>
+
+                <?php foreach ($notifications as $notification) : ?>
+                    <?php foreach ($notification['msgs'] as $msg) : ?>
+                        <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+
+                <form class="form" id="kt_login_signin_form" method="post" action="">
+                    <center>
+                        <div class="form-group">
+                            <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Email" name="username" autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="password" placeholder="Password" name="password" />
+                        </div>
+                        <div class="form-group text-center mt-10">
+                            <button id="kt_login_signin_submit" class="btn btn-pill btn-outline-black font-weight-bold opacity-90 px-15 py-3">Đăng nhập</button>
+                        </div>
+                    </center>
+                </form>
             </form>
         </div>
     </div>
