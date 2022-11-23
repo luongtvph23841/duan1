@@ -129,12 +129,6 @@
             margin-left: 10px;
         }
 
-        /* .booklist {
-    
-        width: 160px;
-        height: 35px;
-    } */
-
         .booklist i {
             font-size: 30px;
             border-left: 2px solid #808080;
