@@ -1,11 +1,51 @@
 <?php
 
-function get_list_users() {
-    $result = db_fetch_array("SELECT * FROM `tbl_users`");
+function get_list_users()
+{
+    $result = db_fetch_array("SELECT u.id, u.email, u.password, u.phone, u.address, r.name_role FROM `users` u
+    INNER JOIN `role` r ON r.id = u.id_role");
     return $result;
 }
 
-function get_user_by_id($id) {
-    $item = db_fetch_row("SELECT * FROM `tbl_users` WHERE `user_id` = {$id}");
-    return $item;
+function get_list_role()
+{
+    $result = db_fetch_array("SELECT * FROM `role`");
+    return $result;
+}
+
+function get_one_user($id)
+{
+    $result = db_fetch_row("SELECT c.id, c.email, c.password, c.phone, c.address, c.id_role  FROM `users` c WHERE c.id = $id");
+    return $result;
+}
+
+function create_user($email, $password, $phone, $address, $id_role)
+{
+    $user = get_auth();
+    $id = db_insert('users', [
+        'email' => $email,
+        'password' => $password,
+        'phone' => $phone,
+        'address' => $address,
+        'id_role' => $id_role,
+    ]);
+    return $id;
+}
+
+function update_user($id, $email, $password, $phone, $address, $id_role)
+{
+    db_update('users', [
+        'email' => $email,
+        'password' => $password,
+        'phone' => $phone,
+        'address' => $address,
+        'id_role' => $id_role,
+    ], "id = $id");
+    return true;
+}
+
+function delete_user($id)
+{
+    db_delete('users', "id = $id");
+    return true;
 }

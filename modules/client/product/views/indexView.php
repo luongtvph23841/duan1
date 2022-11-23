@@ -11,174 +11,28 @@
 </head>
 
 <body>
-    <div class="w-full mb-4">
-
-        <div class="text-center h-[100px] text-5xl pt-6 text-red-500">
-            <h1 class="font-sans text-bold  ">Danh mục sản phẩm</h1>
+    <div class="w-full mb-7">
+        <div>
+            <img src="assets/media/logos/banner-kaka.jpg" alt="" class="w-full">
         </div>
-
-        <div class="flex justify-between mt-4 ml-2">
-            <div class="border-2 mr-4  rounded-md">
-                <img src="assets/media/products/19.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md">
-                <img src="assets/media/products/20.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/21.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/22.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/23.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center pb-4">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-        </div>
-
-        <!---->
-
-        <div class="flex justify-between mt-4 ml-2">
-            <div class="border-2 mr-4  rounded-md">
-                <img src="assets/media/products/24.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md">
-                <img src="assets/media/products/25.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/26.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/27.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/28.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center pb-4">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-        </div>
-
-        <!---->
-
-        <div class="flex justify-between mt-4 ml-2">
-            <div class="border-2 mr-4  rounded-md">
-                <img src="assets/media/products/29.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md">
-                <img src="assets/media/products/30.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/1.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/2.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-
-            <div class="border-2  mr-4  rounded-md ">
-                <img src="assets/media/products/3.png" alt="" class="w-[100px]  h-[280px] m-auto">
-
-                <p class="text-xl text-slate-500 pb-4 pl-2 text-center ">Siêu tinh chất Vita-C Total Care Ampule
-                    Newland...</p>
-                <form class="text-center pb-4">
-                    <button class="text-2xl font-bold text-red-500 w-[150px] h-[40px] bg-red-100  rounded-xl">150.000đ</button>
-                </form>
-            </div>
-        </div>
-
-
-
+    </div>
+    <div class="grid grid-cols-3 gap-24 text-center bg-[url('assets/media/bg/bg-3.jpg')]">
+        <?php foreach ($products as $product) : ?>
+            <a href="?role=client&mod=productinfo&id_prod=<?= $product['id']; ?>">
+                <div class="border-2 border-[#EFA969] rounded-x1">
+                    <img src="assets/media/products/19.png" alt="" class="mx-auto mt-3">
+                </div>
+                <div>
+                    <p class="font-semibold mt-2 mb-1 p-3"><?= $product['name'] ?></p>
+                </div>
+                <div>
+                    <span class="text-red-500 font-bold"><?= $product['price'] ?></span>
+                </div>
+                <div class="mt3 mb-4">
+                    <button class="border border-[#EFA969] rounded-x1 font-bold w-[100px] text-[18px] hover:bg-[#EFA969] hover:text-white p-1">Mua</button>
+                </div>
+            </a>
+        <?php endforeach; ?>
     </div>
 </body>
 

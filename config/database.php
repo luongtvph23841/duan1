@@ -18,8 +18,6 @@
 $db = array(
     'hostname' => '202.92.5.49',
     'username' => 'ljnwmosnhosting_nhom5',
-    'password' => 'duan1nhom5',
+    'password' => 'luongtvph23841',
     'database' => 'ljnwmosnhosting_duan1',
 );
-
-

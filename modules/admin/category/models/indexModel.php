@@ -7,7 +7,7 @@ function get_list_categories()
 
 function get_one_category($id)
 {
-    $result = db_fetch_row("SELECT c.id, c.name FROM `categories` c WHERE c.id = $id");
+    $result = db_fetch_row("SELECT c.id, c.name_cate FROM `categories` c WHERE c.id = $id");
     return $result;
 }
 
@@ -15,7 +15,7 @@ function create_category($name)
 {
     $user = get_auth();
     $id = db_insert('categories', [
-        'name' => $name,
+        'name_cate' => $name,
     ]);
     return $id;
 }
@@ -23,7 +23,7 @@ function create_category($name)
 function update_category($id, $name)
 {
     db_update('categories', [
-        'name' => $name,
+        'name_cate' => $name,
     ], "id = $id");
     return true;
 }

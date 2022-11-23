@@ -84,8 +84,8 @@
                                 <td><?php echo ($product['name']) ?></td>
                                 <td><?php echo ($product['price']) ?></td>
                                 <td><?php echo ($product['quantity']) ?></td>
-                                <td><?php echo ($product['id_orgin']) ?></td>
-                                <td><?php echo ($product['id_cate']) ?></td>
+                                <td><?php echo ($product['name_orgin']) ?></td>
+                                <td><?php echo ($product['name_cate']) ?></td>
                                 <td><?php echo ($product['detail']) ?></td>
                                 <td><img src="/public/images/<?php echo ($product['image']) ?>" width="100" alt=""></td>
                                 <td>
@@ -105,7 +105,9 @@
                                                         <path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero"></path>
                                                         <path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3"></path>
                                                     </g>
-                                                </svg> </span> </a>
+                                                </svg>
+                                            </span>
+                                        </a>
                                     </span>
                                 </td>
                             </tr>

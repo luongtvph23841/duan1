@@ -95,7 +95,7 @@
 							<h4 class="menu-text">Quản lý</h4>
 							<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 						</li>
-						
+
 						<li class="menu-item" aria-haspopup="true">
 							<a href="?role=admin&mod=category" class="menu-link">
 								<span class="svg-icon menu-icon">
@@ -112,7 +112,7 @@
 								<span class="menu-text">Danh mục</span>
 							</a>
 						</li>
-						
+
 						<li class="menu-item" aria-haspopup="true">
 							<a href="?role=admin&mod=product" class="menu-link">
 								<span class="svg-icon menu-icon">
@@ -256,10 +256,10 @@
 			<!--end::Header-->
 			<!--begin::Content-->
 			<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-				<?php foreach ($notifications as $notification): ?>
-				<div class="container">
-					<?php foreach ($notification['msgs'] as $msg): ?>
-					<div class="alert alert-<?php echo $notification['type'] ?>" role="alert"><?php echo $msg ?></div>
-					<?php endforeach; ?>
-				</div>
+				<?php foreach ($notifications as $notification) : ?>
+					<div class="container">
+						<?php foreach ($notification['msgs'] as $msg) : ?>
+							<div class="alert alert-<?php echo $notification['type'] ?>" role="alert"><?php echo $msg ?></div>
+						<?php endforeach; ?>
+					</div>
 				<?php endforeach; ?>

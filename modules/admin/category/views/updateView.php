@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group mb-1">
                         <label for="descriptionCategoryInput">Tên danh mục</label>
-                        <input type="text" name="name" class="form-control" value="<?php echo $category['name'] ?>" />
+                        <input type="text" name="name" class="form-control" value="<?php echo $category['name_cate'] ?>" />
                     </div>
                 </div>
                 <div class="card-footer">

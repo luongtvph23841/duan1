@@ -49,9 +49,8 @@
                             </div>
                             <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
-                                <select class="form-control select2" name="id_cate">
-                                    <?php foreach ($categories as $category) : ?>
-                                        <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
+                                <select class="form-control select2" name="id_cate"><?php foreach ($categories as $category) : ?>
+                                        <option value="<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
@@ -59,7 +58,7 @@
                                 <label>Xuất sứ</label>
                                 <select class="form-control select2" name="id_orgin">
                                     <?php foreach ($orgin as $key) : ?>
-                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name'] ?></option>
+                                        <option value="<?php echo $key['id'] ?>"><?php echo $key['name_orgin'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>
