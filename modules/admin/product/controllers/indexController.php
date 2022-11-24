@@ -73,16 +73,15 @@ function updatePostAction()
     $name = $_POST['name'];
     $price = $_POST['price'];
     $quantity = $_POST['quantity'];
-    $img = $_POST['img'];
     $id_orgin = $_POST['id_orgin'];
     $id_cate = $_POST['id_cate'];
     $detail = $_POST['detail'];
-    if (empty($name)) {
-        push_notification('errors', [
-            'name' => 'Vui lòng nhập vào tên danh mục'
-        ]);
-        header('Location: ?role=admin&mod=product&action=update&id_prod=' . $id);
-    }
+
+    $file = $_FILES['img'];
+    move_uploaded_file($file['tmp_name'], 'assets/media/products/' . $file['name']);
+
+    $img = $file['name'];
+
     update_product($id, $name, $price, $quantity, $img, $id_orgin, $id_cate, $detail);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=product');
