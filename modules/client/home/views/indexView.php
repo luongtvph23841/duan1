@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <h3 class="mb-[5px] text-[18px] text-center h-[40px] truncate w-[200px] mx-auto">
-                        <a href="" class=""><?php echo $product['name'] ?></a>
+                        <a href="" class=""><?php echo $product['name_product'] ?></a>
                     </h3>
                     <h4 class="mb-[5px] text-[14px] text-center h-[40px] truncate ">
                         <a href="" class=""><?php echo $product['detail'] ?></a>

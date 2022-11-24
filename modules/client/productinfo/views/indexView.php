@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <title>Thông tin sản phẩm</title>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border-b-[1px] pl-[30px] ">
-    <a href="?role=client&mod=product">Sản phẩm</a> <i class="fa fa-angle-right m-[5px]"> </i><?php echo $product['name'] ?>
+    <a href="?role=client&mod=product">Sản phẩm</a> <i class="fa fa-angle-right m-[5px]"> </i><?php echo $product['name_product'] ?>
 </div>
 
 <div class="flex font-serif w-[1000px] h-full mt-[50px] mx-auto">
@@ -11,7 +11,7 @@
     <form class="col-lg-6 col-md-6 col-sm-12 col-xs-12 information-product w-full">
         <div class="flex flex-wrap items-baseline">
             <h1 class="w-full flex-none mb-3 text-2xl leading-none text-slate-900">
-                <?php echo $product['name'] ?>
+                <?php echo $product['name_product'] ?>
             </h1>
             <div class="flex-auto text-lg font-medium text-slate-500">
                 <?php echo $product['price'] ?> đ

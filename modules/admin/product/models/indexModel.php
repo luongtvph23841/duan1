@@ -1,7 +1,7 @@
 <?php
 function get_list_products()
 {
-    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantity, p.image, p.detail, o.name_orgin, c.name_cate FROM `products` p 
+    $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.detail, o.name_orgin, c.name_cate FROM `products` p 
     INNER JOIN `orgin` o ON o.id = p.id_orgin
     INNER JOIN `categories` c ON c.id = p.id_cate");
     return $result;
@@ -21,7 +21,7 @@ function get_list_orgin()
 
 function get_one_product($id)
 {
-    $result = db_fetch_row("SELECT c.id, c.name, c.price, c.quantity, c.image, c.id_orgin, c.id_cate, c.detail  FROM `products` c WHERE c.id = $id");
+    $result = db_fetch_row("SELECT c.id, c.name_product, c.price, c.quantity, c.image, c.id_orgin, c.id_cate, c.detail  FROM `products` c WHERE c.id = $id");
     return $result;
 }
 
@@ -29,7 +29,7 @@ function create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $de
 {
     $user = get_auth();
     $id = db_insert('products', [
-        'name' => $name,
+        'name_product' => $name,
         'price' => $price,
         'quantity' => $quantity,
         'image' => $img,
@@ -43,7 +43,7 @@ function create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $de
 function update_product($id, $name, $price, $quantity, $img, $id_orgin, $id_cate, $detail)
 {
     db_update('products', [
-        'name' => $name,
+        'name_product' => $name,
         'price' => $price,
         'quantity' => $quantity,
         'image' => $img,

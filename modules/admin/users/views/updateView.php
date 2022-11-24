@@ -33,7 +33,7 @@
                             </div>
                             <div class=" form-group">
                                 <label>Tên</label>
-                                <input type="text" name="name" class="form-control" value="<?php echo $user['name'] ?>" />
+                                <input type="text" name="name" class="form-control" value="<?php echo $user['name_user'] ?>" />
                             </div>
                             <div class=" form-group">
                                 <label>Email</label>

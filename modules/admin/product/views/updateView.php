@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group mb-1">
                                 <label>Tên</label>
-                                <input type="text" name="name" class="form-control" value="<?php echo $product['name'] ?>"></input>
+                                <input type="text" name="name" class="form-control" value="<?php echo $product['name_product'] ?>"></input>
                             </div>
                             <div class="form-group">
                                 <label>Giá cho mỗi sản phẩm</label>

@@ -2,7 +2,7 @@
 
 function get_list_users()
 {
-    $result = db_fetch_array("SELECT u.id, u.name, u.email, u.password, u.phone, u.address, r.name_role FROM `users` u
+    $result = db_fetch_array("SELECT u.id, u.name_user, u.email, u.password, u.phone, u.address, r.name_role FROM `users` u
     INNER JOIN `role` r ON r.id = u.id_role");
     return $result;
 }
@@ -15,7 +15,7 @@ function get_list_role()
 
 function get_one_user($id)
 {
-    $result = db_fetch_row("SELECT c.id, c.name, c.email, c.password, c.phone, c.address, c.id_role  FROM `users` c WHERE c.id = $id");
+    $result = db_fetch_row("SELECT c.id, c.name_user, c.email, c.password, c.phone, c.address, c.id_role  FROM `users` c WHERE c.id = $id");
     return $result;
 }
 
@@ -23,7 +23,7 @@ function create_user($name, $email, $password, $phone, $address, $id_role)
 {
     $user = get_auth();
     $id = db_insert('users', [
-        'name' => $name,
+        'name_user' => $name,
         'email' => $email,
         'password' => $password,
         'phone' => $phone,
@@ -36,7 +36,7 @@ function create_user($name, $email, $password, $phone, $address, $id_role)
 function update_user($id, $name, $email, $password, $phone, $address, $id_role)
 {
     db_update('users', [
-        'name' => $name,
+        'name_user' => $name,
         'email' => $email,
         'password' => $password,
         'phone' => $phone,

@@ -81,7 +81,7 @@
                         <?php foreach ($products as $product) : ?>
                             <tr>
                                 <td><?php echo ($product['id']) ?></td>
-                                <td><?php echo ($product['name']) ?></td>
+                                <td><?php echo ($product['name_product']) ?></td>
                                 <td><?php echo ($product['price']) ?></td>
                                 <td><?php echo ($product['quantity']) ?></td>
                                 <td><?php echo ($product['name_orgin']) ?></td>
@@ -99,7 +99,7 @@
                                                 </svg>
                                             </span>
                                         </a>
-                                        <a href="?role=admin&mod=product&action=delete&id_prod=<?php echo $product['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $product['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')" class="btn btn-sm btn-clean btn-icon" title="Delete"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <a href="?role=admin&mod=product&action=delete&id_prod=<?php echo $product['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $product['name_product'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')" class="btn btn-sm btn-clean btn-icon" title="Delete"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                         <rect x="0" y="0" width="24" height="24"></rect>
                                                         <path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero"></path>
