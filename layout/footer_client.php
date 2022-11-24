@@ -45,7 +45,7 @@
     <footer class="footer-distributed">
 
         <div class="footer-left" style="text-align: left; padding:0 100px; ">
-            <img src="assets/media/logos/logo-kaka.jpg" alt="">
+            <img src="assets/media/logos/logo-kaka.png" class="w-[50%]">
             <b>Thông Tin Liên Hệ</b>
             <p> Số điện thoại: 0962138993</p>
             <p>Email: kakashop@gmail.com</p>

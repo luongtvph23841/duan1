@@ -1,51 +1,43 @@
 <?php get_header() ?>
+<title>Trang chủ</title>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-</head>
-
-<body>
-    <div class="w-full mb-4">
-        <div>
-            <img src="assets/media/logos/banner-kaka.jpg" alt="" class="w-full">
-        </div>
-        <div class="text-center h-[100px] text-5xl pt-6 text-red-500">
-            <h1 class="font-sans text-bold  ">Sản Phẩm Tiêu Biểu </h1>
-        </div>
-        <div class="grid grid-cols-4 gap-24 text-center bg-[url('assets/media/bg/bg-3.jpg')]">
+<div class="w-full my-3">
+    <div>
+        <img src="assets/media/logos/banner-kaka.jpg" alt="" class="w-[70%] m-auto">
+    </div>
+    <div class="text-center h-[100px] text-5xl pt-6 text-red-500">
+        <h1 class="font-sans text-bold  ">Sản Phẩm Tiêu Biểu </h1>
+    </div>
+    <div class="w-full my-3">
+        <div class="grid grid-cols-4 gap-10 w-[80%] mx-auto">
             <?php foreach ($products as $product) : ?>
-                <a href="?role=client&mod=productinfo&id_prod=<?= $product['id']; ?>">
-                    <div class="border-2 border-[#EFA969] rounded-x1">
-                        <img src="assets/media/products/<?php echo ($product['image']) ?>" alt="" class="mx-auto mt-3">
+                <div class="mb-[25px] border-[#ebebeb] border-[1px]">
+                    <div class="mb-[20px]">
+                        <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="flex justify-center">
+                            <picture>
+                                <img src="assets/media/products/<?php echo $product['image'] ?>" class="w-[50%]  mx-auto">
+                            </picture>
+                        </a>
                     </div>
-                    <div>
-                        <p class="font-semibold mt-2 mb-1 p-3"><?= $product['name'] ?></p>
-                    </div>
-                    <div>
-                        <span class="text-red-500 font-bold"><?= $product['price'] ?>đ</span>
-                    </div>
-                    <div class="mt3 mb-4">
-                        <button class="border border-[#EFA969] rounded-x1 font-bold w-[100px] text-[18px] hover:bg-[#EFA969] hover:text-white p-1">Mua</button>
-                    </div>
-                </a>
+                    <h3 class="mb-[5px] text-[18px] text-center h-[40px] truncate w-[200px] mx-auto">
+                        <a href="" class=""><?php echo $product['name'] ?></a>
+                    </h3>
+                    <h4 class="mb-[5px] text-[14px] text-center h-[40px] truncate ">
+                        <a href="" class=""><?php echo $product['detail'] ?></a>
+                    </h4>
+                    <p class="text-center text-[#ff1616] font-light text-[15px]">1,285,000₫</p>
+                </div>
             <?php endforeach; ?>
         </div>
-
-        <div class="text-center">
-            <a href="?role=client&mod=product">
-                <button class="border border-[#EFA969] font-bold w-[100px] h-[40px] text-[18px] hover:bg-[#EFA969] hover:text-white p-1 place-items-center"> Xem thêm</button>
-            </a>
-        </div>
-
     </div>
-</body>
 
-</html>
+    <div class="text-center">
+        <a href="?role=client&mod=product">
+            <button class="border border-[#EFA969] font-bold w-[100px] h-[40px] text-[18px] hover:bg-[#EFA969] hover:text-white p-1 place-items-center"> Xem thêm</button>
+        </a>
+    </div>
+
+</div>
+
 
 <?php get_footer() ?>

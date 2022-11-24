@@ -88,7 +88,7 @@
     <div id="wrapper">
         <div id="header">
             <ul id="main-menu">
-                <img src="assets/media/logos/logo-kaka.jpg" alt="">
+                <img src="assets/media/logos/logo-kaka.png" class="w-[10%]">
                 <li><a href="?role=client&mod=home" class="menu-link">Trang Chủ</a></li>
                 <li><a href="?role=client&mod=product" class="menu-link">Sản Phẩm</a></li>
                 <li><a href="?role=client&mod=introduce" class="menu-link">Giới Thiệu</a></li>
