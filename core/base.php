@@ -232,6 +232,17 @@ function get_auth()
     return $_SESSION["auth"];
 }
 
+function remove_auth()
+{
+    unset($_SESSION["auth"]);
+    return true;
+}
+
+function is_admin()
+{
+    return is_auth() && get_auth()['id_role'] == 1;
+}
+
 function request_auth($isLogin = true)
 {
     if (is_auth() !== $isLogin) {

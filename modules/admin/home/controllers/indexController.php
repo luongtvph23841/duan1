@@ -1,10 +1,12 @@
 <?php
 
-function construct() {
+function construct()
+{
     request_auth();
     load_model('index');
 }
 
-function indexAction() {
+function indexAction()
+{
     load_view('index');
 }

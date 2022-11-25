@@ -1,4 +1,4 @@
-<?php $users = get_auth(); ?>
+<!-- <?php $users = get_auth(); ?> -->
 <?php $notifications = get_notification(); ?>
 
 <head>
@@ -101,8 +101,6 @@
                     <a href="?role=client&mod=cart" class="menu-link"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
 
                 </button>
-                <li><a href="?role=client&mod=login">Đăng Nhập </a></li>
-                <li><a href="?role=client&mod=register">Đăng Kí </a></li>
             </ul>
 
         </div>
