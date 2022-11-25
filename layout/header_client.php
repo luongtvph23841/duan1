@@ -1,4 +1,4 @@
-<?php $users = get_auth(); ?>
+<!-- <?php $users = get_auth(); ?> -->
 <?php $notifications = get_notification(); ?>
 
 <head>

@@ -2,7 +2,7 @@
 
 function construct()
 {
-    request_auth(true);
+    // request_auth(true);
     load_model('index');
 }
 
