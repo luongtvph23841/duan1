@@ -1,4 +1,5 @@
 <?php get_header('base', $title) ?>
+<?php $users = get_auth(); ?>
 
 <style>
     .hasmenu:hover .submenu {
@@ -30,7 +31,7 @@
                         <li class="hasmenu">
                             <div class="flex ml-[60px]">
                                 <i class="fa fa-user-circle-o hover:text-pink-100 text-[33px] mt-[7px]"></i>
-                                <p class="pt-3 pl-3">Trần văn lương</p>
+                                <p class="pt-3 pl-3"><?php echo $users['name_user'] ?></p>
                             </div>
                             <ul class="submenu absolute bg-[#fff] w-[155px] h-[90px] text-center leading-[40px] text-[15px] rounded-[30px]">
                                 <?php if (is_admin()) : ?>
