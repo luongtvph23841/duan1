@@ -1,15 +1,6 @@
 <?php get_header('base', $title) ?>
 <?php $users = get_auth(); ?>
 
-<style>
-    .hasmenu:hover .submenu {
-        display: block;
-    }
-
-    .submenu {
-        display: none;
-    }
-</style>
 <div class="bg-[pink] text-[#333333]">
     <div class="border-b-[1px]">
         <div class="flex justify-around h-[50px]">
@@ -28,12 +19,12 @@
             <?php if (is_auth()) : ?>
                 <div>
                     <ul>
-                        <li class="hasmenu">
+                        <li class="menu">
                             <div class="flex ml-[60px]">
                                 <i class="fa fa-user-circle-o hover:text-pink-100 text-[33px] mt-[7px]"></i>
                                 <p class="pt-3 pl-3"><?php echo $users['name_user'] ?></p>
                             </div>
-                            <ul class="submenu absolute bg-[#fff] w-[155px] h-[90px] text-center leading-[40px] text-[15px] rounded-[30px]">
+                            <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[90px] text-center leading-[40px] text-[15px] rounded-[30px]">
                                 <?php if (is_admin()) : ?>
                                     <li>
                                         <a href="?role=admin" class="hover:text-[#ffc0cb] border-b-[1px] p-[10px] leading-[24px]">Admin</a>

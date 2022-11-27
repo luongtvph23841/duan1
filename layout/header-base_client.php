@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="assets/media/logos/logo-kaka.png" />
+    <style>
+        .menu:hover .dropmenu {
+            display: block;
+        }
+
+        .dropmenu {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
