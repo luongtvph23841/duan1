@@ -49,7 +49,8 @@
                     <h4 class="mb-[5px] text-[14px] text-center h-[40px] truncate ">
                         <a href="" class=""><?php echo $product['detail'] ?></a>
                     </h4>
-                    <p class="text-center text-[#ff1616] font-light text-[15px]">1,285,000₫</p>
+                    <p class="text-center text-[#ff1616] font-light text-[15px]"><?php echo $product['price'] ?> đ</p>
+                    <button class="hover:bg-[red]">Thêm</button>
                 </div>
             <?php endforeach; ?>
         </div>
