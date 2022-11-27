@@ -1,30 +1,5 @@
-<?php get_header() ?>
-<title>Trang chủ</title>
+<?php get_header('', 'Trang chủ') ?>
 
-<div id="wrapper">
-    <?php if (is_auth()) : ?>
-        <div id="header">
-            <ul id="main-menu" class="float-right mt-[-180px]">
-                <li>
-                    <a><strong><?php echo get_auth()['name_user'] ?></strong></a>
-                    <?php if (is_admin()) : ?>
-                <li>
-                    <a href="?role=admin">Trang quản trị</a>
-                </li>
-            <?php endif; ?>
-            </li>
-            <a href="?role=client&mod=home&action=logout">Logout</a>
-            </ul>
-        </div>
-    <?php else : ?>
-        <div id="header">
-            <ul id="main-menu" class="float-right mt-[-180px]">
-                <li><a href="?role=client&mod=login">Đăng Nhập </a></li>
-                <li><a href="?role=client&mod=register">Đăng Kí </a></li>
-            </ul>
-        </div>
-    <?php endif; ?>
-</div>
 <div class="w-full my-3">
     <div>
         <img src="assets/media/logos/banner-kaka.jpg" alt="" class="w-[70%] m-auto">
