@@ -1,5 +1,5 @@
-<?php get_header() ?>
-<title>Thông tin sản phẩm</title>
+<?php get_header('', 'Thông tin sản phẩm') ?>
+
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border-b-[1px] pl-[30px] ">
     <a href="?role=client&mod=product">Sản phẩm</a> <i class="fa fa-angle-right m-[5px]"> </i><?php echo $product['name_product'] ?>
 </div>
@@ -49,5 +49,5 @@
     </form>
 
 </div>
-</div>
+
 <?php get_footer() ?>
