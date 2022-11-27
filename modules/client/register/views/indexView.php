@@ -122,20 +122,26 @@
             <h3>Register your account</h3>
         </div>
         <center>
-            <br>
-            <label for="name" style="margin-right: 230px;"><b>Tên đăng nhập</b></label>
-            <input type="text" placeholder="Tên đăng nhập" name="name" required>
-            <label for="psw" style="margin-right: 220px;"><b>Nhập mật khẩu</b></label>
-            <input type="text" placeholder="Mật khẩu" name="psw" required>
-            <label for="psw-reapet" style="margin-right: 195px;"><b>Nhập lại mật khẩu</b></label>
-            <input type="text" placeholder="Nhập lại mật khẩu" name="psw-reapet" required>
-            <label for="email" style="margin-right: 290px;"><b>Email</b></label>
-            <input type="text" placeholder="Nhập Email" name="email" required>
-            <label for="phone" style="margin-right: 225px;"><b>Số điện thoại</b></label>
-            <input type="text" placeholder="Số điện thoại" name="phone" required>
-
-            <b><button type="submit" class="signupbtn" style="background-color: rgb(155, 52, 146); width: 150px; height: 50px;"><a href="">Đăng
-                        Ký</a></button></b>
+            <form class="form" id="kt_login_signin_form" method="post" action="">
+                <div class="form-group">
+                    <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Tên người dùng" name="name" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Email" name="email" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="password" placeholder="Password" name="password" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Số điện thoại" name="phone" autocomplete="off" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Địa chỉ" name="address" autocomplete="off" />
+                </div>
+                <div class="form-group text-center mt-10">
+                    <button id="kt_login_signin_submit" class="btn btn-pill btn-outline-black font-weight-bold opacity-90 px-15 py-3">Đăng ký</button>
+                </div>
+            </form>
             <br>
             <br>
             <a href="?role=client&mod=login" class="text1">Bạn đã có tài khoản đăng nhập?</a>
