@@ -121,7 +121,13 @@
             <h1>Welcome</h1>
             <h3>Register your account</h3>
         </div>
+
         <center>
+            <?php foreach ($notifications as $notification) : ?>
+                <?php foreach ($notification['msgs'] as $msg) : ?>
+                    <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
             <form class="form" id="kt_login_signin_form" method="post" action="">
                 <div class="form-group">
                     <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Tên người dùng" name="name" autocomplete="off" />

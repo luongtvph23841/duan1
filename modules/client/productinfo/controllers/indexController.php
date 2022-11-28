@@ -25,6 +25,11 @@ function indexPostAction()
             'name' => 'Bạn phải nhập bình luận'
         ]);
         header('Location: ?role=client&mod=productinfo&id_prod=' . $id_product);
+    } elseif ($id_user == '') {
+        push_notification('errors', [
+            'name' => 'Bạn phải đăng nhập để bình luận'
+        ]);
+        header('Location: ?role=client&mod=productinfo&id_prod=' . $id_product);
     } else {
         create_comment($content, $id_product, $id_user);
         header('Location: ?role=client&mod=productinfo&id_prod=' . $id_product);
