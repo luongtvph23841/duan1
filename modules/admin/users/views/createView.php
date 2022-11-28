@@ -23,7 +23,7 @@
                 <h3 class="card-title">Form thông tin người dùng mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
@@ -54,6 +54,10 @@
                                         <option value="<?php echo $key['id'] ?>"><?php echo $key['name_role'] ?></option>
                                     <?php endforeach ?>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Hình ảnh</label>
+                                <input type="file" name="img" id="img" class="form-control" />
                             </div>
                         </div>
                     </div>

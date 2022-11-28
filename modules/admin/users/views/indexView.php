@@ -73,7 +73,8 @@
                             <th title="Field #5">Số điện thoại</th>
                             <th title="Field #6">Địa chỉ</th>
                             <th title="Field #7">Vai trò</th>
-                            <th title="Field #8">Hành động</th>
+                            <th title="Field #8">Hình ảnh</th>
+                            <th title="Field #9">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,6 +87,7 @@
                                 <td><?php echo ($user['phone']) ?></td>
                                 <td><?php echo ($user['address']) ?></td>
                                 <td><?php echo ($user['name_role']) ?></td>
+                                <td><img src="assets/media/users/<?php echo ($user['image']) ?>" width="100" alt=""></td>
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">
                                         <a href="?role=admin&mod=users&action=update&id_user=<?php echo $user['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
