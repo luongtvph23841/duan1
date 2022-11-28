@@ -4,6 +4,7 @@ function construct()
 {
     request_auth();
     load_model('index');
+    load('helper', 'format');
 }
 
 function indexAction()

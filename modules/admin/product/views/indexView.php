@@ -82,7 +82,7 @@
                             <tr>
                                 <td><?php echo ($product['id']) ?></td>
                                 <td><?php echo ($product['name_product']) ?></td>
-                                <td><?php echo ($product['price']) ?></td>
+                                <td><?php echo currency_format($product['price']) ?></td>
                                 <td><?php echo ($product['quantity']) ?></td>
                                 <td><?php echo ($product['name_orgin']) ?></td>
                                 <td><?php echo ($product['name_cate']) ?></td>
