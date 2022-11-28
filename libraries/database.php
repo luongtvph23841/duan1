@@ -3,27 +3,25 @@
 // Hàm kết nối dữ liệu
 function db_connect()
 {
-    try {
-        global $conn;
-        $db = func_get_arg(0);
-        $conn = new PDO("mysql:host={$db['hostname']};dbname={$db['database']};charset=utf8", $db['username'], $db['password'], [
-            PDO::ATTR_EMULATE_PREPARES => false,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ]);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+    global $conn;
+    $db = func_get_arg(0);
+    $conn = mysqli_connect($db['hostname'], $db['username'], $db['password'], $db['database']);
+    if (!$conn) {
+        die("Kết nối không thành công " . mysqli_connect_error());
     }
+    //    mysqli_set_charset($conn, "utf8");
+
 }
 
-// Thực thi câu truy vấn
+//Thực thi chuổi truy vấn
 function db_query($query_string)
 {
     global $conn;
-    $stmt = $conn->prepare($query_string);
-    $stmt->execute();
-    $result = $conn->query($query_string);
-    return $stmt;
+    $result = mysqli_query($conn, $query_string);
+    if (!$result) {
+        db_sql_error('Query Error', $query_string);
+    }
+    return $result;
 }
 
 // Lấy một dòng trong CSDL
@@ -31,9 +29,10 @@ function db_fetch_row($query_string)
 {
     global $conn;
     $result = array();
-    $pdo_result = db_query($query_string);
-    $pdo_result->setFetchMode(PDO::FETCH_ASSOC);
-    return $pdo_result->fetch();
+    $mysqli_result = db_query($query_string);
+    $result = mysqli_fetch_assoc($mysqli_result);
+    mysqli_free_result($mysqli_result);
+    return $result;
 }
 
 //Lấy một mảng trong CSDL
@@ -41,19 +40,19 @@ function db_fetch_array($query_string)
 {
     global $conn;
     $result = array();
-    $pdo_result = db_query($query_string);
-    foreach ($pdo_result->fetchAll() as $k => $v) {
-        $result[] = $v;
+    $mysqli_result = db_query($query_string);
+    while ($row = mysqli_fetch_assoc($mysqli_result)) {
+        $result[] = $row;
     }
+    mysqli_free_result($mysqli_result);
     return $result;
 }
-
 //Lấy số bản ghi
 function db_num_rows($query_string)
 {
     global $conn;
-    $pdo_result = db_query($query_string);
-    return $pdo_result->fetchColumn();
+    $mysqli_result = db_query($query_string);
+    return mysqli_num_rows($mysqli_result);
 }
 
 function db_insert($table, $data)
@@ -72,12 +71,11 @@ function db_insert($table, $data)
             INSERT INTO $table $fields
             VALUES($values)
         ");
-    return $conn->lastInsertId();
+    return mysqli_insert_id($conn);
 }
 
 function db_update($table, $data, $where)
 {
-    global $conn;
     $sql = "";
     foreach ($data as $field => $value) {
         if ($value === NULL)
@@ -91,22 +89,25 @@ function db_update($table, $data, $where)
             SET $sql
             WHERE $where
    ");
-    return db_fetch_array("SELECT * FROM `$table` WHERE $where");
+    // return mysqli_affected_rows($conn);
 }
 
 function db_delete($table, $where)
 {
     global $conn;
     $query_string = "DELETE FROM " . $table . " WHERE $where";
-    return db_query($query_string);
+    db_query($query_string);
+    return mysqli_affected_rows($conn);
 }
 
 function escape_string($str)
 {
-    return $str;
+    global $conn;
+    return mysqli_real_escape_string($conn, $str);
 }
 
 // Hiển thị lỗi SQL
+
 function db_sql_error($message, $query_string = "")
 {
     global $conn;
