@@ -26,7 +26,9 @@
                         <input type="number" name="quantity" value="1" min=1 class="w-[100px] h-[50px] border-2 rounded mr-2 text-center outline-none">
                         <button class="w-[220px] h-[50px] bg-[#333333] text-white rounded hover:bg-[#d2a98b]">
                             <p class="text-white text-base uppercase">
-                                <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
+                                    <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                </a>
                             </p>
                         </button>
                     </div>

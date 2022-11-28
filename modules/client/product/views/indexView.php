@@ -41,7 +41,9 @@
                             <div class="flex justify-around mt-1">
                                 <a href="?role=client&mod=cart">
                                     <p class="text-white text-base pt-2 hover:text-amber-500 uppercase">
-                                        <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                        <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
+                                            <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                        </a>
                                     </p>
                                 </a>
                                 <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="mt-[-3px]">
