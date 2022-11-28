@@ -150,8 +150,9 @@
                 <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
             <?php endforeach; ?>
         <?php endforeach; ?>
-        <form class="form" id="kt_login_signin_form" method="post" action="">
-            <center>
+        <center>
+            <form class="form" id="kt_login_signin_form" method="post" action="">
+
                 <div class="form-group">
                     <input class="form-control h-auto text-black placeholder-black opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mb-5" type="text" placeholder="Email" name="username" autocomplete="off" />
                 </div>
@@ -161,7 +162,8 @@
                 <div class="form-group text-center mt-10">
                     <button id="kt_login_signin_submit" class="btn btn-pill btn-outline-black font-weight-bold opacity-90 px-15 py-3">Đăng nhập</button>
                 </div>
-            </center>
+                <a href="?role=client&mod=register" class="text1">Bạn chưa có tài khoản đăng ký?</a>
+        </center>
         </form>
     </div>
 </div>
