@@ -3,6 +3,7 @@
 function construct()
 {
     load_model('index');
+    load('helper', 'format');
 }
 
 function indexAction()

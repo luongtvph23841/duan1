@@ -57,7 +57,7 @@
                     <h3 class="color-black uppercase ext-[16px] font-semibold text-ellipsis	whitespace-normal leading-none">
                         <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="hover:text-amber-500"><?php echo $product['name_product'] ?></a>
                     </h3>
-                    <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight"><?php echo $product['price'] ?>₫</h4>
+                    <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight"><?php echo currency_format($product['price']) ?></h4>
                 </div>
             </div>
         <?php endforeach; ?>

@@ -16,7 +16,7 @@
                     <?php echo $product['name_product'] ?>
                 </h1>
                 <div class="flex-auto text-lg font-medium text-[#d2a98b] h-[40px] border-b-2">
-                    <?php echo $product['price'] ?>.đ
+                    <?php echo currency_format($product['price']) ?>
                 </div>
             </div>
             <div class="">
