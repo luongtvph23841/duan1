@@ -27,8 +27,12 @@ function createPostAction()
     $address = $_POST['address'];
     $id_role = $_POST['id_role'];
 
+    $file = $_FILES['img'];
+    move_uploaded_file($file['tmp_name'], 'assets/media/users/' . $file['name']);
 
-    create_user($name, $email, $password, $phone, $address, $id_role);
+    $img = $file['name'];
+
+    create_user($name, $email, $password, $phone, $address, $id_role, $img);
     push_notification('success', ['Thêm mới người dùng thành công']);
     header('Location: ?role=admin&mod=users');
 }
@@ -69,7 +73,12 @@ function updatePostAction()
     $address = $_POST['address'];
     $id_role = $_POST['id_role'];
 
-    update_user($id, $name, $email, $password, $phone, $address, $id_role);
+    $file = $_FILES['img'];
+    move_uploaded_file($file['tmp_name'], 'assets/media/users/' . $file['name']);
+
+    $img = $file['name'];
+
+    update_user($id, $name, $email, $password, $phone, $address, $id_role, $img);
     push_notification('success', ['Chỉnh sửa người dùng thành công']);
     header('Location: ?role=admin&mod=users');
 }
