@@ -12,18 +12,19 @@
             <?php foreach ($products as $product) : ?>
                 <div class="mx-auto h-auto text-center">
                     <div class="">
-                        <div class="menu h-[250px] w-[270px] bg-[#f8f8f8] rounded-t-[30px] rounded-b-[30px]">
+                        <div class="menu h-[300px] w-[270px] bg-[#f8f8f8] rounded-t  hover:border">
                             <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>">
-                                <img src="assets/media/products/<?php echo $product['image'] ?>" alt="" class="w-[200px] h-[210px] pt-2 mx-auto">
+                                <img src="assets/media/products/<?php echo $product['image'] ?>" alt="" class="w-[200px] h-[210px] pt-2 mx-auto ">
                             </a>
-                            <div class="dropmenu absolute bg-[pink] w-[270px] leading-[45px] rounded-b-[30px]">
+                            <div class="dropmenu absolute bg-stone-500 w-[270px] leading-[45px]  mt-10 ">
                                 <div class="flex justify-around mt-1">
-                                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>">
-                                        <i class="fa fa-eye text-[30px] hover:text-pink-100"></i>
-                                    </a>
                                     <a href="?role=client&mod=cart">
-                                        <i class="fa fa-shopping-cart text-[30px] hover:text-pink-100"></i>
+                                        <p class="text-white text-base pt-2 hover:text-amber-500"><i class="fa fa-plus" aria-hidden="true"></i> ADD TO CART</p>
                                     </a>
+                                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>">
+                                        <i class="fa fa-eye text-[30px] text-white hover:text-amber-500"></i>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
