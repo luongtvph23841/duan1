@@ -24,14 +24,17 @@
                                 <i class="fa fa-user-circle-o text-[33px] mt-[7px]"></i>
                                 <p class="pt-3 pl-3"><?php echo $users['name_user'] ?></p>
                             </div>
-                            <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[90px] text-center leading-[40px] text-[15px] rounded-[30px]">
+                            <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[130px] text-center leading-[40px] text-[15px] rounded-[30px]">
+                                <li>
+                                    <a href="http://localhost/duan1/?role=client&mod=login" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Thông tin cá nhân</a>
+                                </li>
                                 <?php if (is_admin()) : ?>
                                     <li>
                                         <a href="?role=admin" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Admin</a>
                                     </li>
                                 <?php endif; ?>
                                 <li>
-                                    <a href="?role=client&mod=home&action=logout" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]"><i class="fa fa-sign-out"></i></i></a>
+                                    <a href="?role=client&mod=home&action=logout" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]"><i class="fa fa-sign-out"> Đăng xuất</i></i></a>
                                 </li>
                             </ul>
                         </li>
@@ -43,7 +46,7 @@
                         <li class="menu">
                             <div class="flex ml-[60px] text-[#fff]">
                                 <i class="fa fa-user-circle-o hover:text-[#d2a98b] text-[33px] mt-[7px]"></i>
-                                <p class="pt-3 pl-3">Login</p>
+                                <p class="pt-3 pl-3">Xin chào</p>
                             </div>
                             <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[90px] text-center leading-[40px] text-[15px] rounded-[30px]">
                                 <li>

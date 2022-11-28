@@ -5,35 +5,38 @@
         <img src="assets/media/logos/banner.jpg" alt="" class="w-[100%] m-auto">
     </div>
     <div class="text-center h-[100px] text-5xl pt-6 text-red-500">
-        <h1 class="font-sans text-bold text-rose-400  ">Sản Phẩm Tiêu Biểu </h1>
+        <h1 class="font-sans text-bold text-rose-400">Sản Phẩm Tiêu Biểu </h1>
     </div>
-    <div class="w-full my-3">
-        <div class="grid grid-cols-4 gap-10 w-[90%] mx-auto">
+    <div class="w-[90%] mx-auto">
+        <div class="grid grid-cols-4 gap-1 w-[90%] mx-auto">
             <?php foreach ($products as $product) : ?>
-                <div class="mx-auto h-auto text-center">
+                <div div class="mx-auto h-auto text-center mb-10">
                     <div class="">
-                        <div class="menu h-[300px] w-[270px] bg-[#f8f8f8] rounded-t  hover:border">
+                        <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border">
                             <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>">
-                                <img src="assets/media/products/<?php echo $product['image'] ?>" alt="" class="w-[200px] h-[210px] pt-2 mx-auto ">
+                                <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[200px] h-[210px] pt-2 mx-auto">
                             </a>
                             <div class="dropmenu absolute bg-stone-500 w-[270px] leading-[45px]  mt-10 ">
                                 <div class="flex justify-around mt-1">
                                     <a href="?role=client&mod=cart">
-                                        <p class="text-white text-base pt-2 hover:text-amber-500"><i class="fa fa-plus" aria-hidden="true"></i> ADD TO CART</p>
+                                        <p class="text-white text-base pt-2 hover:text-amber-500 uppercase">
+                                            <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                        </p>
                                     </a>
-                                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>">
-                                        <i class="fa fa-eye text-[30px] text-white hover:text-amber-500"></i>
+                                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="mt-[-3px]">
+                                        <p class="text-white hover:text-amber-500 uppercase">
+                                            <i class="fa fa-eye mr-[5px]"></i>Xem
+                                        </p>
                                     </a>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="mt-[30px]">
-                        <h3 class="color-black uppercase font-semibold leading-[16px]">
-                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="hover:text-pink-800"><?php echo $product['name_product'] ?></a>
+                        <h3 class="color-black uppercase ext-[16px] font-semibold text-ellipsis	whitespace-normal leading-none">
+                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="hover:text-amber-500"><?php echo $product['name_product'] ?></a>
                         </h3>
-                        <h4 class="color-black leading-[16px] text-[14px] text-[red] mt-[15px]"><?php echo $product['price'] ?> đ</h4>
+                        <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight"><?php echo $product['price'] ?>₫</h4>
                     </div>
                 </div>
             <?php endforeach; ?>
