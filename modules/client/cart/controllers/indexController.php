@@ -16,14 +16,14 @@ function indexAction()
         }
         $_SESSION['cart']['buy'][$id] = array(
             'id' => $pro['id'],
-            'name' => $pro['name_product'],
+            'name_product' => $pro['name_product'],
             'image' => $pro['image'],
             'price' => $pro['price'],
             'qty' => $qty,
             'sub_total' => $pro['price'] * $qty
         );
         update_info_cart();
-        header('Location:?role=client&mod=cart');
+        header('Location: ?role=client&mod=cart');
     }
     if (!empty($_SESSION['cart'])) {
         $data['cart'] = $_SESSION['cart'];
@@ -41,7 +41,7 @@ function deleteAction()
             update_info_cart();
         }
     }
-    header('Location:?role=client&mod=cart');
+    header('Location: ?role=client&mod=cart');
 }
 
 function indexPostAction()
@@ -49,5 +49,5 @@ function indexPostAction()
     show_array($_POST['qty']);
     die;
     update_cart($_POST['qty']);
-    header("Location:?role=client&mod=cart");
+    header("Location: ?role=client&mod=cart");
 }
