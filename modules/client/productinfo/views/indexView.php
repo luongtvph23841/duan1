@@ -1,5 +1,5 @@
 <?php get_header('', 'Thông tin sản phẩm') ?>
-<?php $notifications = get_notification(); ?>s
+<?php $notifications = get_notification(); ?>
 
 <div class="text-[25px] leading-[40px] font-semibold uppercase p-[30px] border-b-[1px] ">
     <a href="?role=client&mod=product">Sản phẩm</a> <i class="fa fa-angle-right m-[5px]"> </i><?php echo $product['name_product'] ?>
