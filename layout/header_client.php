@@ -26,7 +26,7 @@
                             </div>
                             <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[130px] text-center leading-[40px] text-[15px] rounded-[30px]">
                                 <li>
-                                    <a href="http://localhost/duan1/?role=client&mod=login" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Thông tin cá nhân</a>
+                                    <a href="?role=client&mod=userinfo" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Thông tin cá nhân</a>
                                 </li>
                                 <?php if (is_admin()) : ?>
                                     <li>
