@@ -8,7 +8,8 @@ function construct()
 function indexAction()
 {
     $id = $_GET['id_prod'];
-    $prod = get_one_product($id);
-    $data['product'] = $prod;
+    $data['product'] = get_one_product($id);
+    $data['comment'] = get_list_comment($id);
+
     load_view('index', $data);
 }

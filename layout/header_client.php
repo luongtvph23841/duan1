@@ -1,5 +1,5 @@
 <?php get_header('base', $title) ?>
-<?php $users = get_auth(); ?>
+<!-- <?php $users = get_auth(); ?> -->
 
 <div class="bg-[#333333]">
     <div class="border-b-[1px]">

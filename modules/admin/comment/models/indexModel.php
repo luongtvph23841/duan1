@@ -1,9 +1,9 @@
 <?php
 function get_list_comment()
 {
-    $result = db_fetch_array("SELECT p.id, p.content, p.time, o.name_product, c.name_user FROM `comments` p 
-    INNER JOIN `products` o ON o.id = p.id_products
-    INNER JOIN `users` c ON c.id = p.id_user");
+    $result = db_fetch_array("SELECT c.id, c.content, c.time, p.name_product, u.name_user FROM `comments` c 
+    INNER JOIN `products` p ON p.id = c.id_products
+    INNER JOIN `users` u ON u.id = c.id_user");
     return $result;
 }
 
@@ -19,10 +19,10 @@ function get_list_users()
     return $result;
 }
 
-function create_comment()
+function create_comment($content)
 {
     $id = db_insert('comments', [
-        'content' => 1,
+        'content' => $content,
         'time' => date('Y-m-d H:i:s'),
         'id_products' => 1,
         'id_user' => 1,
