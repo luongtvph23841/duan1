@@ -14,3 +14,14 @@ function get_list_comment($id)
     WHERE p.id = $id");
     return $result;
 }
+
+function create_comment($content, $id_product, $id_user)
+{
+    $id = db_insert('comments', [
+        'content' => $content,
+        'time' => date('Y-m-d H:i:s'),
+        'id_products' => $id_product,
+        'id_user' => $id_user,
+    ]);
+    return $id;
+}
