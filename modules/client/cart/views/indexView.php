@@ -28,21 +28,21 @@
                     <td class="border-2 border-black text-center w-[200px] h-[200px]">
                         <img src="assets/media/products/<?php echo $item['image'] ?>" class="w-[100px] h-[100px] mx-auto">
                     </td>
-                    <td class="border-2 border-black text-center text-red-500 ">
+                    <td class="border-2 border-black text-center">
                         <?php echo currency_format($item['price']) ?>
                     </td>
                     <td class="border-2 border-black text-center">
                         <div class="flex justify-center">
-                            <button type="submit" class="flex border w-[32px] h-[32px] bg-[#f8f8f8] text-[30px] items-center cursor-pointer justify-center">-</button>
-                            <input type="input" min="1" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center ">
-                            <button type="submit" class="flex border w-[32px] h-[32px] bg-[#f8f8f8] text-[21px] items-center cursor-pointer justify-center">+</button>
+                            <button type="submit" class="flex border w-[32px] h-[32px] bg-[#f8f8f8] text-[30px] items-center cursor-pointer justify-center hover:bg-[#d2a98b] hover:border-[#d2a98b]">-</button>
+                            <input type="input" min="1" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none">
+                            <button type="submit" class="flex border w-[32px] h-[32px] bg-[#f8f8f8] text-[21px] items-center cursor-pointer justify-center hover:bg-[#d2a98b] hover:border-[#d2a98b]">+</button>
                         </div>
                     </td>
-                    <td class="border-2 border-black text-center ">
+                    <td class="border-2 border-black text-center text-red-500 font-semibold">
                         <?php echo currency_format($item['sub_total']) ?>
                     </td>
                     <td class="border-2 border-black text-center ">
-                        <a href="?role=client&mod=cart&action=delete&id=<?php echo $item['id'] ?>">
+                        <a href="?role=client&mod=cart&action=delete&id=<?php echo $item['id'] ?>" class="text-[30px] hover:text-[#d2a98b]">
                             <i class="fa fa-trash"></i>
                         </a>
                     </td>
