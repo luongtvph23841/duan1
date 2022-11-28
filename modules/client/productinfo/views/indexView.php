@@ -49,20 +49,20 @@
                 </svg>
             </button>
         </div>
-        <div class="h-[60px] pt-4 border-b border-t  ">
-            <scan class="font-sans text-base">CATEGORIES:</scan>
-            <scan class="font-sans text-base">Son Mac Chili, Phấn Phủ MAC NC15</scan>
-
+        <div class="h-[60px] pt-4 border-b border-t  " >
+        <scan class="font-sans text-base" >CATEGORIES:</scan>
+        <scan class="font-sans text-base">Son Mac Chili, Phấn Phủ MAC NC15</scan>
+        
         </div>
         <div class="pt-4">
             <scan class="font-sans"> SHARE THIS PRODUCT: </scan>
-            <scan class="pr-2"><i class="fa fa-facebook" aria-hidden="true"></i></scan>
-            <scan class="pr-2"><i class="fa fa-instagram" aria-hidden="true"></i></scan>
-            <san class="pr-2"><i class="fa fa-twitter" aria-hidden="true"></i></san>
-            <scan class="pr-2"><i class="fa fa-google-plus" aria-hidden="true"></i></scan>
+          <scan class="pr-2"><i class="fa fa-facebook" aria-hidden="true"></i></scan>
+          <scan class="pr-2"><i class="fa fa-instagram" aria-hidden="true"></i></scan>
+          <san class="pr-2"><i class="fa fa-twitter" aria-hidden="true"></i></san>
+          <scan class="pr-2"><i class="fa fa-google-plus" aria-hidden="true"></i></scan>
         </div>
-
-
+       
+        
     </form>
 
 </div>
