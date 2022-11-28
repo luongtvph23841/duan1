@@ -46,8 +46,7 @@ function deleteAction()
 
 function indexPostAction()
 {
-    show_array($_POST['qty']);
-    die;
-    update_cart($_POST['qty']);
+    $qty = $_POST['qty'];
+    update_cart($qty);
     header("Location: ?role=client&mod=cart");
 }

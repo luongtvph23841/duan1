@@ -5,14 +5,14 @@
         <h1 class="text-2xl">Giỏ hàng</h1>
     </div>
 
-    <form action="" method="POST">
+    <form method="POST" action="">
         <table class="w-[100%]">
             <tr class="bg-gray-200">
                 <th class="border-2 border-black ">ID</th>
                 <th class="border-2 border-black ">Tên sản phẩm</th>
                 <th class="border-2 border-black ">Hình ảnh sản phẩm</th>
+                <th class="border-2 border-black ">Giá</th>
                 <th class="border-2 border-black ">Số Lượng</th>
-                <th class="border-2 border-black ">Thành Tiền</th>
                 <th class="border-2 border-black ">Tổng</th>
                 <th class="border-2 border-black ">Thao tác</th>
             </tr>
@@ -28,11 +28,15 @@
                     <td class="border-2 border-black text-center w-[200px] h-[200px]">
                         <img src="assets/media/products/<?php echo $item['image'] ?>" class="w-[100px] h-[100px] mx-auto">
                     </td>
-                    <td class="border-2 border-black text-center ">
-                        <input type="input" min="1" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>">
-                    </td>
                     <td class="border-2 border-black text-center text-red-500 ">
                         <?php echo currency_format($item['price']) ?>
+                    </td>
+                    <td class="border-2 border-black text-center">
+                        <div class="flex justify-center">
+                            <button type="submit" class="flex border w-[32px] h-[32px] bg-[#f8f8f8] text-[30px] items-center cursor-pointer justify-center">-</button>
+                            <input type="input" min="1" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center ">
+                            <button type="submit" class="flex border w-[32px] h-[32px] bg-[#f8f8f8] text-[21px] items-center cursor-pointer justify-center">+</button>
+                        </div>
                     </td>
                     <td class="border-2 border-black text-center ">
                         <?php echo currency_format($item['sub_total']) ?>
@@ -44,6 +48,7 @@
                     </td>
                 </tr>
             <?php } ?>
+
         </table>
     </form>
 
