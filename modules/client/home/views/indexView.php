@@ -1,8 +1,8 @@
 <?php get_header('', 'Trang chủ') ?>
 
-<div class="w-full my-3">
+<div class="w-full">
     <div>
-        <img src="assets/media/logos/banner-kaka.jpg" alt="" class="w-[100%] m-auto">
+        <img src="assets/media/logos/banner.jpg" alt="" class="w-[100%] m-auto">
     </div>
     <div class="text-center h-[100px] text-5xl pt-6 text-red-500">
         <h1 class="font-sans text-bold text-rose-400  ">Sản Phẩm Tiêu Biểu </h1>
