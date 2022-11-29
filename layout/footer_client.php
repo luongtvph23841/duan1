@@ -54,13 +54,13 @@
         </div>
     </div>
 
-    <div class="w-[90%] pt-[50px] m-auto">
-        <div class="grid grid-cols-2 text-[#d8d8d8] p-5">
-            <div>
-                <p>Copyright ©2019 <a href="#" class="hover:text-[#d2a98b]">KakaShop</a>. All rights reserved.</p>
+    <div class="w-[90%] pt-[10px] m-auto">
+        <div class="grid grid-cols-2 text-[#d8d8d8]">
+            <div class="my-auto">
+                <p>Copyright ©2019 <a href="?role=client&mod=home" class="hover:text-[#d2a98b]">KakaShop</a>. All rights reserved.</p>
             </div>
             <div>
-                <a href="?role=client&mod=home"><img src="https://demo.hasthemes.com/theface-preview/theface-v3/assets/images/logofoo.png" alt=""></a>
+                <a href="?role=client&mod=home"><img src="assets/media/logos/logo-kaka.png" class="float-right w-[100px]"></a>
             </div>
         </div>
     </div>

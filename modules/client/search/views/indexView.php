@@ -23,7 +23,7 @@ get_header('', 'tìm kiếm')
     </div>
 
     <div class="pt-2 grid grid-cols-4 ml-12 mb-4">
-        <?php foreach ($categories as $product) : ?>
+        <?php foreach ($products as $product) : ?>
             <div div class="mx-auto h-auto text-center mb-10">
                 <div class="">
                     <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border">
