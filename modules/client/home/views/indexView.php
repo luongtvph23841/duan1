@@ -60,6 +60,11 @@
         </div>
     </div>
 
+    <div class="flex justify-center">
+        <img src="assets/media/banner/cate-1.png" class="m-1 hover:scale-[1.03] ease-in duration-500 w-[500px]">
+        <img src="assets/media/banner/cate-2.png" class="m-1 hover:scale-[1.03] ease-in duration-500 w-[500px]">
+        <img src="assets/media/banner/cate-3.png" class="m-1 hover:scale-[1.03] ease-in duration-500 w-[500px]">
+    </div>
 </div>
 
 <?php get_footer() ?>
