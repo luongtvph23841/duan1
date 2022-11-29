@@ -21,8 +21,8 @@
                     <ul>
                         <li class="menu">
                             <div class="flex ml-[60px] hover:text-[#d2a98b] text-[#fff]">
-                                <i class="fa fa-user-circle-o text-[33px] mt-[7px]"></i>
-                                <p class="pt-3 pl-3"><?php echo $users['name_user'] ?></p>
+                                <img src="assets/media/users/<?php echo $users['image'] ?>" class="rounded-[50%] w-[20%] h-[20%] mt-[10px]">
+                                <p class="pt-3 pl-2"><?php echo $users['name_user'] ?></p>
                             </div>
                             <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[130px] text-center leading-[40px] text-[15px] rounded-[30px]">
                                 <li>
