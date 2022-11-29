@@ -1,71 +1,67 @@
-<head>
-    <link rel="stylesheet" href="footer.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .footer-distributed {
-            background: pink;
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-            box-sizing: border-box;
-            width: 100%;
-            text-align: center;
-            padding: 35px 30px;
-        }
-
-        .footer-distributed .footer-left,
-        .footer-distributed .footer-center,
-        .footer-distributed .footer-right {
-            display: inline-block;
-            vertical-align: top;
-        }
-
-        /* Footer left */
-        .footer-distributed .footer-left {
-            width: 40%;
-            font-size: 20px;
-        }
-
-        /* Footer Center */
-        .footer-distributed .footer-center {
-            width: 35%;
-            padding-top: 70px;
-            font-size: 20px;
-        }
-
-        /* Footer Right */
-
-        .footer-distributed .footer-right {
-            width: 20%;
-            padding-top: 70px;
-            font-size: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <footer class="footer-distributed">
-
-        <div class="footer-left" style="text-align: left; padding:0 100px; ">
-            <img src="assets/media/logos/logo-kaka.png" class="w-[50%]">
-            <b>Thông Tin Liên Hệ</b>
-            <p> Số điện thoại: 0962138993</p>
-            <p>Email: kakashop@gmail.com</p>
+<div class="w-full bg-[#333333]">
+    <div class="w-[95%] border-b-[1px] pb-[45px] pt-[100px] m-auto">
+        <div class="grid grid-cols-4 gap-10 w-[90%] mx-auto text-[#d8d8d8]">
+            <div class="col-lg-3">
+                <h4 class="text-[16px] font-semibold uppercase mb-[30px]">ABOUT THEFACE</h4>
+                <p class="leading-[24px] ml-[10px]">Duis aute iure dolor in reprehenderit in voluptate ese cillum
+                    dolore
+                    eu fugiat nulla pairiatur.Excepteur sint occaecat cupidayat.
+                </p>
+                <div class="mt-10 ml-[10px]">
+                    <a href="#"><i class="fa fa-facebook pr-4 py-2 hover:text-[#d2a98b]"></i></a>
+                    <a href="#"><i class="fa fa-twitter px-4 py-2 hover:text-[#d2a98b]"></i></a>
+                    <a href="#"><i class="fa fa-google-plus px-4 py-2 hover:text-[#d2a98b]"></i></a>
+                    <a href="#"><i class="fa fa-pinterest-p px-4 py-2 hover:text-[#d2a98b]"></i></a>
+                    <a href="#"><i class="fa fa-instagram px-4 py-2 hover:text-[#d2a98b]"></i></a>
+                    <a href="#"><i class="fa fa-vimeo px-4 py-2 hover:text-[#d2a98b]"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-[16px] font-semibold uppercase mb-[30px]">INFORMATION</h4>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Returns</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Delivery</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Service</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Gift cards</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Mobile</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Gift cards</p>
+            </div>
+            <div>
+                <h4 class="text-[16px] font-semibold uppercase mb-[30px]">OUR OFERS</h4>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">New products</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Top sellers</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Service</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Supplies</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Specials</p>
+                <p class="leading-[24px] ml-[10px] hover:text-[#d2a98b]">Service</p>
+            </div>
+            <div>
+                <h4 class="text-[16px] font-semibold uppercase mb-[30px]">CONTACT US</h4>
+                <ul>
+                    <li class="flex text-[14px] leading-[22px] mb-[12px] hover:text-[#d2a98b]">
+                        <i class="fa fa-home mr-[15px] leading-[28px] text-[18px]"></i>
+                        <p>HHA BacHa buiding,Tohuu Street Hanoi,Vietnam</p>
+                    </li>
+                    <li class="flex text-[14px] leading-[22px] mb-[12px] hover:text-[#d2a98b]">
+                        <i class="fa fa-phone mr-[15px] leading-[28px] text-[18px]"></i>
+                        <p>08123456789</p>
+                    </li>
+                    <li class="flex text-[14px] leading-[22px] mb-[12px] hover:text-[#d2a98b]">
+                        <i class="fa fa-envelope-o mr-[15px] leading-[28px] text-[18px]"></i>
+                        <p>kakashop.@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
 
-        <div class="footer-center" style="text-align: left;">
-            <b>Dịch Vụ Khách Hàng</b>
-            <p>Chính sách bảo mật</p>
-            <p>Cam kết chất lượng sản phẩm</p>
+    <div class="w-[90%] pt-[50px] m-auto">
+        <div class="grid grid-cols-2 text-[#d8d8d8] p-5">
+            <div>
+                <p>Copyright ©2019 <a href="#" class="hover:text-[#d2a98b]">KakaShop</a>. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="?role=client&mod=home"><img src="https://demo.hasthemes.com/theface-preview/theface-v3/assets/images/logofoo.png" alt=""></a>
+            </div>
         </div>
-
-        <div class="footer-right" style="text-align: left;">
-            <b>Hỗ Trợ Khách Hàng</b>
-            <p>Hướng dẫn mua hàng</p>
-            <p>Hướng dẫn thanh toán</p>
-            <p>Câu hỏi thường gặp</p>
-            <p>Chính sách đổi trả</p>
-            <p>Chính sách giao hàng</p>
-        </div>
-    </footer>
-</body>
-
-</html>
+    </div>
+</div>
