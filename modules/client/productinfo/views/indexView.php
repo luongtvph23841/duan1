@@ -20,17 +20,19 @@
                 </div>
             </div>
             <div class="">
-                <p class="mt-5 text-base uppercase font-bold">Số lượng: </p>
+                <!-- <p class="mt-5 text-base uppercase font-bold">Số lượng: </p> -->
                 <div class="box-quantity h-[50px] mt-3">
                     <div class="flex">
-                        <input type="number" name="quantity" value="1" min=1 class="w-[100px] h-[50px] border-2 rounded mr-2 text-center outline-none">
-                        <button class="w-[220px] h-[50px] bg-[#333333] text-white rounded hover:bg-[#d2a98b]">
-                            <p class="text-white text-base uppercase">
-                                <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
-                                    <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
-                                </a>
-                            </p>
-                        </button>
+                        <form method="POST" action="">
+                            <!-- <input type="input" min="1" name="qty" value="1" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border"> -->
+                            <button class="w-[220px] h-[50px] bg-[#333333] text-white rounded hover:bg-[#d2a98b]">
+                                <p class="text-white text-base uppercase">
+                                    <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
+                                        <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                    </a>
+                                </p>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
