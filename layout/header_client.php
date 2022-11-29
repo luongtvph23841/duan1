@@ -32,17 +32,17 @@ $categories = get_list_categories(); ?>
                                 <img src="assets/media/users/<?php echo $users['image'] ?>" class="rounded-[50%] w-[20%] h-[20%] mt-[10px]">
                                 <p class="pt-3 pl-2"><?php echo $users['name_user'] ?></p>
                             </div>
-                            <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[130px] text-center leading-[40px] text-[15px] rounded-[30px]">
+                            <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[60px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] h-[120px] text-center">
                                 <li>
-                                    <a href="?role=client&mod=userinfo" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Thông tin cá nhân</a>
+                                    <a href="?role=client&mod=userinfo" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Thông tin cá nhân</a>
                                 </li>
                                 <?php if (is_admin()) : ?>
                                     <li>
-                                        <a href="?role=admin" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Admin</a>
+                                        <a href="?role=admin" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Admin</a>
                                     </li>
                                 <?php endif; ?>
                                 <li>
-                                    <a href="?role=client&mod=home&action=logout" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]"><i class="fa fa-sign-out"> Đăng xuất</i></i></a>
+                                    <a href="?role=client&mod=home&action=logout" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1"><i class="fa fa-sign-out"> Đăng xuất</i></i></a>
                                 </li>
                             </ul>
                         </li>
@@ -52,11 +52,11 @@ $categories = get_list_categories(); ?>
                 <div>
                     <ul>
                         <li class="menu">
-                            <div class="flex ml-[60px] text-[#fff]">
-                                <i class="fa fa-user-circle-o hover:text-[#d2a98b] text-[33px] mt-[7px]"></i>
+                            <div class="flex ml-[60px] text-[#fff] hover:text-[#d2a98b]">
+                                <i class="fa fa-user-circle-o text-[33px] mt-[7px]"></i>
                                 <p class="pt-3 pl-3">Xin chào</p>
                             </div>
-                            <ul class="dropmenu absolute bg-[#fff] w-[155px] h-[90px] text-center leading-[40px] text-[15px] rounded-[30px]">
+                            <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[60px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] h-[90px] text-center">
                                 <li>
                                     <a href="http://localhost/duan1/?role=client&mod=login" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px]">Đăng nhập</a>
                                 </li>
@@ -81,9 +81,9 @@ $categories = get_list_categories(); ?>
                 </li>
                 <li class="inline menu">
                     <a href="http://localhost/duan1/?role=client&mod=product" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Sản phẩm</a>
-                    <ul class="dropmenu absolute border bg-[#fff] text-black ml-[100px] mt-1 rounded-[20px]">
+                    <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[100px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] text-center">
                         <?php foreach ($categories as $category) : ?>
-                            <li class="hover:text-[#d2a98b] m-5"><a href="?role=client&mod=search&id_cate=<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></a></li>
+                            <li class="hover:text-[#d2a98b] m-5 border-b-[1px]"><a href="?role=client&mod=search&id_cate=<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </li>
