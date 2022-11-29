@@ -14,8 +14,8 @@ $categories = get_list_categories(); ?>
         <div class="flex justify-around h-[50px]">
             <div class="my-auto text-[#fff]">
                 <div class="lg:inline-flex">
-                    <a href="#" class="px-4 py-2 hover:text-[#d2a98b]"><i class="fa fa-phone "></i> 0367370371</a>
-                    <a href="#" class="px-4 py-2 hover:text-[#d2a98b]"><i class="fa fa-envelope-open-o"></i> kakashop@gmail.com</a>
+                    <a href="#" class="px-4 py-2 hover:text-[#d2a98b]"><i class="fa fa-phone"></i> 0123456789</a>
+                    <a href="#" class="px-4 py-2 hover:text-[#d2a98b]"><i class="fa fa-envelope-o"></i> kakashop@gmail.com</a>
                 </div>
                 <a href="#"><i class="fa fa-facebook px-4 py-2 hover:text-[#d2a98b]"></i></a>
                 <a href="#"><i class="fa fa-twitter px-4 py-2 hover:text-[#d2a98b]"></i></a>
