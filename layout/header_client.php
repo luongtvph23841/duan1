@@ -1,6 +1,14 @@
 <?php get_header('base', $title) ?>
 <!-- <?php $users = get_auth(); ?> -->
 
+<?php function get_list_categories()
+{
+    $result = db_fetch_array("SELECT * FROM `categories`");
+    return $result;
+}
+
+$categories = get_list_categories(); ?>
+
 <div class="bg-[#333333]">
     <div class="border-b-[1px]">
         <div class="flex justify-around h-[50px]">
@@ -68,9 +76,20 @@
         </div>
         <div class="my-auto text-[#fff]">
             <ul class="text-[15px] leading-[15px] font-semibold uppercase">
-                <a href="http://localhost/duan1/?role=client&mod=home" class="px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Trang chủ</a>
-                <a href="http://localhost/duan1/?role=client&mod=product" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Sản phẩm</a>
-                <a href="http://localhost/duan1/?role=client&mod=introduce" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Giới thiệu</a>
+                <li class="inline">
+                    <a href="http://localhost/duan1/?role=client&mod=home" class="px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Trang chủ</a>
+                </li>
+                <li class="inline menu">
+                    <a href="http://localhost/duan1/?role=client&mod=product" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Sản phẩm</a>
+                    <ul class="dropmenu absolute border bg-[#fff] text-black">
+                        <?php foreach ($categories as $category) : ?>
+                            <li class="mt-5 hover:text-[#d2a98b]"><a href=""><?php echo $category['name_cate'] ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+                <li class="inline">
+                    <a href="http://localhost/duan1/?role=client&mod=introduce" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Giới thiệu</a>
+                </li>
             </ul>
         </div>
         <div class="my-auto flex">
