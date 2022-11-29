@@ -1,3 +1,9 @@
+<div class="flex justify-center">
+    <img src="assets/media/banner/cate-1.png" class="m-1 hover:scale-[1.03] ease-in duration-500 w-[500px]">
+    <img src="assets/media/banner/cate-2.png" class="m-1 hover:scale-[1.03] ease-in duration-500 w-[500px]">
+    <img src="assets/media/banner/cate-3.png" class="m-1 hover:scale-[1.03] ease-in duration-500 w-[500px]">
+</div>
+
 <div class="w-full bg-[#333333]">
     <div class="w-[95%] border-b-[1px] pb-[45px] pt-[100px] m-auto">
         <div class="grid grid-cols-4 gap-10 w-[90%] mx-auto text-[#d8d8d8]">

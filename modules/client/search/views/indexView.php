@@ -1,4 +1,4 @@
-<?php get_header('', 'tìm kiếm') ?>
+<?php get_header('', 'Tìm kiếm') ?>
 <div class="border-b-[1px]">
     <div class="border-b-[1px]">
         <div class="grid grid-cols-2 w-[90%] mx-auto">
@@ -29,7 +29,7 @@
     </div>
     <div class="bg-[#f3f3f3] p-5 flex">
         <i class="fa fa-lightbulb-o hover:text-[#d2a98b] text-xl"></i>
-        <p class="ml-1"> Kết quả tìm kiếm cho từ khóa:</p>
+        <p class="ml-1"> Kết quả tìm kiếm cho:</p>
         <p class="ml-1 text-red-500"><?php echo $category['name_cate'] ?></p>
     </div>
 </div>
