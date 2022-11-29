@@ -60,7 +60,7 @@
                 <p>Copyright ©2019 <a href="?role=client&mod=home" class="hover:text-[#d2a98b]">KakaShop</a>. All rights reserved.</p>
             </div>
             <div>
-                <a href="?role=client&mod=home"><img src="assets/media/logos/logo-kaka.png" class="float-right w-[100px]"></a>
+                <a href="?role=client&mod=home"><img src="assets/media/logos/logo-kaka.png" class="float-right w-[100px] hover:scale-[1.1] ease-in duration-500"></a>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
 
 <div class="flex font-sans w-[1000px] h-[500px] mt-[50px] mx-auto">
     <div class="pr-8 bg-[#f8f8f8] mr-6 rounded mb-4 ">
-        <img src="assets/media/products/<?php echo $product['image'] ?>" alt="" class="h-[300px] w-[700px] mt-20" loading="lazy" />
+        <img src="assets/media/products/<?php echo $product['image'] ?>" alt="" class="h-[300px] w-[700px] mt-20 hover:scale-[1.4] ease-in duration-500 pt-8" loading="lazy" />
     </div>
     <div>
         <div class="information-product w-full">

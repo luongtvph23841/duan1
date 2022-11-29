@@ -40,7 +40,7 @@
             <div>
                 <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border">
                     <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>">
-                        <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[200px] h-[210px] pt-2 mx-auto">
+                        <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[200px] h-[210px] pt-2 mx-auto hover:scale-[1.4] ease-in duration-500 pt-8">
                     </a>
 
                     <div class="dropmenu absolute bg-[#333333] w-[270px] leading-[45px]  mt-10 ">

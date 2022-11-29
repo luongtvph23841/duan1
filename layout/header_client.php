@@ -72,7 +72,7 @@ $categories = get_list_categories(); ?>
     </div>
     <div class="flex justify-around">
         <div class="w-[100px]">
-            <a href="?role=client&mod=home"><img src="assets/media/logos/logo-kaka.png" alt="" class=""></a>
+            <a href="?role=client&mod=home"><img src="assets/media/logos/logo-kaka.png" class=" hover:scale-[1.1] ease-in duration-500"></a>
         </div>
         <div class="my-auto text-[#fff]">
             <ul class="text-[15px] leading-[15px] font-semibold">
