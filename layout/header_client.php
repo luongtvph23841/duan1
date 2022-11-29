@@ -75,15 +75,15 @@ $categories = get_list_categories(); ?>
             <a href="?role=client&mod=home"><img src="assets/media/logos/logo-kaka.png" alt="" class=""></a>
         </div>
         <div class="my-auto text-[#fff]">
-            <ul class="text-[15px] leading-[15px] font-semibold uppercase">
+            <ul class="text-[15px] leading-[15px] font-semibold">
                 <li class="inline">
                     <a href="http://localhost/duan1/?role=client&mod=home" class="px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Trang chủ</a>
                 </li>
                 <li class="inline menu">
                     <a href="http://localhost/duan1/?role=client&mod=product" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Sản phẩm</a>
-                    <ul class="dropmenu absolute border bg-[#fff] text-black">
+                    <ul class="dropmenu absolute border bg-[#fff] text-black ml-[100px] mt-1 rounded-[20px]">
                         <?php foreach ($categories as $category) : ?>
-                            <li class="mt-5 hover:text-[#d2a98b]"><a href="?role=client&mod=search&id_cate=<?php echo $category['id']?>"><?php echo $category['name_cate'] ?></a></li>
+                            <li class="hover:text-[#d2a98b] m-5"><a href="?role=client&mod=search&id_cate=<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </li>
