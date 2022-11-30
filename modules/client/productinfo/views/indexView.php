@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="w-[230px] h-[50px] p-3">
-                    <h3 class="color-black uppercase ext-[16px] font-semibold text-ellipsis	whitespace-normal leading-none">
+                    <h3 class="color-black ext-[16px] font-semibold text-ellipsis whitespace-normal leading-none">
                         <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
                     </h3>
                 </div>

@@ -55,7 +55,7 @@
                     <div class="dropmenu absolute bg-[#333333] w-[270px] leading-[45px]  mt-10 ">
                         <div class="flex justify-around mt-1">
                             <a href="?role=client&mod=cart">
-                                <p class="text-white text-base pt-2 hover:text-[#d2a98b] uppercase">
+                                <p class="text-white text-base pt-2 hover:text-[#d2a98b] mr-10">
                                     <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
                                         <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
                                     </a>
@@ -63,7 +63,7 @@
                             </a>
 
                             <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="mt-[-3px]">
-                                <p class="text-white hover:text-[#d2a98b] uppercase">
+                                <p class="text-white hover:text-[#d2a98b]">
                                     <i class="fa fa-eye mr-[5px]"></i>Xem
                                 </p>
                             </a>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="w-[270px] h-[50px] p-3">
-                <h3 class="color-black uppercase ext-[16px] font-semibold text-ellipsis	whitespace-normal leading-none">
+                <h3 class="color-black ext-[16px] font-semibold text-ellipsis whitespace-normal leading-none">
                     <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
                 </h3>
             </div>
