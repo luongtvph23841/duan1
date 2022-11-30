@@ -33,7 +33,7 @@
                         <form method="POST" action="">
                             <td class="w-[200px]">
                                 <div class="flex justify-center">
-                                    <input type="input" min="1" name="quantity[<?php echo $item['id'] ?>]" value="<?php echo $item['quantity'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
+                                    <input type="input" min="1" name="quantity[<?php echo $item['id_product'] ?>]" value="<?php echo $item['quantity'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
                                 </div>
                             </td>
                         </form>
@@ -41,7 +41,7 @@
                             <?php echo currency_format($item['sub_total']) ?>
                         </td>
                         <td class="w-[200px]">
-                            <a href="?role=client&mod=cart&action=delete&id=<?php echo $item['id'] ?>" class="text-[20px] hover:text-[#d2a98b]">
+                            <a href="?role=client&mod=cart&action=delete&id=<?php echo $item['id_product'] ?>" class="text-[20px] hover:text-[#d2a98b]">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>

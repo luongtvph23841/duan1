@@ -16,7 +16,7 @@ function indexAction()
         }
 
         $_SESSION['cart']['buy'][$id] = array(
-            'id' => $product['id'],
+            'id_product' => $product['id'],
             'name_product' => $product['name_product'],
             'image' => $product['image'],
             'price' => $product['price'],

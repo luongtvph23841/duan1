@@ -17,3 +17,22 @@ function indexAction()
 
     load_view('index', $data);
 }
+
+function indexPostAction()
+{
+    $id_user = get_auth()['id'];
+    $code = substr(md5(time()), 0, 16);
+    $status = 1;
+
+    $actived = create_orders($code, $id_user, $status);
+    if ($actived) {
+        foreach ($_SESSION['cart']['buy'] as $vaule) {
+            $id_product = $vaule['id_product'];
+            $quantity = $vaule['quantity'];
+
+            create_order_detail($id_product, $code, $quantity);
+        }
+
+        header('Location: ?role=client&mod=order&id_user=' . $id_user);
+    }
+}
