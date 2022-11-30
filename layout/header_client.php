@@ -10,21 +10,14 @@
                 return $result;
             }
             $users = get_user($id_user);
-
-            function get_list_categories()
-            {
-                $result = db_fetch_array("SELECT * FROM `categories`");
-                return $result;
-            }
-            $categories = get_list_categories();
-        } else {
-            function get_list_categories()
-            {
-                $result = db_fetch_array("SELECT * FROM `categories`");
-                return $result;
-            }
-            $categories = get_list_categories();
         }
+
+        function get_list_categories()
+        {
+            $result = db_fetch_array("SELECT * FROM `categories`");
+            return $result;
+        }
+        $categories = get_list_categories();
         ?> -->
 
 <div class="bg-[#333333]">
