@@ -9,19 +9,21 @@ function indexAction()
 {
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $pro = get_pro_by_id($id);
-        $qty = 1;
+        $product = get_product_by_id($id);
+        $quantity = 1;
         if (isset($_SESSION['cart']['buy']) && array_key_exists($id, $_SESSION['cart']['buy'])) {
-            $qty = $_SESSION['cart']['buy'][$id]['qty'] + 1;
+            $quantity = $_SESSION['cart']['buy'][$id]['quantity'] + 1;
         }
+
         $_SESSION['cart']['buy'][$id] = array(
-            'id' => $pro['id'],
-            'name_product' => $pro['name_product'],
-            'image' => $pro['image'],
-            'price' => $pro['price'],
-            'qty' => $qty,
-            'sub_total' => $pro['price'] * $qty
+            'id' => $product['id'],
+            'name_product' => $product['name_product'],
+            'image' => $product['image'],
+            'price' => $product['price'],
+            'quantity' => $quantity,
+            'sub_total' => $product['price'] * $quantity
         );
+
         update_info_cart();
         header('Location: ?role=client&mod=cart');
     }
@@ -46,7 +48,7 @@ function deleteAction()
 
 function indexPostAction()
 {
-    $qty = $_POST['qty'];
-    update_cart($qty);
+    $quantity = $_POST['quantity'];
+    update_cart($quantity);
     header("Location: ?role=client&mod=cart");
 }

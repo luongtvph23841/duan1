@@ -33,7 +33,7 @@
                         <form method="POST" action="">
                             <td class="w-[200px]">
                                 <div class="flex justify-center">
-                                    <input type="input" min="1" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
+                                    <input type="input" min="1" name="quantity[<?php echo $item['id'] ?>]" value="<?php echo $item['quantity'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
                                 </div>
                             </td>
                         </form>
