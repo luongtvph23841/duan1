@@ -1,15 +1,23 @@
 <?php get_header('base', $title) ?>
 
-<!-- <?php $users = get_auth(); ?> -->
-<?php $notifications = get_notification(); ?>
+<?php
+$id_user = get_auth()['id'];
 
-<?php function get_list_categories()
+function get_list_categories()
 {
     $result = db_fetch_array("SELECT * FROM `categories`");
     return $result;
 }
+$categories = get_list_categories($id_user);
 
-$categories = get_list_categories(); ?>
+function get_user($id_user)
+{
+    $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = $id_user ");
+    return $result;
+}
+$users = get_user($id_user);
+
+?>
 
 <div class="bg-[#333333]">
     <div class="border-b-[1px]">

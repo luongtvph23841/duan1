@@ -28,6 +28,7 @@ function indexPostAction()
     $img = $file['name'];
 
     update_user($id, $name, $email, $password, $phone, $address, $id_role, $img);
-    push_notification('success', ['Chỉnh sửa người dùng thành công']);
+    push_notification('success', ['Chỉnh sửa thông tin thành công']);
+
     header('Location: ?role=client&mod=userinfo&id_user=' . $id);
 }

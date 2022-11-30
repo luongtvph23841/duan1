@@ -10,12 +10,6 @@
                 <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
             </div>
 
-            <?php foreach ($notifications as $notification) : ?>
-                <?php foreach ($notification['msgs'] as $msg) : ?>
-                    <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
-                <?php endforeach; ?>
-            <?php endforeach; ?>
-
             <div class="flex w-[90%]">
 
                 <div class="grid grid-cols-1 w-[800px] h-[500px]">
@@ -66,6 +60,12 @@
                             </a>
                         </button>
                     </form>
+
+                    <?php foreach ($notifications as $notification) : ?>
+                        <?php foreach ($notification['msgs'] as $msg) : ?>
+                            <span class="text-[red] text-center absolute m-3 <?php echo $notification['type'] ?>"><?php echo $msg ?></span>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
