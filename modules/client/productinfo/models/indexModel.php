@@ -2,8 +2,9 @@
 
 function get_one_product($id)
 {
-    $result = db_fetch_row("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, c.name_cate, p.detail  FROM `products` p 
+    $result = db_fetch_row("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, c.name_cate, o.name_orgin, p.detail  FROM `products` p 
     INNER JOIN `categories` c ON c.id = p.id_cate
+    INNER JOIN `orgin` o ON o.id = p.id_orgin
     WHERE p.id = $id");
     return $result;
 }

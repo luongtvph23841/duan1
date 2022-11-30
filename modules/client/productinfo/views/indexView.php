@@ -36,14 +36,18 @@
                     </div>
                 </div>
             </div>
-            <p class="text-slate-500 mb-6 pb-6 border-b border-slate-200 font-sans text-black pt-4 leading-[25px]">
+            <p class="text-slate-500 mb-6 pb-6 border-b border-slate-200 font-sans text-black p-4 leading-[25px]">
                 <?php echo $product['detail'] ?>
             </p>
-            <div class="h-[60px] pt-4 border-t mt-5 flex">
+            <div class="h-[60px] pt-4 border-t border-b mt-5 flex">
                 <p class="text-base uppercase font-bold">danh mục: </p>
-                <a href="?role=client&mod=search&id_cate=<?php echo $product['id_cate'] ?>" class="ml-1 text-red-500"><?php echo $product['name_cate'] ?></a>
+                <a href="?role=client&mod=search&id_cate=<?php echo $product['id_cate'] ?>" class="ml-1 text-red-500 hover:text-[#d2a98b]"><?php echo $product['name_cate'] ?></a>
             </div>
-            <div class=" pt-5 border-t">
+            <div class="h-[60px] pt-5 border-b flex">
+                <p class="text-base uppercase font-bold">xuất xứ: </p>
+                <a href="?role=client&mod=search&id_orgin=<?php echo $product['id_orgin'] ?>" class="ml-1 text-red-500 hover:text-[#d2a98b]"><?php echo $product['name_orgin'] ?></a>
+            </div>
+            <div class="pt-3">
                 <a class="uppercase font-bold">chia sẻ: </a>
                 <a href="#"><i class="fa fa-facebook px-4 py-2 hover:text-[#d2a98b]"></i></a>
                 <a href="#"><i class="fa fa-twitter px-4 py-2 hover:text-[#d2a98b]"></i></a>

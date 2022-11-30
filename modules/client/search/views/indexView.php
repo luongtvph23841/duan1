@@ -1,4 +1,7 @@
 <?php get_header('', 'Tìm kiếm') ?>
+
+
+
 <div class="border-b-[1px]">
     <div class="border-b-[1px]">
         <div class="grid grid-cols-2 w-[90%] mx-auto">
@@ -30,7 +33,15 @@
     <div class="bg-[#f3f3f3] p-5 flex">
         <i class="fa fa-lightbulb-o hover:text-[#d2a98b] text-xl"></i>
         <p class="ml-1"> Kết quả tìm kiếm cho:</p>
-        <p class="ml-1 text-red-500"><?php echo $category['name_cate'] ?></p>
+        <p class="ml-1 text-red-500">
+            <?php
+            if (isset($_GET['id_cate'])) {
+                echo $category['name_cate'];
+            }
+            if (isset($_GET['id_orgin'])) {
+                echo $orgin['name_orgin'];
+            }
+            ?>
     </div>
 </div>
 
