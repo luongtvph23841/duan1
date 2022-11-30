@@ -1,7 +1,4 @@
-<?php get_header('', 'Thanh toán');
-
-print_r($_SESSION['cart'])
-?>
+<?php get_header('', 'Thanh toán'); ?>
 
 <div class="border-b-[2px]">
     <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px] text-center">thanh toán</p>
@@ -110,7 +107,7 @@ print_r($_SESSION['cart'])
 
                 <form action="" method="POST">
                     <div class="mt-5">
-                        <button class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] float-right m-5">
+                        <button type="submit" class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] float-right m-5">
                             <p class="text-black">Đặt hàng</p>
                         </button>
                     </div>

@@ -13,13 +13,14 @@ function get_total_cart()
     return FALSE;
 }
 
+
 function create_orders($code, $id_user, $status)
 {
     $id = db_insert('orders', [
         'code' => $code,
         'id_user' => $id_user,
-        'time' => date('Y-m-d H:i:s'),
         'status' => $status,
+        'time' => date('Y-m-d H:i:s'),
     ]);
     return $id;
 }
