@@ -96,8 +96,8 @@ $categories = get_list_categories(); ?>
             <div class="bg-[white] rounded-[30px] w-[300px] h-[50px]">
                 <div class="mt-[9px]">
                     <form action="" method="POST">
+                        <input type="text" name="search" placeholder="Tìm kiếm" class="outline-0 ml-[50px] w-[200px] h-[30px]">
                         <a href="?role=client&mod=search&name=">
-                            <input type="text" name="search" placeholder="Tìm kiếm" class="outline-0 ml-[50px] w-[200px] h-[30px]">
                             <button>
                                 <i class="fa fa-search hover:text-[#d2a98b]"></i>
                             </button>
