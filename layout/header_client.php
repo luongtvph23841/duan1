@@ -81,7 +81,7 @@ $categories = get_list_categories(); ?>
                 </li>
                 <li class="inline menu">
                     <a href="http://localhost/duan1/?role=client&mod=product" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Sản phẩm</a>
-                    <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[100px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] text-center">
+                    <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[100px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[120px] text-center">
                         <?php foreach ($categories as $category) : ?>
                             <li class="hover:text-[#d2a98b] m-5 border-b-[1px]"><a href="?role=client&mod=search&id_cate=<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></a></li>
                         <?php endforeach; ?>
@@ -96,7 +96,7 @@ $categories = get_list_categories(); ?>
             <div class="bg-[white] rounded-[30px] w-[300px] h-[50px]">
                 <div class="mt-[9px]">
                     <!-- <form action="" method="POST"> -->
-                    <input type="text" placeholder="Tìm kiếm" class="outline-0 ml-[50px] w-[200px] h-[30px]">
+                    <input type="text" name="search" placeholder="Tìm kiếm" class="outline-0 ml-[50px] w-[200px] h-[30px]">
                     <button><i class="fa fa-search hover:text-[#d2a98b]"></i></button>
                     <!-- </form> -->
                 </div>
