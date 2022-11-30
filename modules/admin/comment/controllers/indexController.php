@@ -24,7 +24,6 @@ function createPostAction()
 {
     $content = $_POST['content'];
 
-
     create_comment($content);
     push_notification('success', ['Thêm mới sản phẩm thành công']);
     header('Location: ?role=admin&mod=comment');

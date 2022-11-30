@@ -11,7 +11,7 @@
         <img src="assets/media/banner/banner-3.png" alt="" class="m-3 hover:scale-[1.1] ease-in duration-500">
     </div>
 
-    <div class="border-b-[1px] text-center">
+    <div class="border-b-[2px] text-center">
         <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">Sản phẩm nổi bật</p>
     </div>
 
@@ -20,12 +20,12 @@
             <?php foreach ($products as $product) : ?>
                 <div div class="mx-auto h-auto text-center mb-10">
                     <div>
-                        <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border">
+                        <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border-[2px]">
                             <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>">
                                 <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[200px] h-[210px] pt-2 mx-auto hover:scale-[1.4] ease-in duration-500 pt-8">
                             </a>
 
-                            <div class="dropmenu absolute bg-[#333333] w-[270px] leading-[45px]  mt-10 ">
+                            <div class="dropmenu absolute bg-[#333333] w-[268px] leading-[45px] mt-10 ">
                                 <div class="flex justify-around mt-1">
                                     <a href="?role=client&mod=cart">
                                         <p class="text-white text-base pt-2 hover:text-[#d2a98b] mr-10">

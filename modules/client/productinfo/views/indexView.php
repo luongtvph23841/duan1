@@ -1,7 +1,7 @@
 <?php get_header('', 'Thông tin sản phẩm') ?>
 <?php $notifications = get_notification(); ?>
 
-<div class="text-[25px] leading-[40px] font-semibold uppercase p-[30px] border-b-[1px] ">
+<div class="text-[25px] leading-[40px] font-semibold uppercase p-[30px] border-b-[2px] ">
     <a href="?role=client&mod=product">Sản phẩm</a> <i class="fa fa-angle-right m-[5px]"> </i><?php echo $product['name_product'] ?>
 </div>
 
@@ -15,7 +15,7 @@
                 <h1 class="w-full flex-none mb-3 text-2xl leading-none text-[24px] font-semibold">
                     <?php echo $product['name_product'] ?>
                 </h1>
-                <div class="flex-auto text-lg font-medium text-[#d2a98b] h-[40px] border-b-2">
+                <div class="flex-auto text-lg font-medium text-[#d2a98b] h-[40px] border-b-[2px]">
                     <?php echo currency_format($product['price']) ?>
                 </div>
             </div>
@@ -24,7 +24,6 @@
                 <div class="box-quantity h-[50px] mt-3">
                     <div class="flex">
                         <form method="POST" action="">
-                            <!-- <input type="input" min="1" name="qty" value="1" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border"> -->
                             <button class="w-[220px] h-[50px] bg-[#333333] text-white rounded hover:bg-[#d2a98b]">
                                 <p class="text-white text-base uppercase">
                                     <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
@@ -36,14 +35,14 @@
                     </div>
                 </div>
             </div>
-            <p class="text-slate-500 mb-6 pb-6 border-b border-slate-200 font-sans text-black p-4 leading-[25px]">
+            <p class="text-slate-500 mb-6 pb-6 border-slate-200 font-sans text-black p-4 leading-[25px]">
                 <?php echo $product['detail'] ?>
             </p>
-            <div class="h-[60px] pt-4 border-t border-b mt-5 flex">
+            <div class="h-[60px] pt-4 border-t-[2px] border-b-[2px] mt-5 flex">
                 <p class="text-base uppercase font-bold">danh mục: </p>
                 <a href="?role=client&mod=search&id_cate=<?php echo $product['id_cate'] ?>" class="ml-1 text-red-500 hover:text-[#d2a98b]"><?php echo $product['name_cate'] ?></a>
             </div>
-            <div class="h-[60px] pt-5 border-b flex">
+            <div class="h-[60px] pt-5 border-b-[2px] flex">
                 <p class="text-base uppercase font-bold">xuất xứ: </p>
                 <a href="?role=client&mod=search&id_orgin=<?php echo $product['id_orgin'] ?>" class="ml-1 text-red-500 hover:text-[#d2a98b]"><?php echo $product['name_orgin'] ?></a>
             </div>
@@ -68,7 +67,7 @@
         <?php foreach ($product_by_id_cate as $product) : ?>
             <div div class="mx-auto h-auto text-center mb-10">
                 <div>
-                    <div class="menu h-[215px] w-[230px] bg-[#f8f8f8] rounded-t hover:border">
+                    <div class="menu h-[215px] w-[230px] bg-[#f8f8f8] rounded-t hover:border-[2px]">
                         <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>">
                             <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[160px] h-[150px] pt-2 mx-auto hover:scale-[1.2] ease-in duration-500 pt-8">
                         </a>
@@ -119,7 +118,7 @@
                 <div class="mr-[5px]">
                     <img src="assets/media/users/<?php echo $cmt['image'] ?>" class="w-[80px] h-[80px]" alt="">
                 </div>
-                <div class="border-[1px] w-full h-auto">
+                <div class="border-[2px] w-full h-auto">
                     <p class="m-[15px]">
                         <?php echo $cmt['name_user'] ?> - <?php echo $cmt['time'] ?>
                     </p>
@@ -129,7 +128,7 @@
                 </div>
             </div>
         <?php endforeach; ?>
-        <div class="mt-20 border-t-[1px]">
+        <div class="mt-20 border-t-[2px]">
             <form method="POST" action="" enctype="multipart/form-data">
                 <div class="flex pt-4">
                     <div>
