@@ -29,8 +29,8 @@ $categories = get_list_categories(); ?>
                     <ul>
                         <li class="menu">
                             <div class="flex ml-[60px] hover:text-[#d2a98b] text-[#fff]">
-                                <img src="assets/media/users/<?php echo $users['image'] ?>" class="rounded-[50%] w-[20%] h-[20%] mt-[10px]">
-                                <p class="pt-3 pl-2"><?php echo $users['name_user'] ?></p>
+                                <img src="assets/media/users/<?php echo $users['image'] ?>" class="rounded-[50%] w-[30px] h-[30px] mt-[10px]">
+                                <p class="pt-3 pl-2 w-[200px]"><?php echo $users['name_user'] ?></p>
                             </div>
                             <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[60px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] h-[120px] text-center">
                                 <li>

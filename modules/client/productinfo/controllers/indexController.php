@@ -23,7 +23,7 @@ function indexPostAction()
 {
     $id_product = $_GET['id_prod'];
     $id_cate = $_GET['id_cate'];
-    $id_user = get_auth()['id_role'];
+    $id_user = get_auth()['id'];
     $content = $_POST['content'];
 
     if (empty($content)) {
