@@ -7,8 +7,9 @@
     </div>
 
     <div>
-        <table class="w-[80%] mx-auto mt-10 border-b-[5px]">
-            <?php if (isset($cart)) { ?>
+        <?php if (isset($cart)) { ?>
+            <table class="w-[80%] mx-auto mt-10 border-b-[5px]">
+
                 <tr class="bg-[#333333] text-white h-[50px] font-semibold text-[16px]">
                     <th class="">Tên sản phẩm</th>
                     <th class="">Hình ảnh sản phẩm</th>
@@ -46,11 +47,12 @@
                         </td>
                     </tr>
                 <?php } ?>
-
-            <?php } else {
-                echo "Không có sản phẩm nào trong giỏ hàng";
-            } ?>
-        </table>
+            </table>
+        <?php } else { ?>
+            <div class="text-[25px] leading-[40px] font-semibold uppercase m-[30px] text-center">
+                <p>Không có sản phẩm nào trong giỏ hàng</p>
+            </div>
+        <?php } ?>
 
         <div class="flex justify-end w-[80%] h-[300px] mx-auto my-5">
             <div class="bg-[#333333] text-white w-[300px] h-[220px] font-semibold text-[16px]">
