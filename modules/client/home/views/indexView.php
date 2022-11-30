@@ -35,7 +35,7 @@
                                         </p>
                                     </a>
 
-                                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="mt-[-3px]">
+                                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="mt-[-3px]">
                                         <p class="text-white hover:text-[#d2a98b] uppercase">
                                             <i class="fa fa-eye mr-[5px]"></i>Xem
                                         </p>
@@ -47,10 +47,9 @@
 
                     <div class="w-[270px] h-[50px] p-3">
                         <h3 class="color-black uppercase ext-[16px] font-semibold text-ellipsis	whitespace-normal leading-none">
-                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
+                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
                         </h3>
                     </div>
-
                     <div class="pt-5">
                         <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight"><?php echo currency_format($product['price']) ?>
                         </h4>

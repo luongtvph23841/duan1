@@ -17,5 +17,5 @@ function logoutAction()
 {
     request_auth(true);
     remove_auth();
-    header('Location: ?role=client');
+    header('Location: ?role=client&mod=home');
 }

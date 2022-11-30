@@ -60,8 +60,8 @@
     </div>
 </div>
 
-<div class="pt-2 grid grid-cols-4 ml-12 mb-4 mt-10">
-    <?php foreach ($cate as $product) : ?>
+<div class="pt-2 grid grid-cols-4 ml-12 mb-4 mt-10 border-t-[1px]">
+    <?php foreach ($product_by_id_cate as $product) : ?>
         <div div class="mx-auto h-auto text-center mb-10">
             <div>
                 <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border">
@@ -79,7 +79,7 @@
                                 </p>
                             </a>
 
-                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="mt-[-3px]">
+                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="mt-[-3px]">
                                 <p class="text-white hover:text-[#d2a98b] uppercase">
                                     <i class="fa fa-eye mr-[5px]"></i>Xem
                                 </p>
@@ -91,7 +91,7 @@
 
             <div class="w-[270px] h-[50px] p-3">
                 <h3 class="color-black uppercase ext-[16px] font-semibold text-ellipsis	whitespace-normal leading-none">
-                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
+                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
                 </h3>
             </div>
             <div class="pt-5">
