@@ -19,3 +19,7 @@ function indexAction()
     }
     load_view('index', $data);
 }
+
+function searchPostAction()
+{
+}

@@ -1,7 +1,5 @@
 <?php get_header('', 'Tìm kiếm') ?>
 
-
-
 <div class="border-b-[1px]">
     <div class="border-b-[1px]">
         <div class="grid grid-cols-2 w-[90%] mx-auto">
