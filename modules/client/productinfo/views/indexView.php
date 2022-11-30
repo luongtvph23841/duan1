@@ -70,10 +70,10 @@
                 <div>
                     <div class="menu h-[215px] w-[230px] bg-[#f8f8f8] rounded-t hover:border">
                         <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>">
-                            <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[160px] h-[170px] pt-2 mx-auto hover:scale-[1.2] ease-in duration-500 pt-8">
+                            <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[160px] h-[150px] pt-2 mx-auto hover:scale-[1.2] ease-in duration-500 pt-8">
                         </a>
 
-                        <div class="dropmenu absolute bg-[#333333] w-[230px] leading-[45px]">
+                        <div class="dropmenu absolute bg-[#333333] w-[230px] leading-[45px] mt-5">
                             <div class="flex justify-around mt-1">
                                 <a href="?role=client&mod=cart">
                                     <p class="text-white text-base pt-2 hover:text-[#d2a98b]">

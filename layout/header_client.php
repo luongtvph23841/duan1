@@ -83,7 +83,7 @@ $categories = get_list_categories(); ?>
                     <a href="http://localhost/duan1/?role=client&mod=product" class="px-4 py-2 px-4 py-2 hover:text-[#d2a98b] hover:rounded-[30px]">Sản phẩm</a>
                     <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[100px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[120px] text-center">
                         <?php foreach ($categories as $category) : ?>
-                            <li class="hover:text-[#d2a98b] m-5 border-b-[1px]"><a href="?role=client&mod=search&id_cate=<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></a></li>
+                            <li class="hover:text-[#d2a98b] m-2 border-b-[1px]"><a href="?role=client&mod=search&id_cate=<?php echo $category['id'] ?>"><?php echo $category['name_cate'] ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </li>
