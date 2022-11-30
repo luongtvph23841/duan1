@@ -1,23 +1,31 @@
 <?php get_header('base', $title) ?>
 
-<?php
-$id_user = get_auth()['id'];
+<!-- <?php
+        if (isset(get_auth()['id'])) {
+            $id_user = get_auth()['id'];
 
-function get_list_categories()
-{
-    $result = db_fetch_array("SELECT * FROM `categories`");
-    return $result;
-}
-$categories = get_list_categories($id_user);
+            function get_user($id_user)
+            {
+                $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = $id_user ");
+                return $result;
+            }
+            $users = get_user($id_user);
 
-function get_user($id_user)
-{
-    $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = $id_user ");
-    return $result;
-}
-$users = get_user($id_user);
-
-?>
+            function get_list_categories()
+            {
+                $result = db_fetch_array("SELECT * FROM `categories`");
+                return $result;
+            }
+            $categories = get_list_categories();
+        } else {
+            function get_list_categories()
+            {
+                $result = db_fetch_array("SELECT * FROM `categories`");
+                return $result;
+            }
+            $categories = get_list_categories();
+        }
+        ?> -->
 
 <div class="bg-[#333333]">
     <div class="border-b-[1px]">
@@ -42,9 +50,12 @@ $users = get_user($id_user);
                                 <img src="assets/media/users/<?php echo $users['image'] ?>" class="rounded-[50%] w-[30px] h-[30px] mt-[10px]">
                                 <p class="pt-3 pl-2 w-[200px]"><?php echo $users['name_user'] ?></p>
                             </div>
-                            <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[60px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] h-[120px] text-center">
+                            <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[60px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] h-[150px] text-center">
                                 <li>
                                     <a href="?role=client&mod=userinfo&id_user=<?php echo $users['id'] ?>" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Thông tin cá nhân</a>
+                                </li>
+                                <li>
+                                    <a href="?role=client&mod=order&id_user=<?php echo $users['id'] ?>" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Đơn hàng</a>
                                 </li>
                                 <?php if (is_admin()) : ?>
                                     <li>

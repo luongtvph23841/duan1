@@ -1,5 +1,9 @@
 <?php get_header('', 'Thanh toán') ?>
 
+<div class="border-b-[1px]">
+    <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px] text-center">thanh toán</p>
+</div>
+
 <div class="w-full flex justify-between bg-rose-300 ">
     <div class="w-[500px] ml-4  mr-4">
         <h1 class="">Thông tin khách hàng</h1>
@@ -107,7 +111,12 @@
             <input type="checkbox">Thanh toán tại nhà
         </div>
         <div class="pt-2">
-            <button class="w-[100px]  bg-rose-400 text-base text-white rounded hover:border border-red-300"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Đặt Hàng</button>
+            <button class="w-[100px] bg-rose-400 text-base text-white rounded hover:border border-red-300">
+                <a href="?role=client&mod=order&id_user=<?php echo $users['id'] ?>">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i> Đặt Hàng
+                </a>
+            </button>
+
         </div>
 
     </div>
