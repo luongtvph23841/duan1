@@ -1,5 +1,7 @@
 <?php get_header('base', $title) ?>
+
 <!-- <?php $users = get_auth(); ?> -->
+<?php $notifications = get_notification(); ?>
 
 <?php function get_list_categories()
 {
@@ -34,7 +36,7 @@ $categories = get_list_categories(); ?>
                             </div>
                             <ul class="dropmenu absolute bg-[#fff] border-[2px] text-black ml-[60px] rounded-[20px] font-normal leading-[35px] text-[13px] w-[150px] h-[120px] text-center">
                                 <li>
-                                    <a href="?role=client&mod=userinfo" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Thông tin cá nhân</a>
+                                    <a href="?role=client&mod=userinfo&id_user=<?php echo $users['id'] ?>" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Thông tin cá nhân</a>
                                 </li>
                                 <?php if (is_admin()) : ?>
                                     <li>
