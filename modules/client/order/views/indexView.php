@@ -5,42 +5,52 @@
     <p>Quản lý đơn hàng</p>
 </div>
 
-<div class="grid grid-cols-1 gap-10 mx-auto bg-[#f8f8f8] p-5">
-    <?php foreach ($orders as $value) : ?>
-        <div class="p-5 bg-white rounded-[20px] mx-auto">
-            <div class="grid grid-cols-1 m-2">
-                <div class="flex justify-end border-b-[2px]">
-                    <p class="text-[#26aa99] m-2">Chờ lấy hàng</p>
-                    <p class="ml-5 m-2">Đã giao</p>
-                </div>
+<div class="bg-[#f8f8f8]">
+    <div class="grid grid-cols-2 gap-5 mx-auto p-5 w-[1300px]">
+        <?php foreach ($orders as $value) : ?>
+            <div class="p-8 bg-white rounded-[20px] mx-auto">
+                <table>
+                    <tbody class="text-center">
+                        <tr class="flex justify-start mb-5">
+                            <th class="w-[200px]">
+                                <p class="text-[18px] text-[#222] font-normal">Mã đơn hàng</p>
+                            </th>
 
-                <div class="flex justify-center border-b-[2px]">
-                    <div class="mt-5 flex">
-                        <div class="flex">
-                            <img src="assets/media/products/<?php echo $value['image'] ?>" class="w-[100px] h-[100px]">
+                            <th class="w-[200px]">
+                                <p class="text-[14px] text-[#bbb] font-normal">Thời gian</p>
+                            </th>
 
-                            <div class="grid grid-cols-1 flex w-[900px]">
-                                <h3 class="text-[18px] leading-[22px] text-[#222] font-normal m-2"><?php echo $value['name_product'] ?></h3>
-                                <p class="text-[14px] text-[#bbb] font-normal m-2">Loại: Son môi</p>
-                                <p class="text-[16px] leading-[22px] text-[#222] font-normal m-2">x<?php echo $value['quantity'] ?></p>
-                            </div>
-                        </div>
+                            <th class="w-[150px]">
+                                <p class="text-[14px] text-[#bbb] font-normal">Trạng thái</p>
+                            </th>
+                        </tr>
 
-                        <div class="flex float-right">
-                            <p class="text-[16px] leading-[22px] text-[red] font-normal my-auto"><?php echo currency_format($value['price']) ?></p>
-                        </div>
-                    </div>
-                </div>
+                        <tr class="flex justify-start">
+                            <td class="w-[200px]">
+                                <p class="text-[18px] leading-[22px] text-[#222] font-normal uppercase"><?php echo $value['code'] ?></p>
+                            </td>
 
-                <div class="flex justify-end">
-                    <div class="mt-2 flex">
-                        <p class="text-[18px] leading-[22px] text-[#222] font-normal m-5">Tổng số tiền:</p>
-                        <p class="text-[18px] leading-[22px] text-[#222] font-normal text-[red] m-5">₫60.000</p>
-                    </div>
+                            <td class="w-[200px]">
+                                <p class="text-[16px] leading-[22px] text-[#222] font-normal"><?php echo $value['time'] ?></p>
+                            </td>
+
+                            <td class="w-[150px]">
+                                <p class="text-[#26aa99]"><?php echo $value['name_status'] ?></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="border-t-[2px] mt-5">
+                    <button class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] float-right mt-5">
+                        <a href="?role=client&mod=orderdetail&code=<?php echo $value['code'] ?>">
+                            Chi tiết đơn hàng
+                        </a>
+                    </button>
                 </div>
             </div>
-        </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
 </div>
 
 <?php get_footer() ?>
