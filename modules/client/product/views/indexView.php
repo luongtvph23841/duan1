@@ -1,34 +1,40 @@
 <?php get_header('', 'Sản phẩm') ?>
 
 <div class="border-b-[2px]">
-    <div class="grid grid-cols-2 w-[90%] mx-auto">
+    <div class="grid grid-cols-2 mx-auto">
         <div class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">
             <p>Sản phẩm</p>
         </div>
 
-        <div class="grid grid-cols-2">
-            <div class="m-[30px]">
-                <label>Sắp xếp:</label>
+        <form action="" method="POST">
+            <div class="grid grid-cols-3">
+                <div class="mt-[30px]">
+                    <label>Sắp xếp:</label>
 
-                <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-18[px] pr-[30px] select-none whitespace-nowrap outline-none rounded-[5px]">
-                    <option value="Select" class="outline">Chọn</option>
-                    <option value="Name, A to Z">Tên từ A đến Z</option>
-                    <option value="Name, Z to A">Tên từ Z đến A</option>
-                    <option value="Price, low to high">Giá từ thấp đến cao</option>
-                    <option value="Price, high to low">Giá từ cao đến thấp</option>
-                </select>
+                    <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-[15px] pr-[15px] select-none whitespace-nowrap outline-none rounded-[5px]" name="sort">
+                        <option value="0">Chọn</option>
+                        <option value="1">Tên từ A đến Z</option>
+                        <option value="2">Tên từ Z đến A</option>
+                        <option value="3">Giá từ thấp đến cao</option>
+                        <option value="4">Giá từ cao đến thấp</option>
+                    </select>
+                </div>
+
+                <div class="mt-[30px]">
+                    <label>Hiện:</label>
+
+                    <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-[15px] pr-[15px] select-none whitespace-nowrap outline-none rounded-[5px]" name="show">
+                        <option value="4">4</option>
+                        <option value="8">8</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="bg-[#cea679] w-[70px] h-[42px] hover:text-[#ffffff] hover:bg-[#333333] text-center rounded-[5px] mt-[30px]">
+                    <p class="text-[18px] font-semibold">Lọc</p>
+                </button>
             </div>
-
-            <div class="m-[30px]">
-                <label>Hiện:</label>
-
-                <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-18[px] pr-[30px] select-none whitespace-nowrap outline-none rounded-[5px]">
-                    <option value="9" class="">12</option>
-                    <option value="15">20</option>
-                    <option value="30">32</option>
-                </select>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
 
