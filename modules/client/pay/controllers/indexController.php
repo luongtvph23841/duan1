@@ -33,6 +33,8 @@ function indexPostAction()
             create_order_detail($id_product, $code, $quantity);
         }
 
+        unset($_SESSION['cart']['buy']);
+        unset($_SESSION['cart']['info']);
         header('Location: ?role=client&mod=order&id_user=' . $id_user);
     }
 }
