@@ -19,7 +19,7 @@ function create_orders($code, $id_user, $status)
     $id = db_insert('orders', [
         'code' => $code,
         'id_user' => $id_user,
-        'status' => $status,
+        'id_status' => $status,
         'time' => date('Y-m-d H:i:s'),
     ]);
     return $id;
