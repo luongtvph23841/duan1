@@ -4,7 +4,7 @@
     <div class="border-b-[2px]">
         <div class="grid grid-cols-2 mx-auto">
             <div class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">
-                <p>Sản phẩm</p>
+                <p>tìm kiếm</p>
             </div>
 
             <form action="" method="POST">
