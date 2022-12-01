@@ -2,7 +2,6 @@
 
 function construct()
 {
-    // request_auth(true);
     load_model('index');
 }
 
@@ -16,17 +15,16 @@ function indexAction()
 
 function indexPostAction()
 {
-    // validation
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     $auth = get_login_user($username, $password);
 
     if (empty($username)) {
-        push_notification('danger', ['Vui lòng nhập tài khoản']);
+        push_notification('danger', ['Bạn phải nhập tài khoản']);
         header('Location: ?role=client&mod=login');
     } elseif (empty($password)) {
-        push_notification('danger', ['Vui lòng nhập mật khẩu']);
+        push_notification('danger', ['Bạn phải nhập mật khẩu']);
         header('Location: ?role=client&mod=login');
     } elseif (empty($auth)) {
         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);

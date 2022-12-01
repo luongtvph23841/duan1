@@ -1,6 +1,5 @@
 <?php get_header('', 'Giỏ hàng') ?>
 
-
 <div class="h-auto mb-5">
     <div class="border-b-[1px]">
         <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px] text-center">giỏ hàng</p>
@@ -23,12 +22,15 @@
                         <td class="w-[200px]">
                             <?php echo $item['name_product'] ?>
                         </td>
+
                         <td class="w-[200px] h-[200px]">
                             <img src="assets/media/products/<?php echo $item['image'] ?>" class="w-[100px] h-[100px] mx-auto">
                         </td>
+
                         <td class="w-[200px]">
                             <?php echo currency_format($item['price']) ?>
                         </td>
+
                         <form method="POST" action="">
                             <td class="w-[200px]">
                                 <div class="flex justify-center">
@@ -36,9 +38,11 @@
                                 </div>
                             </td>
                         </form>
+
                         <td class="text-red-500 font-semibold w-[200px]">
                             <?php echo currency_format($item['sub_total']) ?>
                         </td>
+
                         <td class="w-[200px]">
                             <a href="?role=client&mod=cart&action=delete&id=<?php echo $item['id_product'] ?>" class="text-[20px] hover:text-[#d2a98b]">
                                 <i class="fa fa-trash"></i>

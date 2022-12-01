@@ -27,6 +27,7 @@ function indexAction()
         update_info_cart();
         header('Location: ?role=client&mod=cart');
     }
+
     if (!empty($_SESSION['cart'])) {
         $data['cart'] = $_SESSION['cart'];
         $total = get_total_cart();

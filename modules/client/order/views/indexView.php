@@ -35,7 +35,23 @@
                             </td>
 
                             <td class="w-[150px]">
-                                <p class="text-[#26aa99]"><?php echo $value['name_status'] ?></p>
+                                <?php if ($value['id_status'] == 1) { ?>
+                                    <p class="text-[orange]">
+                                        <?php echo $value['name_status'] ?>
+                                    </p>
+                                <?php } elseif ($value['id_status'] == 2) { ?>
+                                    <p class="text-[blue]">
+                                        <?php echo $value['name_status'] ?>
+                                    </p>
+                                <?php } elseif ($value['id_status'] == 3) { ?>
+                                    <p class="text-[green]">
+                                        <?php echo $value['name_status'] ?>
+                                    </p>
+                                <?php } elseif ($value['id_status'] == 4) { ?>
+                                    <p class="text-[red]">
+                                        <?php echo $value['name_status'] ?>
+                                    </p>
+                                <?php } ?>
                             </td>
                         </tr>
                     </tbody>

@@ -27,19 +27,19 @@ function indexPostAction()
     $address = $_POST['address'];
 
     if (empty($name)) {
-        push_notification('danger', ['Vui lòng nhập tên']);
+        push_notification('danger', ['Bạn phải nhập tên người dùng']);
         header('Location: ?role=client&mod=register');
     } elseif (empty($email)) {
-        push_notification('danger', ['Vui lòng nhập email']);
+        push_notification('danger', ['Bạn phải nhập email']);
         header('Location: ?role=client&mod=register');
     } elseif (empty($password)) {
-        push_notification('danger', ['Vui lòng nhập mật khẩu']);
+        push_notification('danger', ['Bạn phải nhập mật khẩu']);
         header('Location: ?role=client&mod=register');
     } elseif (empty($phone)) {
-        push_notification('danger', ['Vui lòng nhập số điện thoại']);
+        push_notification('danger', ['Bạn phải nhập số điện thoại']);
         header('Location: ?role=client&mod=register');
     } elseif (empty($address)) {
-        push_notification('danger', ['Vui lòng nhập địa chỉ']);
+        push_notification('danger', ['Bạn phải nhập địa chỉ']);
         header('Location: ?role=client&mod=register');
     } else {
         create_user($name, $email, $password, $phone, $address);
