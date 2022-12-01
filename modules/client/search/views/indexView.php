@@ -6,9 +6,11 @@
             <div class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">
                 <p>Sản phẩm</p>
             </div>
+
             <div class="grid grid-cols-2">
                 <div class="m-[30px]">
                     <label>Sắp xếp:</label>
+
                     <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-18[px] pr-[30px] select-none whitespace-nowrap outline-none rounded-[5px]">
                         <option value="Select" class="outline">Chọn</option>
                         <option value="Name, A to Z">Tên từ A đến Z</option>
@@ -17,8 +19,10 @@
                         <option value="Price, high to low">Giá từ cao đến thấp</option>
                     </select>
                 </div>
+
                 <div class="m-[30px]">
                     <label>Hiện:</label>
+
                     <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-18[px] pr-[30px] select-none whitespace-nowrap outline-none rounded-[5px]">
                         <option value="9" class="">12</option>
                         <option value="15">20</option>
@@ -30,7 +34,9 @@
     </div>
     <div class="bg-[#f3f3f3] p-5 flex">
         <i class="fa fa-lightbulb-o hover:text-[#d2a98b] text-xl"></i>
+
         <p class="ml-1"> Kết quả tìm kiếm cho:</p>
+
         <p class="ml-1 text-red-500">
             <?php
             if (isset($_GET['id_cate'])) {
@@ -74,16 +80,19 @@
 
             <div class="w-[270px] h-[50px] p-3">
                 <h3 class="color-black ext-[16px] font-semibold text-ellipsis whitespace-normal leading-none">
-                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]"><?php echo $product['name_product'] ?></a>
+                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]">
+                        <?php echo $product['name_product'] ?>
+                    </a>
                 </h3>
             </div>
+
             <div class="pt-5">
-                <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight"><?php echo currency_format($product['price']) ?>
+                <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight">
+                    <?php echo currency_format($product['price']) ?>
                 </h4>
             </div>
         </div>
     <?php endforeach; ?>
 </div>
 
-</div>
 <?php get_footer() ?>

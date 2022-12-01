@@ -20,7 +20,7 @@
         $categories = get_list_categories();
         ?> -->
 
-<div class="bg-[#333333]">
+<div class="w-full bg-[#333333]">
     <div class="border-b-[1px]">
         <div class="flex justify-around h-[50px]">
             <div class="my-auto text-[#fff]">

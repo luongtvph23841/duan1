@@ -10,8 +10,7 @@
                 <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
             </div>
 
-            <div class="flex w-[90%]">
-
+            <div class="flex">
                 <div class="grid grid-cols-1 w-[800px] h-[500px]">
                     <div class="flex m-5">
                         <p class="text-[16px] mt-2 mr-5 w-[150px] text-right">Tên</p>
@@ -39,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="w-[400px] mt-[100px]">
+                <div class="w-[400px] m-auto">
                     <div class="flex justify-center">
                         <img src="assets/media/users/<?php echo $users['image'] ?>" class="rounded-[50%] w-[100px] h-[100px]">
                     </div>
@@ -47,7 +46,6 @@
                     <div class="flex justify-center mt-5">
                         <input type="file" name="img" accept="image/*" />
                     </div>
-
                 </div>
             </div>
 
