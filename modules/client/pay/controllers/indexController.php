@@ -21,7 +21,7 @@ function indexAction()
 function indexPostAction()
 {
     $id_user = get_auth()['id'];
-    $code = substr(md5(time()), 0, 16);
+    $code = RAND(0, 999);
     $status = 1;
 
     $actived = create_orders($code, $id_user, $status);

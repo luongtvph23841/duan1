@@ -8,5 +8,8 @@ function construct()
 
 function indexAction()
 {
-    load_view('index');
+    $code = $_GET['code'];
+    $data['orderdetail'] = get_list_orderdetail($code);
+
+    load_view('index', $data);
 }
