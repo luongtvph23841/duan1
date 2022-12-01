@@ -34,7 +34,6 @@ function indexPostAction()
         }
 
         unset($_SESSION['cart']['buy']);
-        unset($_SESSION['cart']['info']);
         header('Location: ?role=client&mod=order&id_user=' . $id_user);
     }
 }

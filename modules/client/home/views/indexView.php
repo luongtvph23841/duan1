@@ -15,8 +15,8 @@
         <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">Sản phẩm nổi bật</p>
     </div>
 
-    <div class="w-[90%] mx-auto pt-5">
-        <div class="grid grid-cols-4 gap-1 w-[90%] mx-auto">
+    <div class="mx-auto pt-5 w-[1200px]">
+        <div class="grid grid-cols-4 gap-1 mx-auto">
             <?php foreach ($products as $product) : ?>
                 <div div class="mx-auto h-auto text-center mb-10">
                     <div>
