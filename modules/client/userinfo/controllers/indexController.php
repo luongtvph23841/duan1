@@ -27,8 +27,27 @@ function indexPostAction()
 
     $img = $file['name'];
 
-    update_user($id, $name, $email, $password, $phone, $address, $id_role, $img);
-    push_notification('success', ['Chỉnh sửa thông tin thành công']);
-
-    header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    if (empty($name)) {
+        push_notification('danger', ['Bạn phải nhập tên người dùng']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    } elseif (empty($email)) {
+        push_notification('danger', ['Bạn phải nhập email']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    } elseif (empty($password)) {
+        push_notification('danger', ['Bạn phải nhập mật khẩu']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    } elseif (empty($phone)) {
+        push_notification('danger', ['Bạn phải nhập số điện thoại']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    } elseif (empty($address)) {
+        push_notification('danger', ['Bạn phải nhập địa chỉ']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    } elseif (empty($img)) {
+        push_notification('danger', ['Bạn phải chọn hình ảnh']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    } else {
+        update_user($id, $name, $email, $password, $phone, $address, $id_role, $img);
+        push_notification('suceess', ['Chỉnh sửa thông tin thành công']);
+        header('Location: ?role=client&mod=userinfo&id_user=' . $id);
+    }
 }

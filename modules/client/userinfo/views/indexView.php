@@ -50,9 +50,9 @@
             </div>
 
             <div class="text-center border-t-[2px]">
-                <div class="mt-5">
+                <div class="mt-5 grid grid-cols-1">
                     <form action="" method="POST">
-                        <button type="submit" class="w-[50px] h-[50px] bg-[#333333] text-white rounded hover:bg-[#d2a98b]">
+                        <button type="submit" class="w-[50px] h-[50px] bg-[#333333] text-white rounded hover:bg-[#d2a98b] items-center mx-auto">
                             <a href="?role=client&mod=userinfo">
                                 <p class="text-white text-base uppercase">Lưu</p>
                             </a>
@@ -61,7 +61,7 @@
 
                     <?php foreach ($notifications as $notification) : ?>
                         <?php foreach ($notification['msgs'] as $msg) : ?>
-                            <span class="text-[red] text-center absolute m-3 <?php echo $notification['type'] ?>"><?php echo $msg ?></span>
+                            <span class="text-center mt-5 text-[red] <?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
                         <?php endforeach; ?>
                     <?php endforeach; ?>
                 </div>
