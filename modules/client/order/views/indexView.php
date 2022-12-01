@@ -6,11 +6,11 @@
 </div>
 
 <div class="grid grid-cols-1 gap-10 mx-auto bg-[#f8f8f8] p-5">
-    <?php foreach ($orderdetail as $value) : ?>
+    <?php foreach ($orders as $value) : ?>
         <div class="p-5 bg-white rounded-[20px] mx-auto">
             <div class="grid grid-cols-1 m-2">
                 <div class="flex justify-end border-b-[2px]">
-                    <p class="text-[#26aa99] m-2">Giao hàng thành công</p>
+                    <p class="text-[#26aa99] m-2">Chờ lấy hàng</p>
                     <p class="ml-5 m-2">Đã giao</p>
                 </div>
 

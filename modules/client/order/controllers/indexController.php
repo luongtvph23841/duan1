@@ -9,6 +9,7 @@ function construct()
 function indexAction()
 {
     $id_user = $_GET['id_user'];
-    $data['orderdetail'] = get_list_orderdetail($id_user);
+    $data['orders'] = get_list_orders($id_user);
+
     load_view('index', $data);
 }
