@@ -1,4 +1,4 @@
-<?php get_header('', 'Bình luận') ?>
+<?php get_header('', 'Trạng thái') ?>
 
 <!--begin::Subheader-->
 <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">

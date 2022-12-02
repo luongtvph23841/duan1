@@ -1,4 +1,4 @@
-<?php get_header('', 'Vai trò') ?>
+<?php get_header('', 'Đơn hàng') ?>
 
 <!--begin::Subheader-->
 <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
