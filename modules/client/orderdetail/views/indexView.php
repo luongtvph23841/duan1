@@ -6,10 +6,10 @@
         <p>Xem thông tin đơn hàng</p>
     </div>
 
-    <div class="mt-5 w-[1300px] mx-auto">
+    <div class="mt-5 w-[1300px] mx-auto pb-10">
         <div class="mt-10 mt-5 rounded-[5px] bg-[white] mt-6">
             <div class="grid grid-cols-3 text-[18px] leading-[16px] mx-auto border-b-[2px] p-5">
-                <span class="mt-5">
+                <span class="mt-5 hover:text-[#d2a98b]">
                     <a href="?role=client&mod=order&id_user=<?php echo get_auth()['id'] ?>">
                         Trở lại
                     </a>
@@ -20,8 +20,23 @@
                 </span>
 
                 <span class="flex justify-end mt-5 text-center">
-                    Trạng thái:
-                    dang giao
+                    Trạng thái:<?php if ($orders['id_status'] == 1) { ?>
+                    <p class="text-[orange] ml-2">
+                        <?php echo $orders['name_status'] ?>
+                    </p>
+                <?php } elseif ($orders['id_status'] == 2) { ?>
+                    <p class="text-[blue] ml-2">
+                        <?php echo $orders['name_status'] ?>
+                    </p>
+                <?php } elseif ($orders['id_status'] == 3) { ?>
+                    <p class="text-[green] ml-2">
+                        <?php echo $orders['name_status'] ?>
+                    </p>
+                <?php } elseif ($orders['id_status'] == 4) { ?>
+                    <p class="text-[red] ml-2">
+                        <?php echo $orders['name_status'] ?>
+                    </p>
+                <?php } ?>
                 </span>
             </div>
 
@@ -91,11 +106,13 @@
                 </table>
             </div>
 
-            <div class="flex justify-end">
+            <div class="flex justify-center">
                 <div class="w-[300px] h-[220px] bg-[#fffefb]">
                     <div class="p-5">
                         <p class="mt-2 text-[14px] text-[#222] font-normal">
-                            Tổng tiền hàng:<span class="float-right"><?php echo currency_format($total); ?></span>
+                            Tổng tiền hàng:<span class="float-right">
+                                <?php echo currency_format($orders['total_price']) ?>
+                            </span>
                         </p>
 
                         <p class="mt-2 text-[14px] text-[#222] font-normal">
@@ -103,19 +120,22 @@
                         </p>
 
                         <p class="mt-2 text-[14px] text-[#222] font-normal">
-                            Tổng Thanh toán:<span class="float-right text-[red]"><?php echo currency_format($total); ?></span>
+                            Tổng Thanh toán:
+                            <span class="float-right text-[red]">
+                                <?php echo currency_format($orders['total_price']) ?>
+                            </span>
                         </p>
                     </div>
 
-                    <!-- <form action="" method="POST"> -->
-                    <div class="mt-5">
-                        <a href="?role=client&mod=order&id_user=<?php echo get_auth()['id'] ?>">
-                            <button type="submit" class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] float-right m-5">
-                                <p class="text-black">Hủy đơn</p>
-                            </button>
-                        </a>
-                    </div>
-                    <!-- </form> -->
+                    <?php if ($orders['id_status'] != 3 && $orders['id_status'] != 4) { ?>
+                        <div class="mt-5 flex justify-center">
+                            <a href="?role=client&mod=orderdetail&code=<?php echo $orders['code'] ?>&action=cancel">
+                                <button type="submit" class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] m-5">
+                                    <p class="text-black">Hủy đơn</p>
+                                </button>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

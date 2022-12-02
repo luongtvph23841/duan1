@@ -21,10 +21,12 @@ function indexAction()
 function indexPostAction()
 {
     $id_user = get_auth()['id'];
-    $code = RAND(0, 999);
+    $code = RAND(0, 99);
     $status = 1;
+    $total = $_SESSION['cart']['infor']['total'];
 
-    $actived = create_orders($code, $id_user, $status);
+
+    $actived = create_orders($code, $id_user, $status, $total);
     if ($actived) {
         foreach ($_SESSION['cart']['buy'] as $vaule) {
             $id_product = $vaule['id_product'];
