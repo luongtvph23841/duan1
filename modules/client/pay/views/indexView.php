@@ -1,4 +1,6 @@
-<?php get_header('', 'Thanh toán'); ?>
+<?php
+print_r($_SESSION['cart']['infor']);
+get_header('', 'Thanh toán'); ?>
 
 <div class="border-b-[2px]">
     <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px] text-center">thanh toán</p>
@@ -86,7 +88,7 @@
 
     <div class="w-[85%] mx-auto bg-[white] mt-5 rounded-[20px] mb-5">
         <div class="border-b-[2px]">
-            <p class="m-5 text-[18px] font-semibold">Phương thức thanh toán</p>
+            <p class="m-5 text-[18px] font-semibold">Tóm tắt</p>
         </div>
 
         <div class="flex justify-end">
