@@ -20,7 +20,8 @@
                 </span>
 
                 <span class="flex justify-end mt-5 text-center">
-                    Trạng thái:<p>Giao hàng thành công</p>
+                    Trạng thái:
+                    dang giao
                 </span>
             </div>
 
@@ -106,13 +107,15 @@
                         </p>
                     </div>
 
-                    <form action="" method="POST">
-                        <div class="mt-5">
+                    <!-- <form action="" method="POST"> -->
+                    <div class="mt-5">
+                        <a href="?role=client&mod=order&id_user=<?php echo get_auth()['id'] ?>">
                             <button type="submit" class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] float-right m-5">
                                 <p class="text-black">Hủy đơn</p>
                             </button>
-                        </div>
-                    </form>
+                        </a>
+                    </div>
+                    <!-- </form> -->
                 </div>
             </div>
         </div>

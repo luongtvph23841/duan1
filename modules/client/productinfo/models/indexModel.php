@@ -29,8 +29,8 @@ function create_comment($content, $id_product, $id_user)
     return $id;
 }
 
-function get_list_products_by_id_cate($id)
+function get_list_products_by_id_cate($id, $id_product)
 {
-    $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_cate = $id");
+    $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail FROM `products` p WHERE p.id_cate = $id AND p.id <> $id_product");
     return $result;
 }

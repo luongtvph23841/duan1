@@ -11,7 +11,7 @@ function indexAction()
     $id = $_GET['id_prod'];
 
     $id_cate = $_GET['id_cate'];
-    $data['product_by_id_cate'] = get_list_products_by_id_cate($id_cate);
+    $data['product_by_id_cate'] = get_list_products_by_id_cate($id_cate, $id);
 
     $data['product'] = get_one_product($id);
     $data['comment'] = get_list_comment($id);
