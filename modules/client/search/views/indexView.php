@@ -62,50 +62,56 @@
     </div>
 </div>
 
-<div class="pt-2 grid grid-cols-4 pb-4 mt-10">
-    <?php foreach ($products as $product) : ?>
-        <div div class="mx-auto h-auto text-center mb-10">
-            <div>
-                <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border-[2px]">
-                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>">
-                        <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[200px] h-[210px] pt-2 mx-auto hover:scale-[1.4] ease-in duration-500 pt-8">
-                    </a>
+<?php if (!empty($products)) { ?>
+    <div class="pt-2 grid grid-cols-4 pb-4 mt-10">
+        <?php foreach ($products as $product) : ?>
+            <div div class="mx-auto h-auto text-center mb-10">
+                <div>
+                    <div class="menu h-[295px] w-[270px] bg-[#f8f8f8] rounded-t hover:border-[2px]">
+                        <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>">
+                            <img src="assets/media/products/<?php echo $product['image'] ?>" alt="<?php echo $product['name_product'] ?>" class="w-[200px] h-[210px] pt-2 mx-auto hover:scale-[1.4] ease-in duration-500 pt-8">
+                        </a>
 
-                    <div class="dropmenu absolute bg-[#333333] w-[270px] leading-[45px]  mt-10 ">
-                        <div class="flex justify-around mt-1">
-                            <a href="?role=client&mod=cart">
-                                <p class="text-white text-base pt-2 hover:text-[#d2a98b] mr-10">
-                                    <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
-                                        <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
-                                    </a>
-                                </p>
-                            </a>
+                        <div class="dropmenu absolute bg-[#333333] w-[270px] leading-[45px]  mt-10 ">
+                            <div class="flex justify-around mt-1">
+                                <a href="?role=client&mod=cart">
+                                    <p class="text-white text-base pt-2 hover:text-[#d2a98b] mr-10">
+                                        <a href="?role=client&mod=cart&id=<?php echo $product['id'] ?>">
+                                            <i class="fa fa-sharp fa-solid fa-cart-plus mr-[5px]"></i>Thêm vào giỏ hàng
+                                        </a>
+                                    </p>
+                                </a>
 
-                            <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="mt-[-3px]">
-                                <p class="text-white hover:text-[#d2a98b]">
-                                    <i class="fa fa-eye mr-[5px]"></i>Xem
-                                </p>
-                            </a>
+                                <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="mt-[-3px]">
+                                    <p class="text-white hover:text-[#d2a98b]">
+                                        <i class="fa fa-eye mr-[5px]"></i>Xem
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="w-[270px] h-[50px] p-3">
-                <h3 class="color-black ext-[16px] font-semibold text-ellipsis whitespace-normal leading-none">
-                    <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]">
-                        <?php echo $product['name_product'] ?>
-                    </a>
-                </h3>
-            </div>
+                <div class="w-[270px] h-[50px] p-3">
+                    <h3 class="color-black ext-[16px] font-semibold text-ellipsis whitespace-normal leading-none">
+                        <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="hover:text-[#d2a98b] leading-[20px]">
+                            <?php echo $product['name_product'] ?>
+                        </a>
+                    </h3>
+                </div>
 
-            <div class="pt-5">
-                <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight">
-                    <?php echo currency_format($product['price']) ?>
-                </h4>
+                <div class="pt-5">
+                    <h4 class="color-black leading-[16px] text-[16px] text-[#cea679] mt-[15px] font-light leading-tight">
+                        <?php echo currency_format($product['price']) ?>
+                    </h4>
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
-</div>
+        <?php endforeach; ?>
+    </div>
+<?php } else { ?>
+    <div class="h-[100px] text-center pt-10">
+        <p>Không có kết quả tìm kiếm</p>
+    </div>
+<?php } ?>
 
 <?php get_footer() ?>
