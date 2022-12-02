@@ -15,8 +15,7 @@ function indexAction()
 function indexPostAction()
 {
     $sort = $_POST['sort'];
-    $show = $_POST['show'];
 
-    $data['products'] = get_list_products_sort($sort, $show);
+    $data['products'] = get_list_products_sort($sort);
     load_view('index', $data);
 }
