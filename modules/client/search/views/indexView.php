@@ -27,9 +27,9 @@
 
                             <select class="form-control select2 bg-[#fff] border-[2px] box-border cursor-pointer text-[14px] font-normal h-[42px] leading-[40px] pl-[15px] pr-[15px] select-none whitespace-nowrap outline-none rounded-[5px]" name="show">
                                 <option value="0">Chọn</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="8">8</option>
+                                <option value="12">12</option>
                             </select>
                         </div>
 

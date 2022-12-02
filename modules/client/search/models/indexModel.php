@@ -69,7 +69,6 @@ function get_list_products_by_id_cate_sort($id, $sort, $show)
             LIMIT $show");
         }
     }
-
     return $result;
 }
 
@@ -82,13 +81,13 @@ function get_list_products_by_id_orgin_sort($id, $sort, $show)
             $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
             ORDER BY p.name_product ASC");
         } elseif ($sort == 2) {
-            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id
+            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
             ORDER BY p.name_product DESC");
         } elseif ($sort == 3) {
-            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id
+            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
             ORDER BY p.price ASC");
         } elseif ($sort == 4) {
-            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id
+            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
             ORDER BY p.price DESC");
         }
     } else {
@@ -100,15 +99,15 @@ function get_list_products_by_id_orgin_sort($id, $sort, $show)
                 ORDER BY p.name_product ASC
             LIMIT $show");
         } elseif ($sort == 2) {
-            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id
+            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
            ORDER BY p.name_product DESC
            LIMIT $show");
         } elseif ($sort == 3) {
-            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id
+            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
           ORDER BY p.price ASC
           LIMIT $show");
         } elseif ($sort == 4) {
-            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id
+            $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail  FROM `products` p WHERE p.id_orgin = $id 
          ORDER BY p.price DESC
          LIMIT $show");
         }
