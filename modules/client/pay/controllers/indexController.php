@@ -2,8 +2,12 @@
 
 function construct()
 {
-    load_model('index');
-    load('helper', 'format');
+    if (!empty(get_auth())) {
+        load_model('index');
+        load('helper', 'format');
+    } else {
+        header('Location: ?role=client&mod=login');
+    }
 }
 
 function indexAction()
@@ -21,10 +25,9 @@ function indexAction()
 function indexPostAction()
 {
     $id_user = get_auth()['id'];
-    $code = RAND(0, 99);
+    $code = mt_rand();
     $status = 1;
     $total = $_SESSION['cart']['infor']['total'];
-
 
     $actived = create_orders($code, $id_user, $status, $total);
     if ($actived) {
