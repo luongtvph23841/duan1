@@ -7,6 +7,8 @@ function construct()
 
 function indexAction()
 {
+    $data['notifications'] = get_notification();
+
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $product = get_product_by_id($id);
@@ -51,5 +53,11 @@ function indexPostAction()
 {
     $quantity = $_POST['quantity'];
     update_cart($quantity);
+    header("Location: ?role=client&mod=cart");
+}
+
+function removecartAction()
+{
+    unset($_SESSION['cart']['buy']);
     header("Location: ?role=client&mod=cart");
 }
