@@ -12,12 +12,15 @@
 
     <div>
         <div class="information-product w-full">
-            <div class="flex flex-wrap items-baseline">
+            <div class="flex flex-wrap items-baseline border-b-[2px]">
                 <h1 class="w-full flex-none mb-3 text-2xl leading-none text-[24px] font-semibold">
                     <?php echo $product['name_product'] ?>
                 </h1>
-                <div class="flex-auto text-lg font-medium text-[#d2a98b] h-[40px] border-b-[2px]">
+                <div class="flex-auto text-lg font-medium text-[#d2a98b] h-[40px]">
                     <?php echo currency_format($product['price']) ?>
+                </div>
+                <div>
+                    Số lượng: <?php echo $product['quantity'] ?>
                 </div>
             </div>
 
