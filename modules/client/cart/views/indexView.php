@@ -1,4 +1,4 @@
-<?php get_header('', 'Giỏ hàng') ?>
+<?php get_header('', 'Giỏ hàng'); ?>
 
 <div class="h-auto mb-5">
     <div class="border-b-[1px]">
@@ -6,7 +6,7 @@
     </div>
 
     <div>
-        <?php if (isset($_SESSION['cart']['buy'])) { ?>
+        <?php if (!empty($_SESSION['cart']['buy'])) { ?>
             <form method="POST" action="">
                 <table class="w-[80%] mx-auto mt-10 border-b-[5px]">
                     <tr class="bg-[#333333] text-white h-[50px] font-semibold text-[16px]">
@@ -41,12 +41,6 @@
                                 <div class="flex justify-center">
                                     <input type="number" min="1" name="quantity[<?php echo $item['id_product'] ?>]" value="<?php echo $item['quantity'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
                                 </div>
-
-                                <?php foreach ($notifications as $notification) : ?>
-                                    <?php foreach ($notification['msgs'] as $msg) : ?>
-                                        <span class="text-center mt-5 text-[red] <?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
-                                    <?php endforeach; ?>
-                                <?php endforeach; ?>
                             </td>
 
                             <td class="text-red-500 font-semibold w-[200px]">

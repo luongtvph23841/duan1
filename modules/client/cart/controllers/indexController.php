@@ -7,8 +7,6 @@ function construct()
 
 function indexAction()
 {
-    $data['notifications'] = get_notification();
-
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $product = get_product_by_id($id);
