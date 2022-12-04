@@ -18,6 +18,12 @@
             return $result;
         }
         $categories = get_list_categories();
+
+        if (isset($_SESSION['cart']['buy'])) {
+            $count_cart = count($_SESSION['cart']['buy']);
+        } else {
+            $count_cart = 0;
+        }
         ?> -->
 
 <div class="w-full bg-[#333333]">
@@ -117,7 +123,17 @@
                     </form>
                 </div>
             </div>
-            <a href="?role=client&mod=cart"><i class="fa fa-shopping-cart ml-[30px] text-[33px] hover:text-[#d2a98b] text-[#fff] mt-[8px]"></i></a>
+            <div>
+                <a href="?role=client&mod=cart">
+                    <i class="fa fa-shopping-cart ml-[30px] text-[33px] hover:text-[#d2a98b] text-[#fff] mt-[8px]">
+                        <p class="absolute text-[16px] mt-[-37px] ml-[22px] font-bold bg-[#d2a98b] rounded-[50%] w-[17px] h-[17px] text-center text-[white]">
+                            <?php if (isset($count_cart)) {
+                                echo $count_cart;
+                            } ?>
+                        </p>
+                    </i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
