@@ -34,3 +34,17 @@ function get_list_products_by_id_cate($id, $id_product)
     $result = db_fetch_array("SELECT p.id, p.name_product, p.price, p.quantity, p.image, p.id_orgin, p.id_cate, p.detail FROM `products` p WHERE p.id_cate = $id AND p.id <> $id_product");
     return $result;
 }
+
+// function get_view_product($id)
+// {
+//     $result = db_fetch_array("SELECT view FROM `products` WHERE id = $id");
+//     return $result;
+// }
+
+// function update_view($view, $id)
+// {
+//     db_update('products', [
+//         'view' => $view,
+//     ], "id = $id");
+//     return true;
+// }
