@@ -55,6 +55,10 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label>Lượt xem</label>
+                                <input type="text" name="id" class="form-control" readonly="true" value="<?php echo $product['view'] ?>" />
+                            </div>
+                            <div class="form-group">
                                 <label>Xuất sứ</label>
                                 <select class="form-control select2" name="id_orgin">
                                     <?php foreach ($orgin as $key) : ?>

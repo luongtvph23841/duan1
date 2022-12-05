@@ -21,7 +21,7 @@ function get_list_orgin()
 
 function get_one_product($id)
 {
-    $result = db_fetch_row("SELECT c.id, c.name_product, c.price, c.quantity, c.image, c.id_orgin, c.id_cate, c.detail  FROM `products` c WHERE c.id = $id");
+    $result = db_fetch_row("SELECT p.*  FROM `products` p WHERE p.id = $id");
     return $result;
 }
 
