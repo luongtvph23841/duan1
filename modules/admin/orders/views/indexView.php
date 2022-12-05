@@ -78,7 +78,7 @@
                                     <?php echo ($key['time']) ?>
                                 </td>
                                 <td>
-                                    <?php echo ($key['total_price']) ?>
+                                    <?php echo currency_format($key['total_price']) ?>
                                 </td>
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">

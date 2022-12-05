@@ -1,7 +1,7 @@
 <?php
 function construct()
 {
-    request_auth();
+    load('helper', 'format');
     load_model('index');
 }
 
