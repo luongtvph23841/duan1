@@ -12,7 +12,7 @@
     </div>
 
     <div class="border-b-[2px] text-center">
-        <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">Sản phẩm nổi bật</p>
+        <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">Sản phẩm xem nhiều</p>
     </div>
 
     <div class="mx-auto pt-5 w-[1200px]">
