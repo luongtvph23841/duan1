@@ -24,7 +24,7 @@
 
                     <div class="flex m-5">
                         <p class="font-normal text-[16px] mt-2 mr-5 w-[150px] text-right">Mật khẩu</p>
-                        <input type="text" name="password" class="border-[2px] outline-0 h-[40px] w-[400px] box-border rounded-[2px] p-4 items-center" value="<?php echo $users['password'] ?>">
+                        <input type="password" name="password" class="border-[2px] outline-0 h-[40px] w-[400px] box-border rounded-[2px] p-4 items-center" value="<?php echo $users['password'] ?>">
                     </div>
 
                     <div class="flex m-5">
