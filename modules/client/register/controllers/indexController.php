@@ -25,12 +25,16 @@ function indexPostAction()
     $password = $_POST['password'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
+    $pattern = '#^[a-z][a-z0-9\._]{2,31}@[a-z0-9\-]{3,}(\.[a-z]{2,4}){1,2}$#';
 
     if (empty($name)) {
         push_notification('danger', ['Bạn phải nhập tên người dùng']);
         header('Location: ?role=client&mod=register');
     } elseif (empty($email)) {
         push_notification('danger', ['Bạn phải nhập email']);
+        header('Location: ?role=client&mod=register');
+    } elseif (!preg_match($pattern, $email, $match) == 1) {
+        push_notification('danger', ['Email bạn nhập chưa đúng']);
         header('Location: ?role=client&mod=register');
     } elseif (empty($password)) {
         push_notification('danger', ['Bạn phải nhập mật khẩu']);
