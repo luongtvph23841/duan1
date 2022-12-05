@@ -1,4 +1,4 @@
-<?php get_header('', 'Tạo mới bình luận') ?>
+<?php get_header('', 'Tạo trạng thái') ?>
 
 <!--begin::Subheader-->
 <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Thêm mới bình luận</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Thêm trạng thái</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -20,7 +20,7 @@
         <!--begin::Card-->
         <div class="card card-custom gutter-b example example-compact">
             <div class="card-header">
-                <h3 class="card-title">Form thông tin bình luận mới</h3>
+                <h3 class="card-title">Form trạng thái mới</h3>
             </div>
             <!--begin::Form-->
             <form method="POST" action="" enctype="multipart/form-data">
@@ -28,8 +28,8 @@
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
-                                <label>Nội dung</label>
-                                <input type="text" name="content" class="form-control" placeholder="Nhập vào nội dung" />
+                                <label>Trạng thái</label>
+                                <input type="text" name="name" class="form-control" placeholder="Nhập vào nội dung" />
                             </div>
                         </div>
                     </div>
