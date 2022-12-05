@@ -67,6 +67,7 @@
 <script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 <script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 <script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <!--end::Global Theme Bundle-->
 <script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5"></script>
 <script src="assets/js/pages/widgets.js?v=7.0.5"></script>
