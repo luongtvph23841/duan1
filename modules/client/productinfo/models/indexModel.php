@@ -48,3 +48,9 @@ function get_list_products_by_id_cate($id, $id_product)
 //     ], "id = $id");
 //     return true;
 // }
+
+// function update_view($id_prod)
+// {
+//     $result = db_query("UPDATE `products` SET view = view + 1 WHERE id = '$id_prod'");
+//     return $result;
+// }
