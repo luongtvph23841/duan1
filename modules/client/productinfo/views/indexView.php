@@ -19,8 +19,19 @@
                 <div class="flex-auto text-lg font-medium text-[#d2a98b] h-[40px]">
                     <?php echo currency_format($product['price']) ?>
                 </div>
-                <div>
-                    Số lượng: <?php echo $product['quantity'] ?>
+                <div class="grid grid-cols-2">
+                    <p class="font-semibold">
+                        Lượt xem:
+                    </p>
+                    <p class="ml-1">
+                        <?php echo $product['view'] ?>
+                    </p>
+                    <p class="font-semibold">
+                        Số lượng:
+                    </p>
+                    <p class="ml-1">
+                        <?php echo $product['quantity'] ?>
+                    </p>
                 </div>
             </div>
 
