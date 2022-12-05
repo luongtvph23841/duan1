@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý người dùng</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý đơn hàng</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -21,8 +21,8 @@
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
-                    <h3 class="card-label">Danh sách người dùng
-                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các người dùng có trên hệ
+                    <h3 class="card-label">Danh sách đơn hàng
+                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các đơn hàng có trên hệ
                             thống</span>
                     </h3>
                 </div>
