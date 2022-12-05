@@ -6,6 +6,7 @@ function construct()
         load_model('index');
         load('helper', 'format');
     } else {
+        $_SESSION['pay'] = 1;
         header('Location: ?role=client&mod=login');
     }
 }

@@ -30,7 +30,13 @@ function indexPostAction()
         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
         header('Location: ?role=client&mod=login');
     } else {
-        push_auth($auth);
-        header('Location: ?role=client');
+        if ($_SESSION['pay'] == 1) {
+            unset($_SESSION['pay']);
+            header('Location: ?role=client&mod=pay');
+            push_auth($auth);
+        } else {
+            push_auth($auth);
+            header('Location: ?role=client');
+        }
     }
 }

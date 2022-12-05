@@ -1,5 +1,4 @@
-<?php get_header('', 'Đăng nhập') ?>
-
+<?php get_header('', 'Đăng nhập'); ?>
 <div class="bg-[#f8f8f8] h-[700px]">
     <div class="text-center p-10">
         <h1 class="text-[48px] text-[#333333] font-semibold tracking-[0.1px] uppercase">
