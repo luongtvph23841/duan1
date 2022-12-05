@@ -72,9 +72,10 @@
                             <th title="Field #4">Số lượng</th>
                             <th title="Field #5">Xuất sứ</th>
                             <th title="Field #6">Danh mục</th>
-                            <th title="Field #7">Mô tả</th>
-                            <th title="Field #8">Hình ảnh</th>
-                            <th title="Field #9">Hành động</th>
+                            <th title="Field #8">Lượt xem</th>
+                            <th title="Field #9">Mô tả</th>
+                            <th title="Field #10">Hình ảnh</th>
+                            <th title="Field #11">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,6 +87,7 @@
                                 <td><?php echo ($product['quantity']) ?></td>
                                 <td><?php echo ($product['name_orgin']) ?></td>
                                 <td><?php echo ($product['name_cate']) ?></td>
+                                <td><?php echo ($product['view']) ?></td>
                                 <td><?php echo ($product['detail']) ?></td>
                                 <td><img src="assets/media/products/<?php echo ($product['image']) ?>" width="100" alt=""></td>
                                 <td>
