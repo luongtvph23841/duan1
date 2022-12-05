@@ -48,8 +48,8 @@
 			<!--begin::Brand-->
 			<div class="brand flex-column-auto" id="kt_brand">
 				<!--begin::Logo-->
-				<a href="index.html" class="brand-logo">
-					<img alt="Logo" src="assets/media/logos/logo-kaka.png" class="w-[50px] h-[50px" />
+				<a href="?role=admin" class="brand-logo">
+					<img alt="Logo" src="assets/media/logos/logo-kaka-1.png" class="w-[100px] h-[50px]" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Toggle-->
