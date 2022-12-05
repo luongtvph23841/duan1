@@ -10,16 +10,7 @@ function indexAction()
 {
     $id = $_GET['id_prod'];
 
-    // if (isset($_GET['id_prod'])) {
-    //     $view_old = get_view_product($id);
-    //     $view_new = (int)$view_old + 1;
-    //     update_view($view_new, $id);
-    // }
-
-    // if (isset($_GET['id_prod'])) {
-    //     $id_prod = $_GET['id_prod'];
-    //     update_view($id_prod);
-    // }
+    update_view($id);
 
     $id_cate = $_GET['id_cate'];
     $data['product_by_id_cate'] = get_list_products_by_id_cate($id_cate, $id);

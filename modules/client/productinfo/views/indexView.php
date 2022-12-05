@@ -122,7 +122,7 @@
 
                                 <a href="?role=client&mod=productinfo&id_prod=<?php echo $product['id'] ?>&id_cate=<?php echo $product['id_cate'] ?>" class="mt-[-3px]">
                                     <p class="text-white hover:text-[#d2a98b]">
-                                        <i class="fa fa-eye mr-[5px]"></i>Xem
+                                        <i class="fa fa-eye mr-[5px]"> <?php echo $product['view'] ?></i>
                                     </p>
                                 </a>
                             </div>
