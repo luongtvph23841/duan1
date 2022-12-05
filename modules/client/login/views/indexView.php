@@ -3,11 +3,11 @@
 <div class="bg-[#f8f8f8] h-[700px]">
     <div class="text-center p-10">
         <h1 class="text-[48px] text-[#333333] font-semibold tracking-[0.1px] uppercase">
-            welcom
+            xin chào
         </h1>
 
         <h3 class="text-[18px] text-[#333333] font-normal tracking-[0.5px] mt-[10px] leading-none">
-            Login to your account
+            Đăng nhập vào tài khoản của bạn
         </h3>
     </div>
 

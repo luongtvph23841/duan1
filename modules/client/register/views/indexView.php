@@ -2,8 +2,13 @@
 
 <div class="bg-[#f8f8f8] h-[800px]">
     <div class="text-center p-10">
-        <h1 class="text-[48px] text-[#333333] font-semibold tracking-[0.1px] uppercase">welcom</h1>
-        <h3 class="text-[18px] text-[#333333] font-normal tracking-[0.5px] mt-[10px] leading-none">Register your account</h3>
+        <h1 class="text-[48px] text-[#333333] font-semibold tracking-[0.1px] uppercase">
+            xin chào
+        </h1>
+        <h3 class="text-[18px] text-[#333333] font-normal tracking-[0.5px] mt-[10px] leading-none">
+            Đăng kí tài khoản của bạn
+
+        </h3>
     </div>
 
     <div class="rounded-[5px] bg-[white] w-[500px] grid -grid-cols-1 mx-auto mt-5 border-[2px]">
