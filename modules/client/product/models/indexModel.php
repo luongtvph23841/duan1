@@ -2,7 +2,7 @@
 
 function get_list_products()
 {
-    $result = db_fetch_array("SELECT p.* FROM `products` p 
+    $result = db_fetch_array("SELECT p.*, o.name_orgin, c.name_cate FROM `products` p 
     INNER JOIN `orgin` o ON o.id = p.id_orgin
     INNER JOIN `categories` c ON c.id = p.id_cate");
     return $result;
