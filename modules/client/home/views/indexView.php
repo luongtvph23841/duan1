@@ -5,18 +5,18 @@
         <img src="assets/media/banner/banner.jpg" alt="" class="w-[100%] m-auto">
     </div>
 
-    <div class="flex m-20 justify-center">
+    <div class="flex m-10 justify-center">
         <img src="assets/media/banner/banner-1.png" alt="" class="m-3 hover:scale-[1.1] ease-in duration-500">
         <img src="assets/media/banner/banner-2.png" alt="" class="m-3 hover:scale-[1.1] ease-in duration-500">
         <img src="assets/media/banner/banner-3.png" alt="" class="m-3 hover:scale-[1.1] ease-in duration-500">
     </div>
 
-    <div class="border-b-[2px] text-center">
-        <p class="text-[25px] leading-[40px] font-semibold uppercase m-[30px]">Sản phẩm xem nhiều</p>
-    </div>
-
     <div class="mx-auto pt-5 w-[1200px]">
-        <div class="grid grid-cols-4 gap-1 mx-auto">
+        <div class="text-center border-b-[2px] m-5">
+            <p class="text-[25px] leading-[40px] font-semibold uppercase">Sản phẩm xem nhiều</p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-1 mx-auto">
             <?php foreach ($products as $product) : ?>
                 <div div class="mx-auto h-auto text-center mb-10">
                     <div>

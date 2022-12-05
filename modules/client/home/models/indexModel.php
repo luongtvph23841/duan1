@@ -4,7 +4,7 @@ function get_list_products()
 {
     $result = db_fetch_array("SELECT * FROM `products`
      ORDER BY view DESC
-     LIMIT 8");
+     LIMIT 3");
     return $result;
 }
 
