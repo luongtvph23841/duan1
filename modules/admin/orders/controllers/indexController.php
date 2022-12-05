@@ -7,5 +7,7 @@ function construct()
 
 function indexAction()
 {
-    load_view('index');
+
+    $data['orders'] = get_list_orders();
+    load_view('index', $data);
 }

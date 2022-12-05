@@ -28,11 +28,12 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>ID</label>
-                        <input type="text" name="id" class="form-control" readonly="true" value="<?php echo $role['id'] ?>" />
+                        <input type="text" name="id" class="form-control" readonly="true"
+                            value="<?php echo $role['id'] ?>" />
                     </div>
                     <div class="form-group mb-1">
                         <label for="descriptionCategoryInput">Tên vai trò</label>
-                        <input type="text" name="name" class="form-control" value="<?php echo $role['name_role'] ?>" />
+                        <input type="text" name="name" class="form-control" value="<?php echo $role['id_orders'] ?>" />
                     </div>
                 </div>
                 <div class="card-footer">
