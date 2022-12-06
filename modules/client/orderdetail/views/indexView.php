@@ -127,7 +127,7 @@
                         </p>
                     </div>
 
-                    <?php if ($orders['id_status'] != 3 && $orders['id_status'] != 4) { ?>
+                    <?php if ($orders['id_status'] == 1) { ?>
                         <div class="mt-5 flex justify-center">
                             <a href="?role=client&mod=orderdetail&code=<?php echo $orders['code'] ?>&action=cancel">
                                 <button type="submit" class="border-[2px] w-[150px] h-[50px] hover:bg-[#d2a98b] m-5">
