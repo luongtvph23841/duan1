@@ -51,11 +51,11 @@
                     <thead>
                         <tr>
                             <th title="Field #1">ID</th>
-                            <th title="Field #2">Code</th>
+                            <th title="Field #2">Mã đơn hàng</th>
                             <th title="Field #3">Người dùng</th>
-                            <th title="Field #4">Trạng thái</th>
-                            <th title="Field #5">Thời gian</th>
-                            <th title="Field #6">Giá</th>
+                            <th title="Field #4">Thời gian</th>
+                            <th title="Field #5">Giá</th>
+                            <th title="Field #6">Trạng thái</th>
                             <th title="Field #7">Hành động</th>
                         </tr>
                     </thead>
@@ -72,13 +72,13 @@
                                     <?php echo ($key['name_user']) ?>
                                 </td>
                                 <td>
-                                    <?php echo ($key['name_status']) ?>
-                                </td>
-                                <td>
                                     <?php echo ($key['time']) ?>
                                 </td>
                                 <td>
                                     <?php echo currency_format($key['total_price']) ?>
+                                </td>
+                                <td>
+                                    <?php echo ($key['name_status']) ?>
                                 </td>
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">

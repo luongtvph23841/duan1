@@ -13,10 +13,10 @@
 
     <div class="mx-auto pt-5 w-[1200px]">
         <div class="text-center border-b-[2px] m-5">
-            <p class="text-[25px] leading-[40px] font-semibold uppercase">Sản phẩm xem nhiều</p>
+            <p class="text-[25px] leading-[40px] font-semibold uppercase">Lượt xem nhiều</p>
         </div>
 
-        <div class="grid grid-cols-3 gap-1 mx-auto">
+        <div class="grid grid-cols-4 gap-1 mx-auto">
             <?php foreach ($products as $product) : ?>
                 <div div class="mx-auto h-auto text-center mb-10">
                     <div>

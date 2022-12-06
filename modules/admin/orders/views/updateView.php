@@ -28,7 +28,7 @@
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
-                                <label>Vai trò</label>
+                                <label>Trạng thái</label>
                                 <select class="form-control select2" name="id_status">
                                     <?php foreach ($status as $key) : ?>
                                         <option value="<?php echo $key['id'] ?>"><?php echo $key['name_status'] ?></option>
