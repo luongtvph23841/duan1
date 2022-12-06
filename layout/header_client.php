@@ -58,7 +58,7 @@
                                 </li>
                                 <?php if (is_admin()) : ?>
                                     <li>
-                                        <a href="?role=admin" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Admin</a>
+                                        <a href="?role=admin&mod=home" class="hover:text-[#d2a98b] border-b-[1px] p-[10px] leading-[24px] m-1">Admin</a>
                                     </li>
                                 <?php endif; ?>
                                 <li>

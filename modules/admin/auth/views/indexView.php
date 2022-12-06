@@ -3,12 +3,12 @@
 <div class="d-flex flex-column flex-root">
     <!--begin::Login-->
     <div class="login login-3 login-signin-on d-flex flex-row-fluid" id="kt_login">
-        <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url(assets/media/bg/bg-1.jpg);">
+        <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url(assets/media/bg/bg-4.jpg);">
             <div class="login-form text-center text-white p-7 position-relative overflow-hidden">
                 <!--begin::Login Header-->
                 <div class="d-flex flex-center mb-15">
                     <a href="#">
-                        <img src="assets/media/logos/logo-letter-9.png" class="max-h-100px" alt="" />
+                        <img src="assets/media/logos/logo-kaka-1.png" class="max-h-100px" alt="" />
                     </a>
                 </div>
                 <!--end::Login Header-->
@@ -19,7 +19,7 @@
                         <p class="opacity-60 font-weight-bold">Nhập thông tin đăng nhập tài khoản của bạn:</p>
                     </div>
                     <?php foreach ($notifications as $notification) : ?>
-                        <?php foreach ($notification['msgs'] as $msg): ?>
+                        <?php foreach ($notification['msgs'] as $msg) : ?>
                             <span class="label label-lg label-light-<?php echo $notification['type'] ?> label-inline mb-3"><?php echo $msg ?></span>
                         <?php endforeach; ?>
                     <?php endforeach; ?>
