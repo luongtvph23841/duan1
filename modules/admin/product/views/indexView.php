@@ -66,22 +66,21 @@
                 <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                     <thead>
                         <tr>
-                            <th title="Field #1">ID</th>
-                            <th title="Field #2">Tên</th>
-                            <th title="Field #3">Giá</th>
-                            <th title="Field #4">Số lượng</th>
-                            <th title="Field #5">Xuất sứ</th>
-                            <th title="Field #6">Danh mục</th>
-                            <th title="Field #8">Lượt xem</th>
-                            <th title="Field #9">Mô tả</th>
-                            <th title="Field #10">Hình ảnh</th>
-                            <th title="Field #11">Hành động</th>
+                            <th title="Field #1">Tên</th>
+                            <th title="Field #2">Giá</th>
+                            <th title="Field #3">Số lượng</th>
+                            <th title="Field #4">Xuất sứ</th>
+                            <th title="Field #5">Danh mục</th>
+                            <th title="Field #6">Lượt xem</th>
+                            <th title="Field #7">Mô tả</th>
+                            <th title="Field #8">Hình ảnh</th>
+                            <th title="Field #9">ID</th>
+                            <th title="Field #10">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($products as $product) : ?>
                             <tr>
-                                <td><?php echo ($product['id']) ?></td>
                                 <td><?php echo ($product['name_product']) ?></td>
                                 <td><?php echo currency_format($product['price']) ?></td>
                                 <td><?php echo ($product['quantity']) ?></td>
@@ -90,6 +89,7 @@
                                 <td><?php echo ($product['view']) ?></td>
                                 <td><?php echo ($product['detail']) ?></td>
                                 <td><img src="assets/media/products/<?php echo ($product['image']) ?>" width="100" alt=""></td>
+                                <td><?php echo ($product['id']) ?></td>
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">
                                         <a href="?role=admin&mod=product&action=update&id_prod=<?php echo $product['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
