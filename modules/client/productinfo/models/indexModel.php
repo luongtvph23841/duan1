@@ -31,7 +31,10 @@ function create_comment($content, $id_product, $id_user)
 
 function get_list_products_by_id_cate($id, $id_product)
 {
-    $result = db_fetch_array("SELECT p.* FROM `products` p WHERE p.id_cate = $id AND p.id <> $id_product LIMIT 4");
+    $result = db_fetch_array("SELECT p.* FROM `products` p
+    WHERE p.id_cate = $id 
+    AND p.id <> $id_product 
+    LIMIT 4");
     return $result;
 }
 
