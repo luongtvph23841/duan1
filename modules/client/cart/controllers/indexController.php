@@ -20,6 +20,7 @@ function indexAction()
             'name_product' => $product['name_product'],
             'image' => $product['image'],
             'price' => $product['price'],
+            'quantity_default' => $product['quantity'],
             'quantity' => $quantity,
             'sub_total' => $product['price'] * $quantity
         );

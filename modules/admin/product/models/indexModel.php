@@ -27,7 +27,7 @@ function get_one_product($id)
 
 function create_product($name, $price, $quantity, $img, $id_orgin, $id_cate, $detail)
 {
-    $user = get_auth();
+    // $user = get_auth();
     $id = db_insert('products', [
         'name_product' => $name,
         'price' => $price,

@@ -39,7 +39,7 @@
 
                             <td class="w-[200px]">
                                 <div class="flex justify-center">
-                                    <input type="number" min="1" name="quantity[<?php echo $item['id_product'] ?>]" value="<?php echo $item['quantity'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
+                                    <input type="number" min="1" max="<?php echo $item['quantity_default'] ?>" name="quantity[<?php echo $item['id_product'] ?>]" value="<?php echo $item['quantity'] ?>" class="w-[50px] h-[32px] text-[16px] font-normal box-border text-center outline-none border">
                                 </div>
                             </td>
 

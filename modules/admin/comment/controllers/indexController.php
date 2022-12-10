@@ -13,21 +13,21 @@ function indexAction()
     load_view('index', $data);
 }
 
-function createAction()
-{
-    $data['products'] = get_list_products();
-    $data['users'] = get_list_users();
-    load_view('create');
-}
+// function createAction()
+// {
+//     $data['products'] = get_list_products();
+//     $data['users'] = get_list_users();
+//     load_view('create');
+// }
 
-function createPostAction()
-{
-    $content = $_POST['content'];
+// function createPostAction()
+// {
+//     $content = $_POST['content'];
 
-    create_comment($content);
-    push_notification('success', ['Thêm mới sản phẩm thành công']);
-    header('Location: ?role=admin&mod=comment');
-}
+//     create_comment($content);
+//     push_notification('success', ['Thêm mới sản phẩm thành công']);
+//     header('Location: ?role=admin&mod=comment');
+// }
 
 // function deleteAction()
 // {

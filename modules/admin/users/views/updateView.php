@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>ID</label>
                                 <input type="text" name="id" class="form-control" value="<?php echo $user['id'] ?>" readonly="true" />
                             </div>
@@ -50,7 +50,7 @@
                             <div class="form-group">
                                 <label>Địa chỉ</label>
                                 <input type="text" name="address" class="form-control" value="<?php echo $user['address'] ?>" />
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label>Vai trò</label>
                                 <select class="form-control select2" name="id_role">
@@ -59,10 +59,10 @@
                                     <?php endforeach ?>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label>Hình ảnh sản phẩm</label>
                                 <input type="file" name="img" id="img" class="form-control" />
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

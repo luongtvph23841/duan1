@@ -22,7 +22,7 @@ function update_role($id, $name)
 
 function create_role($name)
 {
-    $user = get_auth();
+    // $user = get_auth();
     $id = db_insert('role', [
         'name_role' => $name,
     ]);

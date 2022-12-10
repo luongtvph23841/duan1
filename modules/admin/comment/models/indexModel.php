@@ -19,13 +19,13 @@ function get_list_users()
     return $result;
 }
 
-function create_comment($content)
-{
-    $id = db_insert('comments', [
-        'content' => $content,
-        'time' => date('Y-m-d H:i:s'),
-        'id_products' => 1,
-        'id_user' => 1,
-    ]);
-    return $id;
-}
+// function create_comment($content)
+// {
+//     $id = db_insert('comments', [
+//         'content' => $content,
+//         'time' => date('Y-m-d H:i:s'),
+//         'id_products' => 1,
+//         'id_user' => 1,
+//     ]);
+//     return $id;
+// }

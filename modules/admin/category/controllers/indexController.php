@@ -43,21 +43,21 @@ function updateAction()
     $id = $_GET['id_cate'];
     $cate = get_one_category($id);
     $data['category'] = $cate;
-    if ($cate) {
-        load_view('update', $data);
-    } else {
-        header('Location: ?role=admin&mod=category');
-    }
+    // if ($cate) {
+    load_view('update', $data);
+    // } else {
+    //     header('Location: ?role=admin&mod=category');
+    // }
 }
 
 function updatePostAction()
 {
     $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    if (!$cate) {
-        header('Location: ?role=admin&mod=category');
-        die();
-    }
+    // $cate = get_one_category($id);
+    // // if (!$cate) {
+    // //     header('Location: ?role=admin&mod=category');
+    // //     die();
+    // // }
     $name = $_POST['name'];
     if (empty($name)) {
         push_notification('errors', [
@@ -66,6 +66,6 @@ function updatePostAction()
         header('Location: ?role=admin&mod=category&action=update&id_cate=' . $id);
     }
     update_category($id, $name);
-    push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
+    push_notification('success', ['Chỉnh sửa danh mục thành công']);
     header('Location: ?role=admin&mod=category');
 }

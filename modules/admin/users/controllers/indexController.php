@@ -37,48 +37,46 @@ function createPostAction()
     header('Location: ?role=admin&mod=users');
 }
 
-function deleteAction()
-{
-    $id = $_GET['id_user'];
-    delete_user($id);
-    push_notification('success', ['Xoá người dùng thành công']);
-    header('Location: ?role=admin&mod=users');
-}
+// function deleteAction()
+// {
+//     $id = $_GET['id_user'];
+//     delete_user($id);
+//     push_notification('success', ['Xoá người dùng thành công']);
+//     header('Location: ?role=admin&mod=users');
+// }
 
 function updateAction()
 {
-    $id = $_GET['id_user'];
+    // $id = $_GET['id_user'];
     $data['role'] = get_list_role();
-    $id_user = get_one_user($id);
-    $data['user'] = $id_user;
-    if ($id_user) {
-        load_view('update', $data);
-    } else {
-        header('Location: ?role=admin&mod=users');
-    }
+    // $id_user = get_one_user($id);
+    // $data['user'] = $id_user;
+    // if ($id_user) {
+    load_view('update', $data);
+    // } else {
+    header('Location: ?role=admin&mod=users');
+    // }
 }
 
 function updatePostAction()
 {
     $id = $_GET['id_user'];
-    $id_user = get_one_user($id);
-    if (!$id_user) {
-        header('Location: ?role=admin&mod=users');
-        die();
-    }
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
+
+    // $name = $_POST['name'];
+    // $email = $_POST['email'];
+    // $password = $_POST['password'];
+    // $phone = $_POST['phone'];
+    // $address = $_POST['address'];
     $id_role = $_POST['id_role'];
 
-    $file = $_FILES['img'];
-    move_uploaded_file($file['tmp_name'], 'assets/media/users/' . $file['name']);
+    // $file = $_FILES['img'];
+    // move_uploaded_file($file['tmp_name'], 'assets/media/users/' . $file['name']);
 
-    $img = $file['name'];
+    // $img = $file['name'];
 
-    update_user($id, $name, $email, $password, $phone, $address, $id_role, $img);
+    // update_user($id, $name, $email, $password, $phone, $address, $id_role, $img);
+    update_user($id, $id_role);
+
     push_notification('success', ['Chỉnh sửa người dùng thành công']);
     header('Location: ?role=admin&mod=users');
 }
