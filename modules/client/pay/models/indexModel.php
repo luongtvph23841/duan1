@@ -25,12 +25,13 @@ function create_orders($code, $id_user, $status, $total)
     return $id;
 }
 
-function create_order_detail($id_product, $code, $quantity)
+function create_order_detail($id_product, $code, $quantity, $price_product)
 {
     $id = db_insert('order_detail', [
         'id_product' => $id_product,
         'code' => $code,
         'quantity' => $quantity,
+        'price_product' => $price_product,
     ]);
     return $id;
 }

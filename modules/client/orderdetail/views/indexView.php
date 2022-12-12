@@ -83,7 +83,7 @@
 
                             <td class="w-[200px]">
                                 <p class="text-[14px] text-[#222] font-normal">
-                                    <?php echo currency_format($order['price']) ?>
+                                    <?php echo currency_format($order['price_product']) ?>
                                 </p>
                             </td>
 
@@ -97,7 +97,7 @@
                                 <p class="text-[14px] text-[#222] font-normal text-[red]">
                                     <?php
                                     $total = 0;
-                                    $total += $order['price'] * $order['quantity'];
+                                    $total += $order['price_product'] * $order['quantity'];
                                     echo currency_format($total) ?>
                                 </p>
                             </td>

@@ -14,7 +14,8 @@ function get_list_comment($id)
     $result = db_fetch_array("SELECT c.id, c.content, c.time, p.name_product, u.name_user, u.image FROM `comments` c 
     INNER JOIN `products` p ON p.id = c.id_products
     INNER JOIN `users` u ON u.id = c.id_user
-    WHERE p.id = $id");
+    WHERE p.id = $id
+    ORDER BY c.time ASC");
     return $result;
 }
 

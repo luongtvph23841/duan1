@@ -35,8 +35,9 @@ function indexPostAction()
         foreach ($_SESSION['cart']['buy'] as $vaule) {
             $id_product = $vaule['id_product'];
             $quantity = $vaule['quantity'];
+            $price_product = $vaule['price'];
 
-            create_order_detail($id_product, $code, $quantity);
+            create_order_detail($id_product, $code, $quantity, $price_product);
         }
 
         unset($_SESSION['cart']['buy']);
