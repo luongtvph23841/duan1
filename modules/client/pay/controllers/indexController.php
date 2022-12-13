@@ -36,8 +36,10 @@ function indexPostAction()
             $id_product = $vaule['id_product'];
             $quantity = $vaule['quantity'];
             $price_product = $vaule['price'];
+            $name_product = $vaule['name_product'];
+            $img_product = $vaule['image'];
 
-            create_order_detail($id_product, $code, $quantity, $price_product);
+            create_order_detail($id_product, $code, $quantity, $price_product, $name_product, $img_product);
         }
 
         unset($_SESSION['cart']['buy']);

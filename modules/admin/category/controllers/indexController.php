@@ -8,8 +8,13 @@ function construct()
 
 function indexAction()
 {
-    $data['categories'] = get_list_categories();
-    load_view('index', $data);
+    if (get_auth()['id_role'] == 1) {
+        $data['categories'] = get_list_categories();
+        load_view('index', $data);
+    } else {
+        remove_auth();
+        header('Location: ?role=admin&mod=auth');
+    }
 }
 
 function createAction()

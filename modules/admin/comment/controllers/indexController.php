@@ -8,9 +8,14 @@ function construct()
 
 function indexAction()
 {
-    $data['comments'] = get_list_comment();
-    $data['products'] = get_list_products();
-    load_view('index', $data);
+    if (get_auth()['id_role'] == 1) {
+        $data['comments'] = get_list_comment();
+        $data['products'] = get_list_products();
+        load_view('index', $data);
+    } else {
+        remove_auth();
+        header('Location: ?role=admin&mod=auth');
+    }
 }
 
 // function createAction()

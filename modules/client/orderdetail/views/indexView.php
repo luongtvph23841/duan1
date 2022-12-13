@@ -73,7 +73,7 @@
                         <tr class="text-center">
                             <td class="flex justify-start">
                                 <div class="mt-5 mb-5">
-                                    <img src="assets/media/products/<?php echo $order['image'] ?>" class="w-[50px] h-[50px] mx-auto">
+                                    <img src="assets/media/products/<?php echo $order['img_product'] ?>" class="w-[50px] h-[50px] mx-auto">
                                 </div>
 
                                 <span class="flex flex-col justify-center overflow-hidden">

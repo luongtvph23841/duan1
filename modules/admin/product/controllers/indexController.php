@@ -9,10 +9,15 @@ function construct()
 
 function indexAction()
 {
-    $data['products'] = get_list_products();
-    $data['categories'] = get_list_categories();
-    $data['orgin'] = get_list_orgin();
-    load_view('index', $data);
+    if (get_auth()['id_role'] == 1) {
+        $data['products'] = get_list_products();
+        $data['categories'] = get_list_categories();
+        $data['orgin'] = get_list_orgin();
+        load_view('index', $data);
+    } else {
+        remove_auth();
+        header('Location: ?role=admin&mod=auth');
+    }
 }
 
 function createAction()

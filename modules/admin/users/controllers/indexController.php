@@ -8,14 +8,19 @@ function construct()
 
 function indexAction()
 {
-    $data['users'] = get_list_users();
-    load_view('index', $data);
+    if (get_auth()['id_role'] == 1) {
+        $data['users'] = get_list_users();
+        load_view('index', $data);
+    } else {
+        remove_auth();
+        header('Location: ?role=admin&mod=auth');
+    }
 }
 
 function createAction()
 {
     $data['role'] = get_list_role();
-    load_view('create',  $data);
+    load_view('create', $data);
 }
 
 function createPostAction()

@@ -7,8 +7,13 @@ function construct()
 
 function indexAction()
 {
-    $data['orders'] = get_list_orders();
-    load_view('index', $data);
+    if (get_auth()['id_role'] == 1) {
+        $data['orders'] = get_list_orders();
+        load_view('index', $data);
+    } else {
+        remove_auth();
+        header('Location: ?role=admin&mod=auth');
+    }
 }
 
 function updateAction()
